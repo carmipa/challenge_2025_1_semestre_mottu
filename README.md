@@ -49,9 +49,9 @@
 </table>
 
 
-### Professores coordenadores do projeto:
-- **TDSPV:** [Karina Costa](https://github.com/karinacosta)
-- **TDSPZ:** [Thiago Yamamoto](https://github.com/thiagoyamamoto)
+### ⭐ **Professores coordenadores do projeto:**
+- **TDSPV:** 🧑‍🏫 [Karina Costa](https://github.com/karinacosta)
+- **TDSPZ:** 🧑‍🏫 [Thiago Yamamoto](https://github.com/thiagoyamamoto)
 
 [🔝 Voltar ao topo](#)
 
