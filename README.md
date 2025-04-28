@@ -31,6 +31,20 @@
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
+- **TDSPV**
+
+| Badge                                                                                                                     | Matéria                                                 | Professor                         |
+|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
+| ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)                                  | Advanced Business Development with .NET                 | Alex Sander Resende de Deus              |
+| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)                                    | Java Advanced                                           | Marcel Stefan Wagner          |
+| ![Database](https://img.shields.io/badge/Database-0C4A6E?style=flat&logo=postgresql&logoColor=white)                      | Mastering Relational & Non-Relational DB                | Renato de Ávila Mendes                       |
+| ![QA](https://img.shields.io/badge/QA-34495E?style=flat)                                                                   | Compliance, QA & Tests                                  | Felipe B. F. Santos               |
+| ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=azure&logoColor=white)                                 | DevOps Tools & Cloud Computing                          | João Carlos Menk              |
+| ![React](https://img.shields.io/badge/React-31B8FF?style=flat&logo=react&logoColor=white)                                 | Mobile Application Development                          | Fernando Pinéo de Abreu           |
+| ![IoT](https://img.shields.io/badge/IoT-FF9900?style=flat)                                                                 | Disruptive Architectures: IoT, IOB & Gen AI             | André tritiack de faria       |
+
+- **TDSPZ**
+
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)                                  | Advanced Business Development with .NET                 | Mauricio V. de Moura              |
