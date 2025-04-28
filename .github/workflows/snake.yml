@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Gerar grid snake SVG
-        uses: carmipa/snake-action@v1.0.0
+        uses: joao1015/github-contribution-grid-snake@v1
+
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           theme: dark              # ou light
