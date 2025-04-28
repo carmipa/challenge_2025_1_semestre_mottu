@@ -68,6 +68,8 @@
 
 ## <a name="equipe"></a>👥 **Equipe**
 
+## <a name="equipe"></a>👥 **Equipe**
+
 <table width="100%">
   <thead>
     <tr>
@@ -75,8 +77,8 @@
       <th width="70">RM</th>
       <th width="70">Turma</th>
       <th>
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="18" alt="GitHub">
-        GitHub
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="18" alt="Repositório">
+        Repositório
       </th>
       <th width="260">Contatos</th>
       <th width="350">Foto</th>
@@ -89,8 +91,9 @@
       <td align="center">1TDSPZ</td>
       <td><a href="https://github.com/carmipa" target="_blank">carmipa</a></td>
       <td>
-        <a href="https://linkedin.com/in/pauloandrecarminati"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
-        <a href="https://github.com/carmipa"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"></a>
+        <a href="https://linkedin.com/in/pauloandrecarminati" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
       </td>
       <td align="center">
         <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
@@ -103,8 +106,9 @@
       <td align="center">1TDSPV</td>
       <td><a href="https://github.com/ArthurBispo00" target="_blank">ArthurBispo00</a></td>
       <td>
-        <a href="https://linkedin.com/in/arthur-bispo"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
-        <a href="https://github.com/ArthurBispo00"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"></a>
+        <a href="https://linkedin.com/in/arthur-bispo" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
       </td>
       <td align="center">
         <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
@@ -117,8 +121,9 @@
       <td align="center">1TDSPV</td>
       <td><a href="https://github.com/joao1015" target="_blank">joao1015</a></td>
       <td>
-        <a href="https://linkedin.com/in/joao-paulo-moreira"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
-        <a href="https://github.com/joao1015"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"></a>
+        <a href="https://linkedin.com/in/joao-paulo-moreira" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
       </td>
       <td align="center">
         <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
@@ -127,7 +132,6 @@
     </tr>
   </tbody>
 </table>
-
 
 ---
 
