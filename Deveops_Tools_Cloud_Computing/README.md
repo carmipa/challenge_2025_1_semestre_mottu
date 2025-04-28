@@ -12,7 +12,9 @@ Conteinerizar a API usando **Docker** e executá-la na nuvem (**Azure CLI**).
 ### 📂 **Link do Repositório:**  
 [![Azure Docs](https://img.shields.io/badge/Azure%20CLI-Dockerfile%20%26%20Scripts-blue?style=flat-square&logo=microsoftazure)](https://docs.microsoft.com/en-us/azure/devops/)
 
-https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Deveops_Tools_Cloud_Computing
+[![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Deveops_Tools_Cloud_Computing)
+
+
 
 ## 🎨 **Tecnologias Utilizadas:**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker)
