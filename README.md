@@ -125,7 +125,13 @@
 
 ### 🤝 Contribuidores
 
-<img src="https://contrib.rocks/image?repo=carmipa/mottu-mapping"/>
+### 🤝 Contribuidores
+
+| Avatar                                             | GitHub                                   |
+|----------------------------------------------------|------------------------------------------|
+| <img src="https://github.com/carmipa.png" width="60">          | [carmipa](https://github.com/carmipa)               |
+| <img src="https://github.com/ArthurBispo00.png" width="60">   | [ArthurBispo00](https://github.com/ArthurBispo00)   |
+| <img src="https://github.com/joao1015.png" width="60">        | [joao1015](https://github.com/joao1015)             |
 
 [🔝 Voltar ao topo](#)
 
