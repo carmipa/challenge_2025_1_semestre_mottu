@@ -11,7 +11,7 @@ API Restful usando **Spring Boot** e **Spring Data JPA**.
 - Uso de cache.
 
 ### 📂 **Link do Repositório:**  
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Repositório-green?style=flat-square&logo=springboot)](https://spring.io/projects/spring-boot)
+[![Java Advanced](https://img.shields.io/badge/Spring%20Boot-Repositório-green?style=flat-square&logo=springboot)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced)
 
 ## 🎨 **Tecnologias Utilizadas:**
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot)
