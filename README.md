@@ -72,41 +72,54 @@
       <th style="text-align:center;padding:8px;width:80px;">RM</th>
       <th style="text-align:center;padding:8px;width:80px;">Turma</th>
       <th style="text-align:left;  padding:8px;">GitHub</th>
-      <th style="text-align:center;padding:8px;width:170px;">Foto</th>
+      <!-- A largura aqui precisa ser um pouco maior que o max-width da imagem -->
+      <th style="text-align:center;padding:8px;width:380px;">Foto</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td style="padding:8px;">Paulo André Carminati</td>
       <td style="text-align:center;">557881</td>
       <td style="text-align:center;">1TDSPZ</td>
-      <td><a href="https://github.com/carmipa" target="_blank">GitHub Paulo André</a></td>
+      <td>
+        <a href="https://github.com/carmipa" target="_blank">GitHub&nbsp;Paulo&nbsp;André</a>
+      </td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
-             alt="Paulo André"
-             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
+        <img
+          src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
+          alt="Paulo André"
+          style="max-width:350px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
+
     <tr>
       <td style="padding:8px;">Arthur Bispo de Lima</td>
       <td style="text-align:center;">557568</td>
       <td style="text-align:center;">1TDSPV</td>
-      <td><a href="https://github.com/ArthurBispo00" target="_blank">GitHub Arthur</a></td>
+      <td>
+        <a href="https://github.com/ArthurBispo00" target="_blank">GitHub&nbsp;Arthur</a>
+      </td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
-             alt="Arthur Bispo"
-             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
+        <img
+          src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
+          alt="Arthur Bispo"
+          style="max-width:350px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
+
     <tr>
       <td style="padding:8px;">João Paulo Moreira</td>
       <td style="text-align:center;">557808</td>
       <td style="text-align:center;">1TDSPV</td>
-      <td><a href="https://github.com/joao1015" target="_blank">GitHub João Paulo</a></td>
+      <td>
+        <a href="https://github.com/joao1015" target="_blank">GitHub&nbsp;João&nbsp;Paulo</a>
+      </td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
-             alt="João Paulo"
-             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
+        <img
+          src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
+          alt="João Paulo"
+          style="max-width:350px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
   </tbody>
