@@ -25,7 +25,7 @@
 
 ---
 
-## <a name="grupo"></a>**Grupo:** ** 🧠 MetaMind**
+## <a name="grupo"></a>**Grupo:** 🧠 MetaMind **
 
 ---
 
