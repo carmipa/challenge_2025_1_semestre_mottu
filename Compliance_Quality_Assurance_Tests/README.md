@@ -1,19 +1,17 @@
 # 🛠️ **Compliance, Quality Assurance & Tests**
 
 ## 🔶 **Objetivos:**
-Criar um diagrama de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**, e desenvolver o **PITCH** explicando o problema a ser resolvido.
+Criar um diagrama de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**, e desenvolver o **PITCH** explicando o problema.
 
 ## 🔧 **Requisitos:**
-- Criar uma **visão de arquitetura** usando **TOGAF®** e **ARCHIMATE®**.
-- **PITCH**: Descrição detalhada do problema e objetivos da solução.
-- Apresentação da arquitetura de **negócio**, **sistema** e **tecnologia**.
-- Criar **PDF** com os diagramas e **upload** no portal.
+- Visão de arquitetura com **TOGAF®** e **ARCHIMATE®**.
+- Descrição detalhada do problema (**PITCH**).
+- Arquitetura de negócio, sistema e tecnologia.
+- PDF com diagramas.
 
 ### 📂 **Link do Repositório:**  
-[Link para os Diagramas](https://docs.microsoft.com/en-us/archimate/)
-
----
+[![Microsoft Docs](https://img.shields.io/badge/Diagrama-ArchiMate-blue?style=flat-square&logo=microsoft)](https://docs.microsoft.com/en-us/archimate/)
 
 ## 🎨 **Tecnologias Utilizadas:**
-- ![TOGAF](https://upload.wikimedia.org/wikipedia/commons/5/59/TOGAF_logo.png) **TOGAF®**
-- ![ARCHIMATE](https://upload.wikimedia.org/wikipedia/commons/7/7f/ArchiMate_logo.png) **ARCHIMATE®**
+![TOGAF](https://img.shields.io/badge/TOGAF-005571?style=flat-square)
+![ARCHIMATE](https://img.shields.io/badge/ARCHIMATE-FFD700?style=flat-square)

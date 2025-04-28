@@ -1,21 +1,18 @@
 # ☁️ **DevOps Tools & Cloud Computing**
 
 ## 🔶 **Objetivos:**
-Conteinerizar a API utilizando **Docker** e executá-la na nuvem (**Azure CLI**).
+Conteinerizar a API usando **Docker** e executá-la na nuvem (**Azure CLI**).
 
 ## 🔧 **Requisitos:**
-- **Docker**: Conteinerização da API com **Docker**.
-- **Azure CLI**: Deploy da API na nuvem **Azure**.
-- **CRUD** completo com banco de dados **Oracle**.
-- Criar **scripts de Azure CLI**, **Dockerfile**, e **ReadMe** no repositório.
-- **Testes**: Validar funcionamento da aplicação em nuvem.
+- Conteinerização com **Docker**.
+- Deploy na nuvem com **Azure CLI**.
+- CRUD completo com **Oracle**.
+- Scripts **Azure CLI**, **Dockerfile**, **ReadMe**.
 
 ### 📂 **Link do Repositório:**  
-[Link para o Dockerfile e Scripts](https://docs.microsoft.com/en-us/azure/devops/)
-
----
+[![Azure Docs](https://img.shields.io/badge/Azure%20CLI-Dockerfile%20%26%20Scripts-blue?style=flat-square&logo=microsoftazure)](https://docs.microsoft.com/en-us/azure/devops/)
 
 ## 🎨 **Tecnologias Utilizadas:**
-- ![Docker](https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker_logo.svg) **Docker**
-- ![Azure](https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_Azure_Logo.svg) **Azure**
-- ![CLI](https://upload.wikimedia.org/wikipedia/commons/3/38/Command_line_interface_logo.png) **Azure CLI**
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker)
+![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=microsoftazure)
+![Azure CLI](https://img.shields.io/badge/Azure%20CLI-0078D4?style=flat-square&logo=powershell)

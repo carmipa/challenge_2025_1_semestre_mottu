@@ -1,20 +1,18 @@
 # ☕ **Java Advanced**
 
 ## 🔶 **Objetivos:**
-Criar uma API Restful utilizando **Spring Boot** e **Spring Data JPA** com integração de banco de dados.
+API Restful usando **Spring Boot** e **Spring Data JPA**.
 
 ## 🔧 **Requisitos:**
-- Criar **CRUD completo** com **Spring Boot** e **JPA**.
-- Integração com banco de dados **Oracle** ou **H2**.
-- **Validação de campos** com **Bean Validation**.
-- **Paginação** e **Ordenação** de resultados.
-- **Cache** para otimização de requisições.
+- CRUD completo com **Spring Boot** e **JPA**.
+- Banco de dados **Oracle** ou **H2**.
+- Validação com **Bean Validation**.
+- Paginação e ordenação.
+- Uso de cache.
 
 ### 📂 **Link do Repositório:**  
-[Link para o Repositório Spring Boot](https://spring.io/projects/spring-boot)
-
----
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Repositório-green?style=flat-square&logo=springboot)](https://spring.io/projects/spring-boot)
 
 ## 🎨 **Tecnologias Utilizadas:**
-- ![Spring Boot](https://upload.wikimedia.org/wikipedia/commons/4/46/Spring_Framework_Logo_2018.svg) **Spring Boot**
-- ![Hibernate](https://upload.wikimedia.org/wikipedia/commons/5/53/Hibernate_Logo.png) **JPA & Hibernate**
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot)
+![JPA & Hibernate](https://img.shields.io/badge/JPA%20%26%20Hibernate-59666C?style=flat-square&logo=hibernate)

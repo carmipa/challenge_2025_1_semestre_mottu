@@ -1,19 +1,16 @@
 # 📱 **Mobile Application Development**
 
 ## 🔶 **Objetivos:**
-Criar um protótipo funcional de aplicativo móvel utilizando **React Native** e **Expo**.
+Protótipo funcional com **React Native** e **Expo**.
 
 ## 🔧 **Requisitos:**
-- **Navegação** entre telas utilizando **React Navigation**.
-- **Formulário com manipulação de estado** usando **useState**.
-- Armazenamento de dados com **AsyncStorage**.
-- **Armazenamento local** de dados que persistem após o reinício do aplicativo.
+- Navegação com **React Navigation**.
+- Estado com **useState**.
+- Dados persistentes com **AsyncStorage**.
 
 ### 📂 **Link do Repositório:**  
-[Link para o Repositório React Native](https://reactnative.dev/)
-
----
+[![React Native](https://img.shields.io/badge/React%20Native-Repositório-61DAFB?style=flat-square&logo=react)](https://reactnative.dev/)
 
 ## 🎨 **Tecnologias Utilizadas:**
-- ![React Native](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) **React Native**
-- ![Expo](https://upload.wikimedia.org/wikipedia/commons/0/02/Expo_logo.svg) **Expo**
+![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=flat-square&logo=react)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo)
