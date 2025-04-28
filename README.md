@@ -84,7 +84,7 @@
       <td style="text-align:center;">1TDSPZ</td>
       <td><a href="https://github.com/carmipa" target="_blank">GitHub Paulo André</a></td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ"
+        <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
              alt="Paulo André"
              style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
       </td>
@@ -95,7 +95,7 @@
       <td style="text-align:center;">1TDSPV</td>
       <td><a href="https://github.com/ArthurBispo00" target="_blank">GitHub Arthur</a></td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg"
+        <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
              alt="Arthur Bispo"
              style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
       </td>
@@ -106,7 +106,7 @@
       <td style="text-align:center;">1TDSPV</td>
       <td><a href="https://github.com/joao1015" target="_blank">GitHub João Paulo</a></td>
       <td style="text-align:center;">
-        <img src="https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz"
+        <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
              alt="João Paulo"
              style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
       </td>
