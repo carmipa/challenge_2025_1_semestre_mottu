@@ -245,7 +245,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ### 📚 Matérias & Entregas
 
-<!-- 1 -->
+<!-- .NET -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET">
@@ -254,16 +254,16 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
   <td>API <b>ASP.NET Core</b> + Oracle (<b>EF Core</b>)</td>
 </tr>
 
-<!-- 2 -->
+<!-- TOGAF / Archimate -->
 <tr>
   <td align="center">
-    <img src="https://img.shields.io/badge/TOGAF%20%2F%20ARCHIMATE-34495E?style=for-the-badge&logoColor=white" alt="TOGAF &amp; Archimate">
+    <img src="https://img.shields.io/badge/TOGAF%20%2F%20ARCHIMATE-34495E?style=for-the-badge&logoColor=white" alt="TOGAF & Archimate">
   </td>
   <td>Compliance, QA & Tests</td>
   <td>Diagrama <b>TOGAF® / ARCHIMATE®</b></td>
 </tr>
 
-<!-- 3 -->
+<!-- Docker -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
@@ -272,7 +272,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
   <td>Dockerizar e publicar na nuvem</td>
 </tr>
 
-<!-- 4 -->
+<!-- IoT -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/IoT-00A6FF?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="IoT">
@@ -281,16 +281,17 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
   <td>Protótipo <b>IoT</b> / Visão Computacional</td>
 </tr>
 
-<!-- 5 -->
+<!-- Java + Spring -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+    <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring">
   </td>
   <td>Java Advanced</td>
   <td>API <b>Spring Boot</b> + <b>Spring Data JPA</b></td>
 </tr>
 
-<!-- 6 -->
+<!-- Oracle -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
@@ -299,7 +300,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
   <td>Modelo <b>ER</b> &amp; normalização</td>
 </tr>
 
-<!-- 7 -->
+<!-- React Native -->
 <tr>
   <td align="center">
     <img src="https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native">
@@ -307,7 +308,6 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
   <td>Mobile Application Development</td>
   <td>Protótipo em <b>React Native</b></td>
 </tr>
-
 
 ---
 
