@@ -23,11 +23,7 @@
 
 ## <a name="projeto"></a>**Projeto:** Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos  
 
----
-
 ## <a name="grupo"></a>**Grupo:** 🧠 MetaMind
-
----
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
