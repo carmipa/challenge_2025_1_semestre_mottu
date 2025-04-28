@@ -10,7 +10,8 @@ Banco de dados relacional com operações em **PL/SQL**.
 - Consultas avançadas (joins, group by).
 
 ### 📂 **Link do Repositório:**  
-[![Oracle Database](https://img.shields.io/badge/Oracle-Database-red?style=flat-square&logo=oracle)](https://www.oracle.com/database/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mastering_Relational_and_Non_Relational_Database)
+
 
 ## 🎨 **Tecnologias Utilizadas:**
 ![Oracle Database](https://img.shields.io/badge/Oracle-Database-red?style=flat-square&logo=oracle)
