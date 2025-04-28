@@ -31,21 +31,16 @@
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
-<table>
-  <thead>
-    <tr><th colspan="2" align="center"><b>2TDSPZ</b></th></tr>
-    <tr><th align="left">Matéria</th><th align="left">Professor</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>💼 Advanced Business Development with .NET</td><td>🧑‍🏫 Mauricio V. de Moura</td></tr>
-    <tr><td>☕ Java Advanced</td><td>🧑‍🏫 João Carlos Lima e Silva</td></tr>
-    <tr><td>🗄️ Mastering Relational & Non-Relational DB</td><td>🧑‍🏫 Milton Goya</td></tr>
-    <tr><td>✅ Compliance, QA & Tests</td><td>🧑‍🏫 Felipe B. F. Santos</td></tr>
-    <tr><td>☁️ DevOps Tools & Cloud Computing</td><td>🧑‍🏫 Marcus Martins Leite</td></tr>
-    <tr><td>📱 Mobile Application Development</td><td>🧑‍🏫 Fernando Pinéo de Abreu</td></tr>
-    <tr><td>🤖 Disruptive Architectures: IoT, IOB & Gen AI</td><td>🧑‍🏫 Alberto Messias da C. Souza</td></tr>
-  </tbody>
-</table>
+| Matéria                                                                                                              | Professor                         |
+|----------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| ![Advanced Business Development with .NET](https://img.shields.io/badge/Advanced%20Business%20Development%20with%20.NET-512BD4?style=flat&logo=dotnet&logoColor=white) | Mauricio V. de Moura              |
+| ![Java Advanced](https://img.shields.io/badge/Java%20Advanced-ED8B00?style=flat&logo=java&logoColor=white)            | João Carlos Lima e Silva          |
+| ![Mastering Relational & Non-Relational DB](https://img.shields.io/badge/Mastering%20Relational%20%26%20Non-Relational%20DB-0C4A6E?style=flat&logo=postgresql&logoColor=white) | Milton Goya                       |
+| ![Compliance, QA & Tests](https://img.shields.io/badge/Compliance%2C%20QA%20%26%20Tests-34495E?style=flat)           | Felipe B. F. Santos               |
+| ![DevOps Tools & Cloud Computing](https://img.shields.io/badge/DevOps%20Tools%20%26%20Cloud%20Computing-0078D4?style=flat&logo=azure&logoColor=white) | Marcus Martins Leite              |
+| ![Mobile Application Development](https://img.shields.io/badge/Mobile%20Application%20Development-31B8FF?style=flat&logo=react&logoColor=white) | Fernando Pinéo de Abreu           |
+| ![Disruptive Architectures: IoT, IOB & Gen AI](https://img.shields.io/badge/Disruptive%20Architectures%3A%20IoT%2C%20IOB%20%26%20Gen%20AI-FF9900?style=flat) | Alberto Messias da C. Souza       |
+
 
 ### ⭐ Coordenadores do Projeto
 | Turma | Professor |
