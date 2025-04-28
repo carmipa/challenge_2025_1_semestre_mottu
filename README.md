@@ -21,6 +21,22 @@
 16. [Repositórios das matérias](#repositorios-materias)
 
 ---
+## <a name="repositorios-materias"></a>📑 **Repositórios das matérias:**
+
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Compliance_Quality_Assurance_Tests) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Deveops_Tools_Cloud_Computing) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Disruptive_Architectures_IoT_IOB_Generative_IA) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mastering_Relational_and_Non_Relational_Database) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mobile_Application_Development) |
+
+---
+
+[🔝 Voltar ao topo](#)
+---
 
 ## <a name="projeto"></a>**Projeto:** Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos  
 
@@ -222,13 +238,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ---
 
-## <a name="repositorios-materias"></a>📑 **Repositórios das matérias:**
 
-| Advanced Business Development with .NET  | [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
-| 2º Lugar  | R$ 3 000, medalha, shape e camiseta |
-| 3º Lugar  | R$ 2 000, medalha, shape e camiseta |
-
-[🔝 Voltar ao topo](#)
 
 
 
