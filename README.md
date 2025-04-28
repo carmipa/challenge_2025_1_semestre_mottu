@@ -26,7 +26,18 @@
 ## 🎓 **Turmas e Professores:**
 
 - **TDSPV**
+
 - **TDSPZ**
+| Matéria                                                         | Professor                              |
+|-----------------------------------------------------------------|----------------------------------------|
+| Advanced Business Development with .NET                         | Mauricio Viana de Moura                |
+| Java Advanced                                                   | João Carlos Lima e Silva               |
+| Mastering Relational and Non-Relational Database                | Milton Goya                            |
+| Compliance, Quality Assurance & Tests                           | Felipe Braz Farias Santos              |
+| DevOps Tools & Cloud Computing                                  | Marcus Martins Leite                   |
+| Mobile Application Development                                  | Fernando Pinéo de Abreu                |
+| Disruptive Architectures: IoT, IOB & Generative IA              | Alberto Messias da Costa Souza         |
+
 
 ### Professores:
 - **TDSPV:** [Karina Costa](https://github.com/karinacosta)
