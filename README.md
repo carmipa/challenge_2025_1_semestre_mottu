@@ -243,15 +243,89 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## <a name="materias-e-entregas"></a>📚 **Matérias & Entregas**
 
-| # | Disciplina | Objetivo |
-|---|------------|----------|
-| 1 🖥️ | [Advanced Business Development with .NET](https://docs.microsoft.com/dotnet/core/) | API **ASP.NET Core** + Oracle (**EF Core**) |
-| 2 🛠️ | [Compliance, QA & Tests](https://en.wikipedia.org/wiki/Compliance_(law)) | Diagrama **TOGAF®/ARCHIMATE®** |
-| 3 ☁️ | [DevOps Tools & Cloud Computing](https://azure.microsoft.com/overview/devops/) | Dockerizar e publicar em nuvem |
-| 4 🤖 | [Disruptive Architectures (IoT, IOB & Gen IA)](https://www.i-scoop.eu/internet-of-things-iot/) | Protótipo **IoT** / Visão Computacional |
-| 5 ☕ | [Java Advanced](https://spring.io/projects/spring-boot) | API **Spring Boot** + **Spring Data JPA** |
-| 6 💾 | [Mastering Relational & NoSQL DB](https://www.oracle.com/database/) | Modelo ER e normalização |
-| 7 📱 | [Mobile Application Development](https://reactnative.dev/) | Protótipo em **React Native** |
+### 📚 Matérias & Entregas
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Disciplina / Badge</th>
+      <th>Objetivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 🖥️</td>
+      <td>
+        <a href="https://docs.microsoft.com/dotnet/core/">
+          <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET badge">
+        </a><br/>
+        Advanced Business Development with .NET
+      </td>
+      <td>API <b>ASP.NET Core</b> + Oracle (<b>EF Core</b>)</td>
+    </tr>
+    <tr>
+      <td>2 🛠️</td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/Compliance_(law)">
+          <img src="https://img.shields.io/badge/TOGAF%20%2F%20ARCHIMATE-34495E?style=for-the-badge&logoColor=white" alt="TOGAF badge">
+        </a><br/>
+        Compliance, QA &amp; Tests
+      </td>
+      <td>Diagrama <b>TOGAF® / ARCHIMATE®</b></td>
+    </tr>
+    <tr>
+      <td>3 ☁️</td>
+      <td>
+        <a href="https://azure.microsoft.com/overview/devops/">
+          <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker badge">
+        </a><br/>
+        DevOps Tools &amp; Cloud Computing
+      </td>
+      <td>Dockerizar e publicar na nuvem</td>
+    </tr>
+    <tr>
+      <td>4 🤖</td>
+      <td>
+        <a href="https://www.i-scoop.eu/internet-of-things-iot/">
+          <img src="https://img.shields.io/badge/IoT-00A6FF?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="IoT badge">
+        </a><br/>
+        Disruptive Architectures (IoT, IOB &amp; Gen IA)
+      </td>
+      <td>Protótipo <b>IoT</b> / Visão Computacional</td>
+    </tr>
+    <tr>
+      <td>5 ☕</td>
+      <td>
+        <a href="https://spring.io/projects/spring-boot">
+          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java badge">
+        </a><br/>
+        Java Advanced
+      </td>
+      <td>API <b>Spring Boot</b> + <b>Spring Data JPA</b></td>
+    </tr>
+    <tr>
+      <td>6 💾</td>
+      <td>
+        <a href="https://www.oracle.com/database/">
+          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle badge">
+        </a><br/>
+        Mastering Relational &amp; NoSQL DB
+      </td>
+      <td>Modelo <b>ER</b> &amp; normalização</td>
+    </tr>
+    <tr>
+      <td>7 📱</td>
+      <td>
+        <a href="https://reactnative.dev/">
+          <img src="https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native badge">
+        </a><br/>
+        Mobile Application Development
+      </td>
+      <td>Protótipo em <b>React Native</b></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
