@@ -11,7 +11,7 @@ Implementar uma API Restful utilizando **ASP.NET Core** com **CRUD** completo e 
 - ReadMe completo.
 
 ### 📂 **Link do Repositório:**  
-[![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/joao1015/AutoCarePlusReact)
+[![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET)
 
 ## 🎨 **Tecnologias Utilizadas:**
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp)
