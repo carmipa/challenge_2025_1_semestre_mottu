@@ -70,49 +70,56 @@
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>RM</th>
-      <th>Turma</th>
-      <th>GitHub</th>
-      <th>Foto</th>
+      <th style="text-align:left;padding:6px 10px;">Nome</th>
+      <th style="text-align:center;padding:6px 10px;">RM</th>
+      <th style="text-align:center;padding:6px 10px;">Turma</th>
+      <th style="text-align:left;padding:6px 10px;">GitHub</th>
+      <th style="text-align:center;padding:6px 10px;">Foto</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Paulo André Carminati</strong></td>
-      <td>557881</td>
-      <td>1TDSPZ</td>
-      <td><a href="https://github.com/carmipa" target="_blank">GitHub Paulo André</a></td>
-      <td>
+      <td style="padding:6px 10px;">Paulo André Carminati</td>
+      <td style="text-align:center;padding:6px 10px;">557881</td>
+      <td style="text-align:center;padding:6px 10px;">1TDSPZ</td>
+      <td style="padding:6px 10px;">
+        <a href="https://github.com/carmipa" target="_blank">GitHub Paulo André</a>
+      </td>
+      <td style="text-align:center;padding:6px 10px;vertical-align:middle;">
         <img src="https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ"
              alt="Paulo André"
-             style="width:80px;height:80px;border-radius:50%;object-fit:cover;" />
+             style="width:60px;height:60px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
     <tr>
-      <td><strong>Arthur Bispo de Lima</strong></td>
-      <td>557568</td>
-      <td>1TDSPV</td>
-      <td><a href="https://github.com/ArthurBispo00" target="_blank">GitHub Arthur</a></td>
-      <td>
+      <td style="padding:6px 10px;">Arthur Bispo de Lima</td>
+      <td style="text-align:center;padding:6px 10px;">557568</td>
+      <td style="text-align:center;padding:6px 10px;">1TDSPV</td>
+      <td style="padding:6px 10px;">
+        <a href="https://github.com/ArthurBispo00" target="_blank">GitHub Arthur</a>
+      </td>
+      <td style="text-align:center;padding:6px 10px;vertical-align:middle;">
         <img src="https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg"
              alt="Arthur Bispo"
-             style="width:80px;height:80px;border-radius:50%;object-fit:cover;" />
+             style="width:60px;height:60px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
     <tr>
-      <td><strong>João Paulo Moreira</strong></td>
-      <td>557808</td>
-      <td>1TDSPV</td>
-      <td><a href="https://github.com/joao1015" target="_blank">GitHub João Paulo</a></td>
-      <td>
+      <td style="padding:6px 10px;">João Paulo Moreira</td>
+      <td style="text-align:center;padding:6px 10px;">557808</td>
+      <td style="text-align:center;padding:6px 10px;">1TDSPV</td>
+      <td style="padding:6px 10px;">
+        <a href="https://github.com/joao1015" target="_blank">GitHub João Paulo</a>
+      </td>
+      <td style="text-align:center;padding:6px 10px;vertical-align:middle;">
         <img src="https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz"
              alt="João Paulo"
-             style="width:80px;height:80px;border-radius:50%;object-fit:cover;" />
+             style="width:60px;height:60px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
   </tbody>
 </table>
+
 
 
 [🔝 Voltar ao topo](#)
