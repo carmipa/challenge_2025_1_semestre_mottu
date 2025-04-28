@@ -65,8 +65,7 @@
 
 ## <a name="repositorio-do-projeto"></a>📂 **Repositório**
 
-<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="18">  
-<https://github.com/carmipa/mottu-mapping>
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) 
 
 [🔝 Voltar ao topo](#)
 
