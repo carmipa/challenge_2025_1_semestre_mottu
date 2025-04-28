@@ -21,13 +21,17 @@
 
 ---
 
-<p id="projeto"><strong>Projeto:</strong> Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos</p>
+## <a name="projeto"></a>**Projeto:** Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos  
 
-<p id="grupo"><strong>Grupo:</strong> 🧠 MetaMind</p>
+---
 
-<p id="turmas-e-professores"><strong>🎓 Turmas & Professores</strong></p>
+## <a name="grupo"></a>**Grupo:** 🧠 MetaMind
 
-<p><strong>🏫 Turma:</strong> 2-TDSPV</p>
+--*
+
+## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
+
+## 🏫 Turma: 2-TDSPV
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
@@ -39,7 +43,7 @@
 | ![React](https://img.shields.io/badge/React-31B8FF?style=flat&logo=react&logoColor=white)                                 | Mobile Application Development                          | Fernando Pinéo de Abreu           |
 | ![IoT](https://img.shields.io/badge/IoT-FF9900?style=flat)                                                                 | Disruptive Architectures: IoT, IOB & Gen AI             | André tritiack de faria       |
 
-<p><strong>🏫 Turma: 2-TDSPZ</p>
+## 🏫 Turma: 2-TDSPZ
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
