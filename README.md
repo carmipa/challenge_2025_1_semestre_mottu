@@ -125,13 +125,17 @@
 
 ### 🤝 Contribuidores
 
-### 🤝 Contribuidores
-
-| Avatar                                             | GitHub                                   |
-|----------------------------------------------------|------------------------------------------|
-| <img src="https://github.com/carmipa.png" width="60">          | [carmipa](https://github.com/carmipa)               |
-| <img src="https://github.com/ArthurBispo00.png" width="60">   | [ArthurBispo00](https://github.com/ArthurBispo00)   |
-| <img src="https://github.com/joao1015.png" width="60">        | [joao1015](https://github.com/joao1015)             |
+<p align="center">
+  <a href="https://github.com/carmipa" target="_blank">
+    <img src="https://github.com/carmipa.png" width="60" alt="carmipa" />
+  </a>
+  <a href="https://github.com/ArthurBispo00" target="_blank">
+    <img src="https://github.com/ArthurBispo00.png" width="60" alt="ArthurBispo00" />
+  </a>
+  <a href="https://github.com/joao1015" target="_blank">
+    <img src="https://github.com/joao1015.png" width="60" alt="joao1015" />
+  </a>
+</p>
 
 [🔝 Voltar ao topo](#)
 
