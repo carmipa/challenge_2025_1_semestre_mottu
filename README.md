@@ -17,7 +17,8 @@
 12. [Responsabilidades](#responsabilidades)  
 13. [Premiação](#premiação)  
 14. [Matérias & Entregas](#materias-e-entregas)  
-15. [Documentação](#documentacao)  
+15. [Documentação](#documentacao)
+16. [Repositórios das matérias](#repositorios-materias)
 
 ---
 
@@ -218,4 +219,16 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 * [![PDF Completo](https://img.shields.io/badge/PDF-Completo-red?style=for-the-badge&logo=adobeacrobat&logoColor=white)](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)
 
 [🔝 Voltar ao topo](#)
+
+---
+
+## <a name="repositorios-materias"></a>📑 **Repositórios das matérias:**
+
+| Advanced Business Development with .NET  | [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| 2º Lugar  | R$ 3 000, medalha, shape e camiseta |
+| 3º Lugar  | R$ 2 000, medalha, shape e camiseta |
+
+[🔝 Voltar ao topo](#)
+
+
 
