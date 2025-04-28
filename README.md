@@ -1,6 +1,6 @@
-![Challenge 2025](https://drive.google.com/uc?export=view&id=1-Mpxt3PqS82cyg7so4cIwKFAkeh4-Ko0)
+![Challenge 2025](https://drive.google.com/file/d/1XYZiDX-1TIgX8M5a8fZGFslSe6ao9UXU/view?usp=sharing)
 
-# 🚗 **Challenge 2025 - 1º Semestre**
+# 🏍️ **Challenge 2025 - 1º Semestre**
 
 ## Índice
 1. [Projeto](#projeto)
@@ -11,6 +11,7 @@
 6. [Sobre o Projeto](#sobre-o-projeto)
 7. [Problemas Identificados](#problemas-identificados)
 8. [Matérias e Entregas](#materias-e-entregas)
+9. [Documentação e Banner do Projeto](#documentacao-e-banner-do-projeto)
 
 ---
 
@@ -127,53 +128,31 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## <a name="materias-e-entregas"></a>📚 **Matérias e Entregas**
 
-### 1. [Advanced Business Development with .NET](https://docs.microsoft.com/en-us/dotnet/core/)
+### 1. 🖥️ [Advanced Business Development with .NET](https://docs.microsoft.com/en-us/dotnet/core/)
    - **Objetivo**: Implementar uma API Restful utilizando **ASP.NET Core** com CRUD completo e integração com banco de dados **Oracle** via **EF Core**.
-   - **Requisitos**:
-     - Implementar um CRUD (GET, POST, PUT, DELETE).
-     - Retornos HTTP adequados para cada rota (ok, NotFound, BadRequest, NoContent, Created).
-     - Open API Implementada com **Swagger**, **Redoc** ou **Scalar**.
-   - **Entregas**: [Detalhes sobre a entrega da disciplina](https://docs.microsoft.com/en-us/aspnet/core/).
 
-### 2. [Compliance, Quality Assurance & Tests](https://en.wikipedia.org/wiki/Compliance_(law))
+### 2. 🛠️ [Compliance, Quality Assurance & Tests](https://en.wikipedia.org/wiki/Compliance_(law))
    - **Objetivo**: Criar um diagrama de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**.
-   - **Entregas**:
-     - Criar um pitch explicando o problema a ser resolvido.
-     - Desenho da arquitetura com as visões de negócios, sistema e tecnologia.
-   - **Requisitos**: [Visão geral sobre TOGAF](https://www.opengroup.org/togaf).
 
-### 3. [DevOps Tools & Cloud Computing](https://azure.microsoft.com/en-us/overview/devops/)
+### 3. ☁️ [DevOps Tools & Cloud Computing](https://azure.microsoft.com/en-us/overview/devops/)
    - **Objetivo**: Conteinerizar a API utilizando **Docker** e executá-la em nuvem.
-   - **Requisitos**:
-     - Implementar CRUD (GET, POST, PUT, DELETE) com integração de banco de dados Oracle.
-     - Criar scripts de **Azure CLI** e **Dockerfile**.
-   - **Entregas**: [Requisitos de DevOps](https://docs.microsoft.com/en-us/azure/devops/).
 
-### 4. [Disruptive Architectures: IoT, IOB & Generative IA](https://www.i-scoop.eu/internet-of-things-iot/)
+### 4. 🤖 [Disruptive Architectures: IoT, IOB & Generative IA](https://www.i-scoop.eu/internet-of-things-iot/)
    - **Objetivo**: Desenvolver um protótipo de IoT ou **Visão Computacional**.
-   - **Requisitos**:
-     - Criar um protótipo funcional com sensores e/ou IA para detecção de objetos.
-   - **Entregas**: [IoT e Visão Computacional](https://www.ibm.com/topics/internet-of-things).
 
-### 5. [Java Advanced](https://spring.io/projects/spring-boot)
+### 5. ☕ [Java Advanced](https://spring.io/projects/spring-boot)
    - **Objetivo**: Criar uma API **Restful** com **Spring Boot** e **Spring Data JPA**.
-   - **Requisitos**:
-     - CRUD completo com duas entidades e relacionamento entre elas.
-     - Integração com banco de dados **H2** ou **Oracle**.
-   - **Entregas**: [Spring Boot API](https://spring.io/guides/gs/rest-service/).
 
-### 6. [Mastering Relational and Non-Relational Database](https://www.oracle.com/database/)
+### 6. 💾 [Mastering Relational and Non-Relational Database](https://www.oracle.com/database/)
    - **Objetivo**: Implementar um banco de dados relacional com modelo **ER** e **normalização**.
-   - **Requisitos**:
-     - Criar tabelas com ao menos 5 registros.
-     - Realizar consultas utilizando **PL/SQL**.
-   - **Entregas**: [Documentação de bancos de dados relacionais](https://www.oracle.com/database/technologies/).
 
-### 7. [Mobile Application Development](https://reactnative.dev/)
+### 7. 📱 [Mobile Application Development](https://reactnative.dev/)
    - **Objetivo**: Criar um protótipo funcional de aplicativo móvel utilizando **React Native**.
-   - **Requisitos**:
-     - Implementar navegação entre telas e formulários com manipulação de estado.
-     - Armazenamento de dados local com **AsyncStorage**.
-   - **Entregas**: [React Native Docs](https://reactnative.dev/docs/getting-started).
+
+---
+
+## <a name="documentacao-e-banner-do-projeto"></a>📑 **Documentação e Banner do Projeto**
+
+- **[Documentação do PDF](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)**
 
 [🔝 Voltar ao topo](#)
