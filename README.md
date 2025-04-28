@@ -64,6 +64,9 @@
 [🔝 Voltar ao topo](#)
 
 ---
+
+## <a name="equipe"></a>👥 **Equipe:**
+
 <table width="100%" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
