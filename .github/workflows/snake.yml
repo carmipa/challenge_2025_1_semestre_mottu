@@ -1,25 +1,29 @@
 name: 🐍 Update Snake
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    # toda segunda-feira às 00:00 UTC (ajuste como quiser)
+    # toda segunda-feira à meia-noite UTC
     - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
-  build:
+  update-snake:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Gerar grid snake SVG
-        uses: joao1015/github-contribution-grid-snake@v1
-
+      - name: Gerar Snake SVG (dark)
+        uses: Platane/snk/svg-only@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          theme: dark              # ou light
-          output: output           # pasta onde vai salvar o .svg
+          # usa o seu usuário automaticamente
+          github_user_name: ${{ github.repository_owner }}
+          # gera somente o SVG dark no diretório `output/`
+          outputs: |
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Commit do SVG gerado
         uses: EndBug/add-and-commit@v9
