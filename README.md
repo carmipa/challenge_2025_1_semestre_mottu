@@ -75,7 +75,7 @@
 
 ---
 
-## <a name="equipe"></a>👥 **Equipe**
+## <a name="equipe"></a>👥 **👨‍💻👩‍💻 👩‍💻 Equipe de Desenvolvimento**
 
 | Nome                        | RM     | Turma   | Repositório                                                                                                    | Contato                                                                                                                       | Foto                                                                                                                       |
 |-----------------------------|--------|---------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -121,20 +121,6 @@
     src="./output/github-contribution-grid-snake-dark.svg" 
     alt="Gráfico de contribuições animado" 
   />
-</p>
-
-### 🤝 Contribuidores
-
-<p align="center">
-  <a href="https://github.com/carmipa" target="_blank">
-    <img src="https://github.com/carmipa.png" width="60" alt="carmipa" />
-  </a>
-  <a href="https://github.com/ArthurBispo00" target="_blank">
-    <img src="https://github.com/ArthurBispo00.png" width="60" alt="ArthurBispo00" />
-  </a>
-  <a href="https://github.com/joao1015" target="_blank">
-    <img src="https://github.com/joao1015.png" width="60" alt="joao1015" />
-  </a>
 </p>
 
 [🔝 Voltar ao topo](#)
