@@ -68,70 +68,11 @@
 
 ## <a name="equipe"></a>👥 **Equipe**
 
-## <a name="equipe"></a>👥 **Equipe**
-
-<table width="100%">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th width="70">RM</th>
-      <th width="70">Turma</th>
-      <th>
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="18" alt="Repositório">
-        Repositório
-      </th>
-      <th width="260">Contatos</th>
-      <th width="350">Foto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Paulo André Carminati</td>
-      <td align="center">557881</td>
-      <td align="center">1TDSPZ</td>
-      <td><a href="https://github.com/carmipa" target="_blank">carmipa</a></td>
-      <td>
-        <a href="https://linkedin.com/in/pauloandrecarminati" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-      </td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
-             alt="Paulo André" width="200">
-      </td>
-    </tr>
-    <tr>
-      <td>Arthur Bispo de Lima</td>
-      <td align="center">557568</td>
-      <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/ArthurBispo00" target="_blank">ArthurBispo00</a></td>
-      <td>
-        <a href="https://linkedin.com/in/arthur-bispo" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-      </td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
-             alt="Arthur Bispo" width="200">
-      </td>
-    </tr>
-    <tr>
-      <td>João Paulo Moreira</td>
-      <td align="center">557808</td>
-      <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/joao1015" target="_blank">joao1015</a></td>
-      <td>
-        <a href="https://linkedin.com/in/joao-paulo-moreira" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-      </td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
-             alt="João Paulo" width="200">
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Nome                        | RM     | Turma   | Repositório                                                                                                    | Contato                                                                                                                       | Foto                                                                                                                       |
+|-----------------------------|--------|---------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Paulo André Carminati       | 557881 | 1TDSPZ  | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/carmipa)         | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/pauloandrecarminati) | <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5" alt="Paulo André" width="100"> |
+| Arthur Bispo de Lima        | 557568 | 1TDSPV  | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/ArthurBispo00) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/arthur-bispo)     | <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc" alt="Arthur Bispo" width="100">         |
+| João Paulo Moreira          | 557808 | 1TDSPV  | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/joao1015)   | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/joao-paulo-moreira) | <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq" alt="João Paulo" width="100">        |
 
 ---
 
