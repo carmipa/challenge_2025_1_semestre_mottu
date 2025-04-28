@@ -70,11 +70,11 @@
 <table style="width:100%; table-layout:fixed; border-collapse:collapse;">
   <thead>
     <tr>
-      <th style="text-align:left; padding:8px;">Nome</th>
-      <th style="text-align:center; padding:8px; width:80px;">RM</th>
-      <th style="text-align:center; padding:8px; width:80px;">Turma</th>
-      <th style="text-align:left; padding:8px;">GitHub</th>
-      <th style="text-align:center; padding:8px; width:90px;">Foto</th>
+      <th style="text-align:left;  padding:8px;">Nome</th>
+      <th style="text-align:center;padding:8px;width:80px;">RM</th>
+      <th style="text-align:center;padding:8px;width:80px;">Turma</th>
+      <th style="text-align:left;  padding:8px;">GitHub</th>
+      <th style="text-align:center;padding:8px;width:120px;">Foto</th>
     </tr>
   </thead>
   <tbody>
@@ -86,7 +86,7 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ"
              alt="Paulo André"
-             style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+             style="width:100px;height:100px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg"
              alt="Arthur Bispo"
-             style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+             style="width:100px;height:100px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
     <tr>
@@ -108,13 +108,11 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz"
              alt="João Paulo"
-             style="width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+             style="width:100px;height:100px;border-radius:50%;object-fit:cover;" />
       </td>
     </tr>
   </tbody>
 </table>
-
-
 
 
 [🔝 Voltar ao topo](#)
