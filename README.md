@@ -31,7 +31,7 @@
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
-- ## 🏫 Turma: 2-TDSPV
+## 🏫 Turma: 2-TDSPV
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
@@ -43,7 +43,7 @@
 | ![React](https://img.shields.io/badge/React-31B8FF?style=flat&logo=react&logoColor=white)                                 | Mobile Application Development                          | Fernando Pinéo de Abreu           |
 | ![IoT](https://img.shields.io/badge/IoT-FF9900?style=flat)                                                                 | Disruptive Architectures: IoT, IOB & Gen AI             | André tritiack de faria       |
 
-- ## 🏫 Turma: 2-TDSPZ
+## 🏫 Turma: 2-TDSPZ
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
@@ -57,10 +57,11 @@
 
 
 ### ⭐ Coordenadores do Projeto
+
 | Turma | Professor |
 |-------|-----------|
-| TDSPV |🧑‍🏫 [Karina Costa](https://github.com/karinacosta) |
-| TDSPZ |🧑‍🏫 [Thiago Yamamoto](https://github.com/thiagoyamamoto) |
+| 2-TDSPV |🧑‍🏫 [Karina Costa](https://github.com/karinacosta) |
+| 2-TDSPZ |🧑‍🏫 [Thiago Yamamoto](https://github.com/thiagoyamamoto) |
 
 [🔝 Voltar ao topo](#)
 
@@ -75,7 +76,7 @@
 
 ---
 
-## <a name="equipe"></a>👥 **👨‍💻👩‍💻 👩‍💻 Equipe de Desenvolvimento**
+## <a name="equipe"></a>👥 **👨‍💻👩‍💻👩‍💻 Equipe de Desenvolvimento**
 
 | Nome                        | RM     | Turma   | Repositório                                                                                                    | Contato                                                                                                                       | Foto                                                                                                                       |
 |-----------------------------|--------|---------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
