@@ -1,100 +1,121 @@
-# 🚀 Challenge 2025 - 1º Semestre
+![Challenge 2025](https://drive.google.com/uc?export=view&id=1-Mpxt3PqS82cyg7so4cIwKFAkeh4-Ko0)
 
-# Participantes:
+# 🚗 **Challenge 2025 - 1º Semestre**
 
+## Índice
+1. [Projeto](#projeto)
+2. [Grupo](#grupo)
+3. [Turmas e Professores](#turmas-e-professores)
+4. [Repositório do Projeto](#repositorio-do-projeto)
+5. [Equipe](#equipe)
+6. [Sobre o Projeto](#sobre-o-projeto)
+7. [Problemas Identificados](#problemas-identificados)
 
+---
 
-Este repositório contém os projetos e entregas do **Challenge FIAP 2025 - 1º Semestre**, com foco em desenvolvimento de soluções inovadoras e tecnológicas.
+## <a name="projeto"></a>**Projeto:** Mottu - Mapeamento Inteligente do Pátio e Gestão das Motos  
 
-## 📂 Estrutura do Repositório
+---
 
-- **Mottu** - Desafio de mapeamento inteligente do pátio e gestão das motos.
-- **Entregas por Sprint** - Entregas organizadas por sprints, com foco nas disciplinas de .NET, Java, IoT e outras tecnologias.
+## <a name="grupo"></a>**Grupo:** [MetaMind](#)
 
-## 🌐 Descrição Geral do Projeto
+---
 
-O projeto é voltado para a **Mottu**, uma startup brasileira que oferece soluções de mobilidade através do aluguel de motos, com presença no Brasil e no México. O desafio envolve otimizar a gestão e localização das motos nos pátios das filiais utilizando tecnologias inovadoras como **Visão Computacional** e **IoT**.
+## 🎓 **Turmas e Professores:**
 
-## 🎯 Objetivos do Desafio
+- **TDSPV**
+- **TDSPZ**
 
-- **Mapeamento e Monitoramento**: Criar uma solução para mapear e monitorar as motos dentro dos pátios de mais de 100 filiais, utilizando ferramentas inovadoras.
-- **Escalabilidade**: A solução deve ser escalável para filiais em diferentes regiões e com diversos layouts de pátios.
-- **Tecnologias Requeridas**: Uso de visão computacional para identificar motos e integrar sensores IoT para informações adicionais.
+### Professores:
+- **TDSPV:** [Karina Costa](https://github.com/karinacosta)
+- **TDSPZ:** [Thiago Yamamoto](https://github.com/thiagoyamamoto)
 
-## ⚙️ O Que é Esperado da Solução
+[🔝 Voltar ao topo](#)
 
-A solução deve incluir, mas não se limitar a:
+---
 
-- **Visão Computacional**: Identificação de motos por imagem ou vídeo e rastreamento em tempo real.
-- **Modelo Digital do Pátio**: Visualização interativa da disposição das motos.
-- **Desenvolvimento de Interface**: Interface web ou aplicativo para fácil visualização e controle da localização das motos.
-- **Integração IoT**: Conectar os sensores IoT das motos para atualizações automáticas da localização e status.
+## <a name="repositorio-do-projeto"></a>📂 **Repositório do Projeto:**
 
-## 📝 Critérios de Avaliação
+[Mottu - Repositório](https://github.com/carmipa/mottu-mapping)
 
-Os projetos serão avaliados com base em:
+[🔝 Voltar ao topo](#)
 
-- **Precisão do Mapeamento**: Capacidade de identificar e mapear a localização das motos.
-- **Eficiência da Solução**: Tempo de resposta e escalabilidade.
-- **Facilidade de Uso**: Interface intuitiva e acessível.
-- **Criatividade e Inovação**: Uso de tecnologias inovadoras.
-- **Viabilidade de Implementação**: Considerações práticas sobre custos e manutenção.
+---
 
-## 🏆 Premiação
+## <a name="equipe"></a>👥 **Equipe:**
+
+| Nome                      | RM     | Turma  | GitHub                                           | Foto                                                                                         |
+| ------------------------- | ------ | ------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| **Paulo André Carminati** | 557881 | 1TDSPZ | [GitHub Paulo André](https://github.com/carmipa) | ![Paulo André](https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ) |
+
+[🔝 Voltar ao topo](#)
+
+---
+
+## <a name="sobre-o-projeto"></a>📑 **Sobre o Projeto:**
+
+### 💡 **Gestão de Frota e Mapeamento Inteligente**  
+O projeto visa aprimorar a gestão de frotas de motos em pátios de múltiplas filiais, utilizando tecnologias de **Visão Computacional** e **IoT** para otimizar o mapeamento e monitoramento das motos em tempo real.
+
+### 🛠 **Funcionalidades do Sistema**  
+- **Identificação precisa das motos** utilizando visão computacional.
+- **Modelo digital do pátio** mostrando em tempo real a disposição das motos.
+- **Interface visual intuitiva** para visualização em tempo real.
+
+### 🚀 **Escalabilidade**  
+A solução é escalável para ser implementada em mais de 100 filiais no Brasil e no México, com diferentes layouts de pátios.
+
+[🔝 Voltar ao topo](#)
+
+---
+
+## <a name="problemas-identificados"></a>🚩 **Problemas Identificados:**
+
+1. **Dificuldade no mapeamento preciso das motos** dentro dos pátios, afetando a eficiência operacional.
+   
+2. **Falta de visibilidade em tempo real** sobre a disposição das motos, tornando a operação menos ágil e mais sujeita a erros humanos.
+
+## Tecnologias e Bibliotecas Utilizadas
+
+1. **Visão Computacional** para detecção e rastreamento de motos.
+2. **IoT** para integrar sensores nas motos e atualizar automaticamente sua localização.
+3. **Spring Boot** para backend e criação da API Restful.
+
+## Cronograma de Entregas
+
+- **Até 23/05/2025**: Entrega da Sprint 1.
+- **Até 30/05/2025**: Feedback das entregas da Sprint 1.
+
+[🔝 Voltar ao topo](#)
+
+---
+
+## 🎯 **Objetivos do Desafio**
+
+- **Precisão de Identificação**: Garantir que as motos sejam identificadas corretamente dentro dos pátios.
+- **Escalabilidade**: A solução deve ser capaz de ser aplicada nas diversas filiais, independentemente do tamanho e formato dos pátios.
+- **Tecnologias Inovadoras**: Usar tecnologias de **Visão Computacional** e **IoT** para otimizar os processos.
+
+---
+
+## 🧑‍💻 **Responsabilidades**
+
+### Alunos
+- Cumprir com as entregas conforme os requisitos do desafio.
+- Gerenciar o planejamento e prazos do grupo.
+
+### Professores
+- Orientar o desenvolvimento do projeto e garantir o cumprimento dos critérios de avaliação.
+
+### Scrum Master
+- Facilitar a comunicação entre os alunos e os professores da Mottu.
+
+---
+
+## 🏆 **Premiação**
 
 - **1º Lugar**: R$ 5.000,00, medalha, shape e camiseta.
 - **2º Lugar**: R$ 3.000,00, medalha, shape e camiseta.
 - **3º Lugar**: R$ 2.000,00, medalha, shape e camiseta.
 
-## 📅 Cronograma - 1º Semestre
-
-- **14/04**: Abertura do Challenge com a Mottu.
-- **Até 23/05**: Entrega da Sprint 1.
-- **Até 30/05**: Feedback das entregas Sprint 1.
-
-## 🧑‍💻 Responsabilidades
-
-### Alunos
-- Cumprir com as entregas e requisitos definidos.
-- Gerenciar o grupo e prazos.
-
-### Professores
-- Orientar os alunos e manter os requisitos atualizados.
-
-### Scrum Master
-- Facilitar a comunicação entre alunos, professores e a empresa parceira.
-
-## 🔧 Entregas e Avaliação
-
-- **Entregas por Sprint**: Cada entrega será realizada conforme as disciplinas do projeto. Cada sprint terá seus entregáveis, especificados pelos respectivos professores.
-
-## 📚 Entregas da Sprint 1
-
-### 1. **Advanced Business Development with .NET**
-   - Implementar uma API Restful utilizando **ASP.NET Core** com CRUD completo e integração com banco de dados Oracle via **EF Core**.
-
-### 2. **Compliance, Quality Assurance & Tests**
-   - Criar diagramas de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**.
-
-### 3. **DevOps Tools & Cloud Computing**
-   - Conteinerização da API e execução em nuvem, com integração de banco de dados e documentação no **GitHub**.
-
-### 4. **Disruptive Architectures: IoT, IOB & Generative IA**
-   - Desenvolvimento de um protótipo funcional utilizando **IoT** ou **Visão Computacional** para a solução proposta.
-
-### 5. **Java Advanced**
-   - Criar uma **API Rest** utilizando **Spring Web** com **Spring Data JPA**, integração com banco de dados **H2** ou **Oracle**, e boas práticas de design **REST**.
-
-### 6. **Mastering Relational and Non-Relational Database**
-   - Implementação de banco de dados relacional e PL/SQL, com diagramação e consulta de dados.
-
-### 7. **Mobile Application Development**
-   - Criar um protótipo funcional de aplicativo em **React Native** para o mapeamento inteligente do pátio e gestão das motos.
-
-## 📂 Repositório
-
-- **GitHub:** [Acesse aqui](https://github.com/carmipa/challenge_2025_1_semestre_mottu)
-
----
-
-Contribuições e feedbacks são bem-vindos! 
+[🔝 Voltar ao topo](#)
