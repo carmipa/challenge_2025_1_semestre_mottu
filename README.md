@@ -2,7 +2,7 @@
 
 # 🏍️ **Challenge 2025 – 1º Semestre**
 
-## Índice
+## 📑 Índice
 1. [Projeto](#projeto)  
 2. [Grupo](#grupo)  
 3. [Turmas e Professores](#turmas-e-professores)  
@@ -25,13 +25,13 @@
 
 ---
 
-## <a name="grupo"></a>**Grupo:** **MetaMind**
+## <a name="grupo"></a>**Grupo:** ** 🧠 MetaMind**
 
 ---
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
-- **TDSPV**
+- **🏫 2-TDSPV**
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
@@ -43,7 +43,7 @@
 | ![React](https://img.shields.io/badge/React-31B8FF?style=flat&logo=react&logoColor=white)                                 | Mobile Application Development                          | Fernando Pinéo de Abreu           |
 | ![IoT](https://img.shields.io/badge/IoT-FF9900?style=flat)                                                                 | Disruptive Architectures: IoT, IOB & Gen AI             | André tritiack de faria       |
 
-- **TDSPZ**
+- **🏫 2-TDSPZ**
 
 | Badge                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
