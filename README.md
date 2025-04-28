@@ -10,6 +10,7 @@
 5. [Equipe](#equipe)
 6. [Sobre o Projeto](#sobre-o-projeto)
 7. [Problemas Identificados](#problemas-identificados)
+8. [Matérias e Entregas](#materias-e-entregas)
 
 ---
 
@@ -44,9 +45,11 @@
 
 ## <a name="equipe"></a>👥 **Equipe:**
 
-| Nome                      | RM     | Turma  | GitHub                                           | Foto                                                                                         |
-| ------------------------- | ------ | ------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| **Paulo André Carminati** | 557881 | 1TDSPZ | [GitHub Paulo André](https://github.com/carmipa) | ![Paulo André](https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ) |
+| Nome                      | RM     | Turma  | GitHub                                            | Foto                                                                                          |
+| ------------------------- | ------ | ------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Paulo André Carminati** | 557881 | 1TDSPZ | [GitHub Paulo André](https://github.com/carmipa)  | ![Paulo André](https://drive.google.com/uc?export=view&id=19bA5l9huX-K2Kkr7uHWHl4tjGjR6ssSZ)  |
+| **Arthur Bispo de Lima**  | 557568 | 1TDSPV | [GitHub Arthur](https://github.com/ArthurBispo00) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
+| **João Paulo Moreira**    | 557808 | 1TDSPV | [GitHub João Paulo](https://github.com/joao1015)  | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz)   |
 
 [🔝 Voltar ao topo](#)
 
@@ -117,5 +120,60 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 - **1º Lugar**: R$ 5.000,00, medalha, shape e camiseta.
 - **2º Lugar**: R$ 3.000,00, medalha, shape e camiseta.
 - **3º Lugar**: R$ 2.000,00, medalha, shape e camiseta.
+
+[🔝 Voltar ao topo](#)
+
+---
+
+## <a name="materias-e-entregas"></a>📚 **Matérias e Entregas**
+
+### 1. [Advanced Business Development with .NET](https://docs.microsoft.com/en-us/dotnet/core/)
+   - **Objetivo**: Implementar uma API Restful utilizando **ASP.NET Core** com CRUD completo e integração com banco de dados **Oracle** via **EF Core**.
+   - **Requisitos**:
+     - Implementar um CRUD (GET, POST, PUT, DELETE).
+     - Retornos HTTP adequados para cada rota (ok, NotFound, BadRequest, NoContent, Created).
+     - Open API Implementada com **Swagger**, **Redoc** ou **Scalar**.
+   - **Entregas**: [Detalhes sobre a entrega da disciplina](https://docs.microsoft.com/en-us/aspnet/core/).
+
+### 2. [Compliance, Quality Assurance & Tests](https://en.wikipedia.org/wiki/Compliance_(law))
+   - **Objetivo**: Criar um diagrama de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**.
+   - **Entregas**:
+     - Criar um pitch explicando o problema a ser resolvido.
+     - Desenho da arquitetura com as visões de negócios, sistema e tecnologia.
+   - **Requisitos**: [Visão geral sobre TOGAF](https://www.opengroup.org/togaf).
+
+### 3. [DevOps Tools & Cloud Computing](https://azure.microsoft.com/en-us/overview/devops/)
+   - **Objetivo**: Conteinerizar a API utilizando **Docker** e executá-la em nuvem.
+   - **Requisitos**:
+     - Implementar CRUD (GET, POST, PUT, DELETE) com integração de banco de dados Oracle.
+     - Criar scripts de **Azure CLI** e **Dockerfile**.
+   - **Entregas**: [Requisitos de DevOps](https://docs.microsoft.com/en-us/azure/devops/).
+
+### 4. [Disruptive Architectures: IoT, IOB & Generative IA](https://www.i-scoop.eu/internet-of-things-iot/)
+   - **Objetivo**: Desenvolver um protótipo de IoT ou **Visão Computacional**.
+   - **Requisitos**:
+     - Criar um protótipo funcional com sensores e/ou IA para detecção de objetos.
+   - **Entregas**: [IoT e Visão Computacional](https://www.ibm.com/topics/internet-of-things).
+
+### 5. [Java Advanced](https://spring.io/projects/spring-boot)
+   - **Objetivo**: Criar uma API **Restful** com **Spring Boot** e **Spring Data JPA**.
+   - **Requisitos**:
+     - CRUD completo com duas entidades e relacionamento entre elas.
+     - Integração com banco de dados **H2** ou **Oracle**.
+   - **Entregas**: [Spring Boot API](https://spring.io/guides/gs/rest-service/).
+
+### 6. [Mastering Relational and Non-Relational Database](https://www.oracle.com/database/)
+   - **Objetivo**: Implementar um banco de dados relacional com modelo **ER** e **normalização**.
+   - **Requisitos**:
+     - Criar tabelas com ao menos 5 registros.
+     - Realizar consultas utilizando **PL/SQL**.
+   - **Entregas**: [Documentação de bancos de dados relacionais](https://www.oracle.com/database/technologies/).
+
+### 7. [Mobile Application Development](https://reactnative.dev/)
+   - **Objetivo**: Criar um protótipo funcional de aplicativo móvel utilizando **React Native**.
+   - **Requisitos**:
+     - Implementar navegação entre telas e formulários com manipulação de estado.
+     - Armazenamento de dados local com **AsyncStorage**.
+   - **Entregas**: [React Native Docs](https://reactnative.dev/docs/getting-started).
 
 [🔝 Voltar ao topo](#)
