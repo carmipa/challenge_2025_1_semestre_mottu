@@ -27,7 +27,7 @@
 
 ## <a name="grupo"></a>**Grupo:** 🧠 MetaMind
 
---*
+---
 
 ## 🎓 <a name="turmas-e-professores"></a>**Turmas & Professores**
 
