@@ -44,7 +44,7 @@
 
 ## 🏫 Turma: 2-TDSPV
 
-| Badge                                                                                                                     | Matéria                                                 | Professor                         |
+| Tecnolôgias                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)                                  | Advanced Business Development with .NET                 | Alex Sander Resende de Deus              |
 | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)                                    | Java Advanced                                           | Marcel Stefan Wagner          |
@@ -56,7 +56,7 @@
 
 ## 🏫 Turma: 2-TDSPZ
 
-| Badge                                                                                                                     | Matéria                                                 | Professor                         |
+| Tecnolôgias                                                                                                                     | Matéria                                                 | Professor                         |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)                                  | Advanced Business Development with .NET                 | Mauricio V. de Moura              |
 | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)                                    | Java Advanced                                           | João Carlos Lima e Silva          |
@@ -215,7 +215,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ### 📚 Matérias & Entregas
 
-| Badge | Disciplina | Entregável |
+| Tecnolôgia | Disciplina | Entregável |
 |-------|------------|------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) | Advanced Business Development with .NET | API **ASP.NET Core** + Oracle (**EF Core**) |
 | ![TOGAF](https://img.shields.io/badge/TOGAF%20%2F%20ARCHIMATE-34495E?style=for-the-badge&logoColor=white) | Compliance, QA & Tests | Diagrama **TOGAF® / ARCHIMATE®** |
