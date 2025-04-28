@@ -27,17 +27,26 @@
 
 - **TDSPV**
 
-- **TDSPZ**
-| Matéria                                                         | Professor                              |
-|-----------------------------------------------------------------|----------------------------------------|
-| Advanced Business Development with .NET                         | Mauricio Viana de Moura                |
-| Java Advanced                                                   | João Carlos Lima e Silva               |
-| Mastering Relational and Non-Relational Database                | Milton Goya                            |
-| Compliance, Quality Assurance & Tests                           | Felipe Braz Farias Santos              |
-| DevOps Tools & Cloud Computing                                  | Marcus Martins Leite                   |
-| Mobile Application Development                                  | Fernando Pinéo de Abreu                |
-| Disruptive Architectures: IoT, IOB & Generative IA              | Alberto Messias da Costa Souza         |
-
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" align="center">TDSPZ</th>
+    </tr>
+    <tr>
+      <th align="left">Matéria</th>
+      <th align="left">Professor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Advanced Business Development with .NET</td><td>Mauricio Viana de Moura</td></tr>
+    <tr><td>Java Advanced</td><td>João Carlos Lima e Silva</td></tr>
+    <tr><td>Mastering Relational and Non-Relational Database</td><td>Milton Goya</td></tr>
+    <tr><td>Compliance, Quality Assurance &amp; Tests</td><td>Felipe Braz Farias Santos</td></tr>
+    <tr><td>DevOps Tools &amp; Cloud Computing</td><td>Marcus Martins Leite</td></tr>
+    <tr><td>Mobile Application Development</td><td>Fernando Pinéo de Abreu</td></tr>
+    <tr><td>Disruptive Architectures: IoT, IOB &amp; Generative IA</td><td>Alberto Messias da Costa Souza</td></tr>
+  </tbody>
+</table>
 
 ### Professores:
 - **TDSPV:** [Karina Costa](https://github.com/karinacosta)
