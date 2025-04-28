@@ -1,4 +1,4 @@
-![Challenge 2025](https://drive.google.com/file/d/1XYZiDX-1TIgX8M5a8fZGFslSe6ao9UXU/view?usp=sharing)
+![Challenge 2025](https://drive.google.com/uc?export=view&id=1XYZiDX-1TIgX8M5a8fZGFslSe6ao9UXU)
 
 # 🏍️ **Challenge 2025 - 1º Semestre**
 
