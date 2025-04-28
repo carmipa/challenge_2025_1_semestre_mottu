@@ -33,13 +33,13 @@
 
 | Badge                                                                                                                  | Matéria                                                 | Professor                         |
 |------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------|
-| !(https://img.shields.io/badge/Advanced%20Business%20Development%20with%20.NET-512BD4?style=flat&logo=dotnet&logoColor=white) | Advanced Business Development with .NET                 | Mauricio V. de Moura              |
-| !(https://img.shields.io/badge/Java%20Advanced-ED8B00?style=flat&logo=java&logoColor=white)              | Java Advanced                                           | João Carlos Lima e Silva          |
-| !(https://img.shields.io/badge/Mastering%20Relational%20%26%20Non-Relational%20DB-0C4A6E?style=flat&logo=postgresql&logoColor=white) | Mastering Relational & Non-Relational DB                | Milton Goya                       |
-| !(https://img.shields.io/badge/Compliance%2C%20QA%20%26%20Tests-34495E?style=flat)               | Compliance, QA & Tests                                  | Felipe B. F. Santos               |
-| !(https://img.shields.io/badge/DevOps%20Tools%20%26%20Cloud%20Computing-0078D4?style=flat&logo=azure&logoColor=white) | DevOps Tools & Cloud Computing                          | Marcus Martins Leite              |
-| !(https://img.shields.io/badge/Mobile%20Application%20Development-31B8FF?style=flat&logo=react&logoColor=white) | Mobile Application Development                          | Fernando Pinéo de Abreu           |
-| !(https://img.shields.io/badge/Disruptive%20Architectures%3A%20IoT%2C%20IOB%20%26%20Gen%20AI-FF9900?style=flat) | Disruptive Architectures: IoT, IOB & Gen AI             | Alberto Messias da C. Souza       |
+| (https://img.shields.io/badge/Advanced%20Business%20Development%20with%20.NET-512BD4?style=flat&logo=dotnet&logoColor=white) | Advanced Business Development with .NET                 | Mauricio V. de Moura              |
+| (https://img.shields.io/badge/Java%20Advanced-ED8B00?style=flat&logo=java&logoColor=white)              | Java Advanced                                           | João Carlos Lima e Silva          |
+| (https://img.shields.io/badge/Mastering%20Relational%20%26%20Non-Relational%20DB-0C4A6E?style=flat&logo=postgresql&logoColor=white) | Mastering Relational & Non-Relational DB                | Milton Goya                       |
+| (https://img.shields.io/badge/Compliance%2C%20QA%20%26%20Tests-34495E?style=flat)               | Compliance, QA & Tests                                  | Felipe B. F. Santos               |
+| (https://img.shields.io/badge/DevOps%20Tools%20%26%20Cloud%20Computing-0078D4?style=flat&logo=azure&logoColor=white) | DevOps Tools & Cloud Computing                          | Marcus Martins Leite              |
+| (https://img.shields.io/badge/Mobile%20Application%20Development-31B8FF?style=flat&logo=react&logoColor=white) | Mobile Application Development                          | Fernando Pinéo de Abreu           |
+| (https://img.shields.io/badge/Disruptive%20Architectures%3A%20IoT%2C%20IOB%20%26%20Gen%20AI-FF9900?style=flat) | Disruptive Architectures: IoT, IOB & Gen AI             | Alberto Messias da C. Souza       |
 
 
 ### ⭐ Coordenadores do Projeto
