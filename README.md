@@ -21,17 +21,6 @@
 
 ---
 
-## 🐍 Meu Gráfico de Contribuições
-
-<p align="center">
-  <img 
-    src="./output/github-contribution-grid-snake-dark.svg" 
-    alt="Gráfico de contribuições animado" 
-  />
-</p>
-
----
-
 ## <a name="projeto"></a>**Projeto:** Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos  
 
 ---
@@ -123,6 +112,15 @@
 </p>
 <p>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=carmipa&theme=chartreuse-dark&hide_border=true"/>
+</p>
+
+## 🐍 Meu Gráfico de Contribuições
+
+<p align="center">
+  <img 
+    src="./output/github-contribution-grid-snake-dark.svg" 
+    alt="Gráfico de contribuições animado" 
+  />
 </p>
 
 ### 🤝 Contribuidores
