@@ -245,10 +245,6 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ### 📚 Matérias & Entregas
 
-### 📚 Matérias & Entregas
-
-### 📚 Matérias & Entregas
-
 | Badge | Disciplina | Entregável |
 |-------|------------|------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) | Advanced Business Development with .NET | API **ASP.NET Core** + Oracle (**EF Core**) |
@@ -264,6 +260,7 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## <a name="documentacao"></a>📑 **Documentação**
 
-* [PDF Completo](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)
+* [![PDF Completo](https://img.shields.io/badge/PDF-Completo-red?style=for-the-badge&logo=adobeacrobat&logoColor=white)](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)
 
 [🔝 Voltar ao topo](#)
+
