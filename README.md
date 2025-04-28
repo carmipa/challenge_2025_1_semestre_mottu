@@ -23,7 +23,7 @@
 ---
 ## 📑 **Repositórios das Matérias:**
 
-| Badge | Matéria |
+| Matéria | Repositório |
 |-------|---------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet) | [Advanced Business Development with .NET](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
 | ![Compliance](https://img.shields.io/badge/Compliance%2C%20QA%20%26%20Tests-34495E?style=flat-square) | [Compliance, Quality Assurance & Tests](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Compliance_Quality_Assurance_Tests) |
