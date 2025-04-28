@@ -66,13 +66,18 @@
 
 ## <a name="equipe"></a>👥 **Equipe:**
 
+<!-- link CDN do ícone GitHub (Material Symbols) -->
+<!-- fonte: https://github.com/google/material-design-icons/blob/master/LICENSE -->
 <table width="100%" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
       <th align="left">Nome</th>
       <th align="center" width="80">RM</th>
       <th align="center" width="80">Turma</th>
-      <th align="left">🐙 GitHub</th>
+      <th align="left">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/github/materialsymbolssharp/github_24px.svg"
+             alt="GitHub" width="18" style="vertical-align:middle"> GitHub
+      </th>
       <th align="center" width="380">Foto</th>
     </tr>
   </thead>
@@ -81,25 +86,50 @@
       <td>Paulo André Carminati</td>
       <td align="center">557881</td>
       <td align="center">1TDSPZ</td>
-      <td><a href="https://github.com/carmipa" target="_blank">🐙 carmipa</a></td>
-      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5" alt="Paulo André" width="350"></td>
+      <td>
+        <a href="https://github.com/carmipa" target="_blank">
+          <img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/github/materialsymbolssharp/github_24px.svg"
+               alt="GitHub" width="18" style="vertical-align:middle"> carmipa
+        </a>
+      </td>
+      <td align="center">
+        <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
+             alt="Paulo André" width="350">
+      </td>
     </tr>
     <tr>
       <td>Arthur Bispo de Lima</td>
       <td align="center">557568</td>
       <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/ArthurBispo00" target="_blank">🐙 ArthurBispo00</a></td>
-      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc" alt="Arthur Bispo" width="350"></td>
+      <td>
+        <a href="https://github.com/ArthurBispo00" target="_blank">
+          <img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/github/materialsymbolssharp/github_24px.svg"
+               alt="GitHub" width="18" style="vertical-align:middle"> ArthurBispo00
+        </a>
+      </td>
+      <td align="center">
+        <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
+             alt="Arthur Bispo" width="350">
+      </td>
     </tr>
     <tr>
       <td>João Paulo Moreira</td>
       <td align="center">557808</td>
       <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/joao1015" target="_blank">🐙 joao1015</a></td>
-      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq" alt="João Paulo" width="350"></td>
+      <td>
+        <a href="https://github.com/joao1015" target="_blank">
+          <img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/github/materialsymbolssharp/github_24px.svg"
+               alt="GitHub" width="18" style="vertical-align:middle"> joao1015
+        </a>
+      </td>
+      <td align="center">
+        <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
+             alt="João Paulo" width="350">
+      </td>
     </tr>
   </tbody>
 </table>
+
 
 [🔝 Voltar ao topo](#)
 
