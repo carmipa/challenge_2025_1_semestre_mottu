@@ -24,7 +24,7 @@
 
 ## 📑 **Repositórios das Matérias:**
 
-| Badge | Matéria | Repositório |
+| Tecnolôgia | Matéria | Endereço do repositório |
 |-------|---------|-------------|
 | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet) | Advanced Business Development with .NET | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
 | ![Compliance](https://img.shields.io/badge/Compliance-34495E?style=flat-square) | Compliance, Quality Assurance & Tests | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Compliance_Quality_Assurance_Tests) |
@@ -32,14 +32,8 @@
 | ![IoT](https://img.shields.io/badge/IoT-FF9900?style=flat-square&logo=iota) | Disruptive Architectures: IoT, IOB & Generative IA | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Disruptive_Architectures_IoT_IOB_Generative_IA) |
 | ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=springboot) | Java Advanced | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced) |
 | ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle) | Mastering Relational and Non-Relational Database | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mastering_Relational_and_Non_Relational_Database) |
-| ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react) | Mobile Application Development | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react) | Mobile Application Development | [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mobile_Application_Development) |
 
-
-
-
----
-
-[🔝 Voltar ao topo](#)
 ---
 
 ## <a name="projeto"></a>**Projeto:** Mottu – Mapeamento Inteligente do Pátio e Gestão das Motos  
