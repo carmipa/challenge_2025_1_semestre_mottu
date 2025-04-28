@@ -65,8 +65,6 @@
 
 ---
 
-## <a name="equipe"></a>👥 **Equipe:**
-
 <table style="width:100%; table-layout:fixed; border-collapse:collapse;">
   <thead>
     <tr>
@@ -74,7 +72,7 @@
       <th style="text-align:center;padding:8px;width:80px;">RM</th>
       <th style="text-align:center;padding:8px;width:80px;">Turma</th>
       <th style="text-align:left;  padding:8px;">GitHub</th>
-      <th style="text-align:center;padding:8px;width:220px;">Foto</th>
+      <th style="text-align:center;padding:8px;width:170px;">Foto</th>
     </tr>
   </thead>
   <tbody>
@@ -86,7 +84,7 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
              alt="Paulo André"
-             style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
+             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
       </td>
     </tr>
     <tr>
@@ -97,7 +95,7 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
              alt="Arthur Bispo"
-             style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
+             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
       </td>
     </tr>
     <tr>
@@ -108,11 +106,12 @@
       <td style="text-align:center;">
         <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
              alt="João Paulo"
-             style="width:200px;height:200px;border-radius:50%;object-fit:cover;" />
+             style="width:150px; height:150px; border-radius:50%; object-fit:cover;" />
       </td>
     </tr>
   </tbody>
 </table>
+
 
 [🔝 Voltar ao topo](#)
 
