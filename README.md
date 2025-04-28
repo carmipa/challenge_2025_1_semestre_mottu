@@ -48,10 +48,9 @@
   </tbody>
 </table>
 
-
 ### ⭐ **Professores coordenadores do projeto:**
-- **TDSPV:** 🧑‍🏫 [Karina Costa](https://github.com/karinacosta)
-- **TDSPZ:** 🧑‍🏫 [Thiago Yamamoto](https://github.com/thiagoyamamoto)
+- **TDSPV:** 🐙🧑‍🏫 [Karina Costa](https://github.com/karinacosta)
+- **TDSPZ:** 🐙🧑‍🏫 [Thiago Yamamoto](https://github.com/thiagoyamamoto)
 
 [🔝 Voltar ao topo](#)
 
@@ -59,7 +58,7 @@
 
 ## <a name="repositorio-do-projeto"></a>📂 **Repositório do Projeto:**
 
-[Mottu - Repositório](https://github.com/carmipa/mottu-mapping)
+🐙 **Mottu – Repositório:** <https://github.com/carmipa/mottu-mapping>
 
 [🔝 Voltar ao topo](#)
 
@@ -73,7 +72,7 @@
       <th align="left">Nome</th>
       <th align="center" width="80">RM</th>
       <th align="center" width="80">Turma</th>
-      <th align="left">GitHub</th>
+      <th align="left">🐙 GitHub</th>
       <th align="center" width="380">Foto</th>
     </tr>
   </thead>
@@ -82,35 +81,25 @@
       <td>Paulo André Carminati</td>
       <td align="center">557881</td>
       <td align="center">1TDSPZ</td>
-      <td><a href="https://github.com/carmipa" target="_blank">GitHub&nbsp;Paulo&nbsp;André</a></td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5"
-             alt="Paulo André" width="350">
-      </td>
+      <td><a href="https://github.com/carmipa" target="_blank">🐙 carmipa</a></td>
+      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1YeoCXRTEnQAWQYlob_C1OE_AKlMcJ8E5" alt="Paulo André" width="350"></td>
     </tr>
     <tr>
       <td>Arthur Bispo de Lima</td>
       <td align="center">557568</td>
       <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/ArthurBispo00" target="_blank">GitHub&nbsp;Arthur</a></td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc"
-             alt="Arthur Bispo" width="350">
-      </td>
+      <td><a href="https://github.com/ArthurBispo00" target="_blank">🐙 ArthurBispo00</a></td>
+      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1sSSuuBP1aRZS2cY-2yrOy0dlknXZ78Sc" alt="Arthur Bispo" width="350"></td>
     </tr>
     <tr>
       <td>João Paulo Moreira</td>
       <td align="center">557808</td>
       <td align="center">1TDSPV</td>
-      <td><a href="https://github.com/joao1015" target="_blank">GitHub&nbsp;João&nbsp;Paulo</a></td>
-      <td align="center">
-        <img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq"
-             alt="João Paulo" width="350">
-      </td>
+      <td><a href="https://github.com/joao1015" target="_blank">🐙 joao1015</a></td>
+      <td align="center"><img src="https://drive.google.com/uc?export=view&id=1gmkgpPkJQsJ2TPbciHs1B8m1aMr-bHjq" alt="João Paulo" width="350"></td>
     </tr>
   </tbody>
 </table>
-
 
 [🔝 Voltar ao topo](#)
 
@@ -122,8 +111,8 @@
 O projeto visa aprimorar a gestão de frotas de motos em pátios de múltiplas filiais, utilizando tecnologias de **Visão Computacional** e **IoT** para otimizar o mapeamento e monitoramento das motos em tempo real.
 
 ### 🛠 **Funcionalidades do Sistema**  
-- **Identificação precisa das motos** utilizando visão computacional.
-- **Modelo digital do pátio** mostrando em tempo real a disposição das motos.
+- **Identificação precisa das motos** utilizando visão computacional.  
+- **Modelo digital do pátio** mostrando em tempo real a disposição das motos.  
 - **Interface visual intuitiva** para visualização em tempo real.
 
 ### 🚀 **Escalabilidade**  
@@ -135,19 +124,22 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## <a name="problemas-identificados"></a>🚩 **Problemas Identificados:**
 
-1. **Dificuldade no mapeamento preciso das motos** dentro dos pátios, afetando a eficiência operacional.
-   
+1. **Dificuldade no mapeamento preciso das motos** dentro dos pátios, afetando a eficiência operacional.  
 2. **Falta de visibilidade em tempo real** sobre a disposição das motos, tornando a operação menos ágil e mais sujeita a erros humanos.
 
-## Tecnologias e Bibliotecas Utilizadas
+---
 
-1. **Visão Computacional** para detecção e rastreamento de motos.
-2. **IoT** para integrar sensores nas motos e atualizar automaticamente sua localização.
+## 🛠 **Tecnologias e Bibliotecas Utilizadas**
+
+1. **Visão Computacional** para detecção e rastreamento de motos.  
+2. **IoT** para integrar sensores nas motos e atualizar automaticamente sua localização.  
 3. **Spring Boot** para backend e criação da API Restful.
 
-## Cronograma de Entregas
+---
 
-- **Até 23/05/2025**: Entrega da Sprint 1.
+## 📅 **Cronograma de Entregas**
+
+- **Até 23/05/2025**: Entrega da Sprint 1.  
 - **Até 30/05/2025**: Feedback das entregas da Sprint 1.
 
 [🔝 Voltar ao topo](#)
@@ -156,31 +148,33 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## 🎯 **Objetivos do Desafio**
 
-- **Precisão de Identificação**: Garantir que as motos sejam identificadas corretamente dentro dos pátios.
-- **Escalabilidade**: A solução deve ser capaz de ser aplicada nas diversas filiais, independentemente do tamanho e formato dos pátios.
-- **Tecnologias Inovadoras**: Usar tecnologias de **Visão Computacional** e **IoT** para otimizar os processos.
+- **Precisão de Identificação**: Garantir que as motos sejam identificadas corretamente dentro dos pátios.  
+- **Escalabilidade**: Aplicável a várias filiais, independentemente do layout.  
+- **Tecnologias Inovadoras**: Uso de **Visão Computacional** e **IoT** para otimização.
 
 ---
 
 ## 🧑‍💻 **Responsabilidades**
 
 ### Alunos
-- Cumprir com as entregas conforme os requisitos do desafio.
-- Gerenciar o planejamento e prazos do grupo.
+- Cumprir as entregas conforme os requisitos.  
+- Gerenciar planejamento e prazos do grupo.
 
 ### Professores
-- Orientar o desenvolvimento do projeto e garantir o cumprimento dos critérios de avaliação.
+- Orientar o desenvolvimento e garantir critérios de avaliação.
 
 ### Scrum Master
-- Facilitar a comunicação entre os alunos e os professores da Mottu.
+- Facilitar a comunicação entre alunos e professores da Mottu.
 
 ---
 
 ## 🏆 **Premiação**
 
-- **1º Lugar**: R$ 5.000,00, medalha, shape e camiseta.
-- **2º Lugar**: R$ 3.000,00, medalha, shape e camiseta.
-- **3º Lugar**: R$ 2.000,00, medalha, shape e camiseta.
+| Colocação | Prêmio                                      |
+|-----------|---------------------------------------------|
+| 1º Lugar  | R$ 5.000,00 + medalha, shape e camiseta     |
+| 2º Lugar  | R$ 3.000,00 + medalha, shape e camiseta     |
+| 3º Lugar  | R$ 2.000,00 + medalha, shape e camiseta     |
 
 [🔝 Voltar ao topo](#)
 
@@ -188,31 +182,31 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 ## <a name="materias-e-entregas"></a>📚 **Matérias e Entregas**
 
-### 1. 🖥️ [Advanced Business Development with .NET](https://docs.microsoft.com/en-us/dotnet/core/)
-   - **Objetivo**: Implementar uma API Restful utilizando **ASP.NET Core** com CRUD completo e integração com banco de dados **Oracle** via **EF Core**.
+1. 🖥️ **[Advanced Business Development with .NET](https://docs.microsoft.com/en-us/dotnet/core/)**  
+   • **Objetivo:** API Restful em **ASP.NET Core** com CRUD + Oracle via EF Core.
 
-### 2. 🛠️ [Compliance, Quality Assurance & Tests](https://en.wikipedia.org/wiki/Compliance_(law))
-   - **Objetivo**: Criar um diagrama de arquitetura utilizando **TOGAF®** e **ARCHIMATE®**.
+2. 🛠️ **[Compliance, Quality Assurance & Tests](https://en.wikipedia.org/wiki/Compliance_(law))**  
+   • **Objetivo:** Diagrama de arquitetura **TOGAF®/ARCHIMATE®**.
 
-### 3. ☁️ [DevOps Tools & Cloud Computing](https://azure.microsoft.com/en-us/overview/devops/)
-   - **Objetivo**: Conteinerizar a API utilizando **Docker** e executá-la em nuvem.
+3. ☁️ **[DevOps Tools & Cloud Computing](https://azure.microsoft.com/en-us/overview/devops/)**  
+   • **Objetivo:** Conteinerizar a API com **Docker** e executar em nuvem.
 
-### 4. 🤖 [Disruptive Architectures: IoT, IOB & Generative IA](https://www.i-scoop.eu/internet-of-things-iot/)
-   - **Objetivo**: Desenvolver um protótipo de IoT ou **Visão Computacional**.
+4. 🤖 **[Disruptive Architectures: IoT, IOB & Generative IA](https://www.i-scoop.eu/internet-of-things-iot/)**  
+   • **Objetivo:** Protótipo de **IoT** ou **Visão Computacional**.
 
-### 5. ☕ [Java Advanced](https://spring.io/projects/spring-boot)
-   - **Objetivo**: Criar uma API **Restful** com **Spring Boot** e **Spring Data JPA**.
+5. ☕ **[Java Advanced](https://spring.io/projects/spring-boot)**  
+   • **Objetivo:** API Restful em **Spring Boot** + **Spring Data JPA**.
 
-### 6. 💾 [Mastering Relational and Non-Relational Database](https://www.oracle.com/database/)
-   - **Objetivo**: Implementar um banco de dados relacional com modelo **ER** e **normalização**.
+6. 💾 **[Mastering Relational and Non-Relational Database](https://www.oracle.com/database/)**  
+   • **Objetivo:** Banco relacional com modelo **ER** e **normalização**.
 
-### 7. 📱 [Mobile Application Development](https://reactnative.dev/)
-   - **Objetivo**: Criar um protótipo funcional de aplicativo móvel utilizando **React Native**.
+7. 📱 **[Mobile Application Development](https://reactnative.dev/)**  
+   • **Objetivo:** Protótipo funcional em **React Native**.
 
 ---
 
 ## <a name="documentacao-e-banner-do-projeto"></a>📑 **Documentação e Banner do Projeto**
 
-- **[Documentação do PDF](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)**
+- **[Documentação (PDF)](https://drive.google.com/file/d/1lxg7SaaaJmneLBUkQdEgxQvdBox_FAwC/view?usp=sharing)**
 
 [🔝 Voltar ao topo](#)
