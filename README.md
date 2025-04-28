@@ -23,15 +23,15 @@
 ---
 ## <a name="repositorios-materias"></a>📑 **Repositórios das matérias:**
 
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Compliance_Quality_Assurance_Tests) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Deveops_Tools_Cloud_Computing) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Disruptive_Architectures_IoT_IOB_Generative_IA) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mastering_Relational_and_Non_Relational_Database) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
-| [![GitHub](https://img.shields.io/badge/GitHub-Repositório-blue?style=flat-square&logo=github)](https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mobile_Application_Development) |
+| Badge                                                                                         | Matéria                                                                                    |
+|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| Advanced Business Development with .NET | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
+| Compliance, Quality Assurance & Tests | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Compliance_Quality_Assurance_Tests) |
+| DevOps Tools & Cloud Computing | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Deveops_Tools_Cloud_Computing) |
+| Disruptive Architectures: IoT, IOB & Generative IA | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Disruptive_Architectures_IoT_IOB_Generative_IA) |
+| Java Advanced | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced) |
+| Mastering Relational and Non-Relational Database | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Mastering_Relational_and_Non_Relational_Database) |
+| Mobile Application Development | (https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Advanced_Business_Development_with.NET) |
 
 ---
 
