@@ -217,11 +217,11 @@ A solução é escalável para ser implementada em mais de 100 filiais no Brasil
 
 | Tecnolôgia | Disciplina | Entregável |
 |-------|------------|------------|
-| ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) | Advanced Business Development with .NET | API **ASP.NET Core** + Oracle (**EF Core**) |
+| ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)<br>![Next JS](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF"/) | Advanced Business Development with .NET | API **ASP.NET Core** + Oracle (**EF Core**) |
 | ![TOGAF](https://img.shields.io/badge/TOGAF%20%2F%20ARCHIMATE-34495E?style=for-the-badge&logoColor=white) | Compliance, QA & Tests | Diagrama **TOGAF® / ARCHIMATE®** |
 | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)<br>![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=white)<br>![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white) | DevOps Tools & Cloud Computing | Dockerizar e publicar na nuvem |
 | ![IoT](https://img.shields.io/badge/IoT-00A6FF?style=for-the-badge&logo=raspberrypi&logoColor=white)<br>![AI](https://img.shields.io/badge/AI-0080FF?style=for-the-badge&logo=openai&logoColor=white) | Disruptive Architectures (IoT, IOB & Gen IA) | Protótipo **IoT** / Visão Computacional |
-| ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)<br>![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) | Java Advanced | API **Spring Boot** + **Spring Data JPA** |
+| ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)<br>![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)<br>![Nest JS](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF"/) | Java Advanced | API **Spring Boot** + **Spring Data JPA** |
 | ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) | Mastering Relational & NoSQL DB | Modelo **ER** & normalização |
 | ![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | Mobile Application Development | Protótipo em **React Native** |
 
