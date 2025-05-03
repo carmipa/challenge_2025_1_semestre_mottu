@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FFE9B0A-334E-07A2-87FC-1D0ACF102D68" name="TB_RASTREAMENTO">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>E62D830F-FB07-7BBA-83E2-5D7F38CEECA7</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rast" id="42E724DE-C0DC-84FC-4EAB-5E896247ED68">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>38687025-76E5-C5FA-8761-68FC1DF4663A</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="AA5065C1-2CF1-23AF-A4E4-098EAE2AD98E">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>ABDD871E-9A7B-4811-6C2C-7B041E6C1EDB</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ips_x" id="D36F8197-3664-AA3D-CC5C-E294E2CF3F4E">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>629A2D62-5B16-14C9-DC01-0457B11EEC64</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,7,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ips_y" id="A8BC57A3-E3DA-B12C-45CA-8C108FF70B59">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>06689A1C-8DEE-C74D-3D4A-9971C3A4422D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,7,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ipcs_z" id="3BD5E15F-0D05-55B3-84C3-75EBC6269C18">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>9C57C17B-40F5-936B-F687-873DF6369789</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,7,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ips_data_hora" id="12B517F0-52AF-DC46-9CEB-F40B4525248A">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>18FD4E21-339B-C059-414B-252F08F69906</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gprs_latitude" id="17DC7755-1B97-00E1-0B58-D38496AC2B72">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>7AF7E992-B9B4-1715-137C-D91E168F9312</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,9,6</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gprs_longitude" id="A516FBA5-CDC3-D891-C8BD-BCDC4FEA9BDA">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>B2BE941D-F093-4D6C-36CE-A3EF88EC57F3</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,9,6</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gprs_altitude" id="B7144A2D-0DF7-4994-08C5-677ECB60264F">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>50B95923-5455-D518-1361-B86073A57312</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D926542-5F10-93D6-94D9-ED1835A9DBAE" name="TB_RASTREAMENTO_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>49FA94F2-587A-B8F3-E888-E26F91E6BD34</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42E724DE-C0DC-84FC-4EAB-5E896247ED68"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

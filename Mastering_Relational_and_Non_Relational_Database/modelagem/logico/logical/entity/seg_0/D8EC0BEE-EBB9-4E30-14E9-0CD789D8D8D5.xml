@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8EC0BEE-EBB9-4E30-14E9-0CD789D8D8D5" name="TB_CONT_F">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 14:58:08 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_contf" id="30F08457-40D6-AA88-54EC-3F51B3103039">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 14:58:20 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="2C54DD8A-D7EF-1E34-C856-510A50265BBC">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 14:58:58 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone1" id="692DE12B-CDEE-08E9-8061-8A451ED9EC38">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 14:59:13 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone2" id="A09AABD8-DD6D-77B6-B797-8744E83F39B0">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 15:00:01 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="outro" id="8A5E5562-2530-E11A-20F1-4C8170A07043">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 15:00:36 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

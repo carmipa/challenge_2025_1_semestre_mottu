@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D01525A1-674F-BBB2-CFEF-5DC65EEBE435" name="TB_VR">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>1F5990A6-FE63-FCB4-E94B-0F5728843DE2</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_vr" id="E50BBA8F-927A-199F-55BB-CEB122C49454">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>340D532C-4584-2EC5-83BA-9727A43AA226</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_VEICULO_id_veiculo" id="71E6CF90-5BC0-F218-C34C-AA3CB921DADA">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>936FBD4A-7489-11D6-0BBB-47F51FAB21CA</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C08E1DD9-645E-0EC1-AE10-F37D877CE81C" referredColumn="64559FAB-C267-8DE0-2C9D-5861C41D7F1D"/>
+</associations>
+</Column>
+<Column name="TB_RASTREAMENTO_id_rast" id="3F1CBB20-6B9C-1A26-8B5D-6166D71AB97A">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>3DB09DCE-2152-F49A-5742-4E51DDBF9785</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="25A402CA-9C54-2021-074B-3290540E844E" referredColumn="42E724DE-C0DC-84FC-4EAB-5E896247ED68"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="326130B4-74DD-8707-6BB3-F88427687FEC" name="TB_VR_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>253C9E56-693B-691F-73D7-F1F3ADB6C76F</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E50BBA8F-927A-199F-55BB-CEB122C49454"/>
+<colUsage columnID="71E6CF90-5BC0-F218-C34C-AA3CB921DADA"/>
+<colUsage columnID="3F1CBB20-6B9C-1A26-8B5D-6166D71AB97A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13060484-A75E-76D1-B1E1-25E8334C6970" name="TB_VR_TB_VEICULO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>9DF9E785-4F17-7040-F0A9-8AC58AA29A0A</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71E6CF90-5BC0-F218-C34C-AA3CB921DADA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="425F023A-555E-BD51-39D3-32BE8EDDC065" name="TB_VR_TB_RASTREAMENTO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>34B059C0-DCC0-D8A6-0CDE-A228A9329902</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F1CBB20-6B9C-1A26-8B5D-6166D71AB97A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

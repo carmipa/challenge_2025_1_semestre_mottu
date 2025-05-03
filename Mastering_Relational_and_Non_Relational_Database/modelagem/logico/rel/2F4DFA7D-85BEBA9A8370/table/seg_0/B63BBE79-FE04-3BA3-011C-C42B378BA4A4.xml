@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B63BBE79-FE04-3BA3-011C-C42B378BA4A4" name="TB_VP">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>A5A01B53-F308-F0F8-04A4-92AB25608D3F</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_vp" id="8BD9C3A8-508C-B15E-FA6E-2CE20F22C64F">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>6072FE66-16FD-F037-858F-7212AA46AD6D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_VEICULO_id_veiculo" id="F447B782-2103-7017-95D2-4683469AD3B0">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>14F453AB-7998-7381-463F-473A3436CC02</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E9A0A34-6FBE-217B-1F72-0BD73E2BA2AA" referredColumn="64559FAB-C267-8DE0-2C9D-5861C41D7F1D"/>
+</associations>
+</Column>
+<Column name="TB_PATIO_id_patio" id="5D9D1EB0-1845-0ABF-C73C-CE5FFB8C268C">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>C836738D-AE6B-2225-1518-FD3D87E2256A</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22D6F22E-5BE0-A74C-2DCB-956FDC4888CC" referredColumn="F6DBF0C4-A84A-56EA-06ED-239BB40DD670"/>
+</associations>
+</Column>
+<Column name="TB_PATIO_TB_CONT_P_id_contp" id="DBA9C22F-10C5-A412-3D59-908AAF8DA8EC">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>882D1051-0CBC-09FD-8120-E0AE542952C9</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22D6F22E-5BE0-A74C-2DCB-956FDC4888CC" referredColumn="2BCD14EF-58CD-EAF8-C001-4074748FB1BC"/>
+</associations>
+</Column>
+<Column name="TB_PATIO_status" id="86FFA2AF-CB71-4282-8425-877412185AA6">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>984A24DA-2E2F-AE4F-2E4B-5E700576910C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22D6F22E-5BE0-A74C-2DCB-956FDC4888CC" referredColumn="D4989470-EF7D-A24F-4556-0F0A1CBDC689"/>
+</associations>
+</Column>
+<Column name="TB_PATIO_TB_END_P_id_endp" id="9081702C-D0FA-5170-386E-D0B5924BE44F">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>5B356F4F-A59A-4025-7C01-3957459CC191</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="22D6F22E-5BE0-A74C-2DCB-956FDC4888CC" referredColumn="6409A094-1DEA-BD49-1212-5325B7727EF7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FE4957F-B2FD-8DE3-64DE-4872ED0168D0" name="TB_VP_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>2FBD0619-3B2D-2014-823B-FD32C730ABCE</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BD9C3A8-508C-B15E-FA6E-2CE20F22C64F"/>
+<colUsage columnID="F447B782-2103-7017-95D2-4683469AD3B0"/>
+<colUsage columnID="5D9D1EB0-1845-0ABF-C73C-CE5FFB8C268C"/>
+<colUsage columnID="DBA9C22F-10C5-A412-3D59-908AAF8DA8EC"/>
+<colUsage columnID="86FFA2AF-CB71-4282-8425-877412185AA6"/>
+<colUsage columnID="9081702C-D0FA-5170-386E-D0B5924BE44F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B905970A-E055-9A71-5B80-522A20AFE1A3" name="TB_VP_TB_VEICULO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>5E3072F4-431A-0EB0-1192-FC7723C84ACC</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F447B782-2103-7017-95D2-4683469AD3B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7287EADA-8AE8-1796-1FAB-8F01B28E28FD" name="TB_VP_TB_PATIO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>0A975E94-CE78-F78F-12BA-0733DA5BD4AA</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D9D1EB0-1845-0ABF-C73C-CE5FFB8C268C"/>
+<colUsage columnID="DBA9C22F-10C5-A412-3D59-908AAF8DA8EC"/>
+<colUsage columnID="86FFA2AF-CB71-4282-8425-877412185AA6"/>
+<colUsage columnID="9081702C-D0FA-5170-386E-D0B5924BE44F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

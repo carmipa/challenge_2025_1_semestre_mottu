@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99B7E619-DF9D-FCEF-2F3A-13A60C1971F5" name="TB_VB">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>DC1E65DA-B6E0-C87F-C474-36CDD0577A45</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_vb" id="AB6AD822-BA38-5DA0-BBC9-13DA1A0A4B4C">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>5CE62794-285B-3FE8-A609-3FC365DE5163</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_VEICULO_id_veiculo" id="4D2AEA2E-B1E1-17AA-423F-EFDDB165780D">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>67829074-D007-47FF-F1F3-73DCEEC653D4</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5DF101F-17AD-4511-AA8A-15AB91AC08B1" referredColumn="64559FAB-C267-8DE0-2C9D-5861C41D7F1D"/>
+</associations>
+</Column>
+<Column name="TB_BOX_id_box" id="EE67F8AC-1A25-0F7D-5FD0-E0B9988D40D7">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>DBFDE148-1947-398D-88D5-B076EA0A774B</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F648CA8-4A7F-280B-FAD0-DA5CE3D4AECB" referredColumn="03DD71D1-AEF4-16F8-7C4C-D9E2DB8CD727"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E66D0431-CCB4-52D6-3E67-D8EE8D788C35" name="TB_VB_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>EF57B74A-1257-C73F-2BEA-8B675BDC178A</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D2AEA2E-B1E1-17AA-423F-EFDDB165780D"/>
+<colUsage columnID="EE67F8AC-1A25-0F7D-5FD0-E0B9988D40D7"/>
+<colUsage columnID="AB6AD822-BA38-5DA0-BBC9-13DA1A0A4B4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14A9FA82-FC70-151B-DFE3-1588F17D5F69" name="TB_VB_TB_VEICULO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>79D062DA-B0FE-9127-62E0-327CA55B55E9</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D2AEA2E-B1E1-17AA-423F-EFDDB165780D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DADF403-1833-F332-516F-71FA9F351DE7" name="TB_VB_TB_BOX_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>77E7ED24-63BE-C73A-1C43-41A7E1EC95E4</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE67F8AC-1A25-0F7D-5FD0-E0B9988D40D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

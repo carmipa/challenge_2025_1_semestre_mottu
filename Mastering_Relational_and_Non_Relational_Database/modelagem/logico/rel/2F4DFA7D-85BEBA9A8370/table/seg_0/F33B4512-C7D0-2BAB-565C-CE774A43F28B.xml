@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F33B4512-C7D0-2BAB-565C-CE774A43F28B" name="TB_VZ">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>818F8ADA-23D5-ACF7-0A2B-4C4A441340E0</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_vz" id="6C532B5F-88E2-D025-7504-27D5478C9FA9">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>CD172647-6AB2-132F-D847-B46A33C27667</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_VEICULO_id_veiculo" id="A3665C94-6BE6-BA69-AD62-16F12F8CB15C">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>25DD8B34-9C5E-04F1-731F-2A814654831D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7ECB0BB-4214-A4ED-883B-E3214618D0AD" referredColumn="64559FAB-C267-8DE0-2C9D-5861C41D7F1D"/>
+</associations>
+</Column>
+<Column name="TB_ZONA_id_zona" id="AC816135-B1F7-7328-1B8F-42064A737A64">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>EA620C90-77E0-B881-6446-DD3AE131302C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CACA7DF2-C466-62EF-C434-EA67A9C99465" referredColumn="AAFF67EF-CCF0-0925-15A7-9C52CDF60890"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF90818F-05C2-2F8D-C61D-4E9BC47D6216" name="TB_VZ_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>BCA10C24-DD8A-0FED-C301-7709C37F5263</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C532B5F-88E2-D025-7504-27D5478C9FA9"/>
+<colUsage columnID="A3665C94-6BE6-BA69-AD62-16F12F8CB15C"/>
+<colUsage columnID="AC816135-B1F7-7328-1B8F-42064A737A64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D0F1BBF-1F9F-7D2B-4FDE-70A6629D936C" name="TB_VZ_TB_VEICULO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>1BA9E579-3E86-5D27-3645-0760B816495D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3665C94-6BE6-BA69-AD62-16F12F8CB15C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D915B8E-379E-3887-C73D-671F8C543AAC" name="TB_VZ_TB_ZONA_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-03 17:14:26 UTC</createdTime>
+<generatorID>A71BC091-F483-9AE4-63E4-5CF556E5D722</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC816135-B1F7-7328-1B8F-42064A737A64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
