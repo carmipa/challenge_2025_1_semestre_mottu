@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C1CADCD-8312-4FEC-BF17-F7BD3CA5785B}|ChallengeMuttuApi\\ChallengeMuttuApi.csproj|d:\\fiap-2025\\1_semestre_fiap-2025\\challenge_2025_mottu\\challenge_2025_1_semestre_mottu\\advanced_business_development_with.net\\challengemuttuapi\\challengemuttuapi\\model\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C1CADCD-8312-4FEC-BF17-F7BD3CA5785B}|ChallengeMuttuApi\\ChallengeMuttuApi.csproj|solutionrelative:challengemuttuapi\\model\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C1CADCD-8312-4FEC-BF17-F7BD3CA5785B}|ChallengeMuttuApi\\ChallengeMuttuApi.csproj|d:\\fiap-2025\\1_semestre_fiap-2025\\challenge_2025_mottu\\challenge_2025_1_semestre_mottu\\advanced_business_development_with.net\\challengemuttuapi\\challengemuttuapi\\model\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C1CADCD-8312-4FEC-BF17-F7BD3CA5785B}|ChallengeMuttuApi\\ChallengeMuttuApi.csproj|solutionrelative:challengemuttuapi\\model\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Filial.cs",
+              "DocumentMoniker": "D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\ChallengeMuttuApi\\Model\\Filial.cs",
+              "RelativeDocumentMoniker": "ChallengeMuttuApi\\Model\\Filial.cs",
+              "ToolTip": "D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\ChallengeMuttuApi\\Model\\Filial.cs",
+              "RelativeToolTip": "ChallengeMuttuApi\\Model\\Filial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T22:04:44.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\ChallengeMuttuApi\\Model\\Cliente.cs",
+              "RelativeDocumentMoniker": "ChallengeMuttuApi\\Model\\Cliente.cs",
+              "ToolTip": "D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\ChallengeMuttuApi\\Model\\Cliente.cs",
+              "RelativeToolTip": "ChallengeMuttuApi\\Model\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T22:00:25.764Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

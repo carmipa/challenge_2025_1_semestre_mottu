@@ -51,6 +51,12 @@ public class Cliente {
     @Temporal(TemporalType.DATE) // Mapeando para DATE
     private LocalDate dataCadastro; // Usando LocalDate
 
+    // 🔹 Método automático para definir a data de cadastro ao criar um objeto
+    @PrePersist
+    protected void onCreate() {
+        this.dataCadastro = LocalDate.now();
+    }
+
     @Column(name = "SEXO", length = 1, nullable = false)
     private String sexo; // CHAR(1) pode ser mapeado como String
 
