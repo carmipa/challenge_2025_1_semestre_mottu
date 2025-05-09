@@ -4,7 +4,7 @@
 <createdTime>2025-05-03 14:35:01 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,25 +15,13 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_cv" id="BE7149CB-DBEB-87C3-D56F-B1C6B7E7E537">
-<createdBy>paulo</createdBy>
-<createdTime>2025-05-03 14:35:24 UTC</createdTime>
-<ownerDesignName>logico</ownerDesignName>
-<engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_cli" id="E79F58EE-C31E-6132-F995-F0B9887F74EC">
+<Attribute name="id_cliente" id="E79F58EE-C31E-6132-F995-F0B9887F74EC">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:37:28 UTC</createdTime>
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>2A2493C5-E1D4-433C-AAFE-0BA03BAB01A5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -41,13 +29,13 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_endc" id="4735E717-C2DC-798C-B0E9-2422230851EC">
+<Attribute name="id_endereco" id="4735E717-C2DC-798C-B0E9-2422230851EC">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:37:28 UTC</createdTime>
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>69D68BF2-29AD-43F9-C011-5CB80DB96EB2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -55,13 +43,13 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_contc" id="4A474DC3-697B-3438-C7E1-65C0A58F6E82">
+<Attribute name="id_contato" id="4A474DC3-697B-3438-C7E1-65C0A58F6E82">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:37:28 UTC</createdTime>
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>8CFCBAE0-3F81-813A-8D83-C9A8C591C4F5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -75,7 +63,7 @@
 <generatorID>22E15F5E-F42D-B0EF-2322-6AF57308F1D7</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>9F3ED40F-935A-8577-51AE-2EDA478341B3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -89,13 +77,11 @@
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:35:40 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="false"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>BE7149CB-DBEB-87C3-D56F-B1C6B7E7E537</attributeRef>
 <attributeRef>E79F58EE-C31E-6132-F995-F0B9887F74EC</attributeRef>
 <attributeRef>4735E717-C2DC-798C-B0E9-2422230851EC</attributeRef>
 <attributeRef>4A474DC3-697B-3438-C7E1-65C0A58F6E82</attributeRef>

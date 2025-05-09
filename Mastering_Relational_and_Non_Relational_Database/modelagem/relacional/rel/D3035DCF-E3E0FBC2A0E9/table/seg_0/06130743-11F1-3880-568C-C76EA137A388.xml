@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06130743-11F1-3880-568C-C76EA137A388" name="TB_VB">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>DC1E65DA-B6E0-C87F-C474-36CDD0577A45</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TB_VEICULO_id_veiculo" id="1E5F9254-C9A3-6FF7-0C7C-07D2BA5FDF59">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>67829074-D007-47FF-F1F3-73DCEEC653D4</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37969C07-278E-990C-6133-07C989AFCA76" referredColumn="E61DF67E-7C5C-DB2D-E6EA-48064A1ED35A"/>
+</associations>
+</Column>
+<Column name="TB_BOX_id_box" id="66284DCE-35A7-73FB-247E-89097EE21140">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>DBFDE148-1947-398D-88D5-B076EA0A774B</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3B3FFCD-D02F-FC53-43C2-AE002B7C0FE0" referredColumn="AEC16018-7776-0FAB-C016-7B09420FE318"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0231650-9BFD-7AF4-760B-33F24A85E6F4" name="TB_VB_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>EF57B74A-1257-C73F-2BEA-8B675BDC178A</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E5F9254-C9A3-6FF7-0C7C-07D2BA5FDF59"/>
+<colUsage columnID="66284DCE-35A7-73FB-247E-89097EE21140"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E57FFCC-A720-8D2A-3603-DBC4CAC5277F" name="TB_VB_TB_VEICULO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>79D062DA-B0FE-9127-62E0-327CA55B55E9</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E5F9254-C9A3-6FF7-0C7C-07D2BA5FDF59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EBB8D541-DB56-C852-5B4A-E120F432303A" name="TB_VB_TB_BOX_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>77E7ED24-63BE-C73A-1C43-41A7E1EC95E4</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66284DCE-35A7-73FB-247E-89097EE21140"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

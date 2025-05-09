@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9BE26E06-49E5-0A66-B391-0E023236F7CE" name="TB_END_C">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9BE26E06-49E5-0A66-B391-0E023236F7CE" name="TB_ENDERECO">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 13:59:11 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,12 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_endc" id="E44F11E7-D7BB-4C65-92C8-7F530C5E3B30">
+<Attribute name="id_endereco" id="E44F11E7-D7BB-4C65-92C8-7F530C5E3B30">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 13:59:25 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2025-05-03 13:59:43 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2025-05-03 14:03:16 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -58,7 +58,7 @@
 <createdTime>2025-05-03 14:04:29 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -71,7 +71,7 @@
 <createdTime>2025-05-03 14:04:51 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -84,7 +84,7 @@
 <createdTime>2025-05-03 14:05:07 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -97,7 +97,7 @@
 <createdTime>2025-05-03 14:05:22 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -110,7 +110,7 @@
 <createdTime>2025-05-03 14:56:13 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -123,13 +123,28 @@
 <createdTime>2025-05-03 14:06:37 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>60</dataTypeSize>
 <ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observacao" id="CCB0F0C1-701E-1A27-5694-C9EBB718D8D1">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-08 16:00:19 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -138,7 +153,7 @@
 <createdTime>2025-05-03 13:59:40 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
+<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

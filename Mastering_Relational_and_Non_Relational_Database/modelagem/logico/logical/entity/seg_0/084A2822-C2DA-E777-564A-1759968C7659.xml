@@ -40,20 +40,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_contp" id="1FC277F5-C62B-3FB8-5AF2-E682DA13609C">
-<createdBy>paulo</createdBy>
-<createdTime>2025-05-03 15:27:27 UTC</createdTime>
-<generatorID>F870195A-D18A-A1B1-0109-7B9F518387D6</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
-</engineerTo>
-<referedAttribute>3FCDB7CB-70DA-50FC-E227-509708106E54</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="status" id="5181C6BE-7EE2-7A96-81CE-1789CDD882D9">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 15:51:17 UTC</createdTime>
@@ -105,20 +91,6 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_endp" id="9BF80C2E-8362-168C-F503-959F40A8EB39">
-<createdBy>paulo</createdBy>
-<createdTime>2025-05-03 16:49:13 UTC</createdTime>
-<generatorID>D5DEC02A-9325-0632-EE6B-A720329CD6D3</generatorID>
-<ownerDesignName>logico</ownerDesignName>
-<engineerTo>
-<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
-</engineerTo>
-<referedAttribute>3AD567BF-3034-F820-3EC0-9CCC57D82CE0</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7F6EFB89-BA41-A350-83B1-8CD897E038FD" name="TB_PATIO PK">
@@ -131,9 +103,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>0343B087-1559-C3A9-4A42-6634C2B41D66</attributeRef>
-<attributeRef>1FC277F5-C62B-3FB8-5AF2-E682DA13609C</attributeRef>
 <attributeRef>5181C6BE-7EE2-7A96-81CE-1789CDD882D9</attributeRef>
-<attributeRef>9BF80C2E-8362-168C-F503-959F40A8EB39</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

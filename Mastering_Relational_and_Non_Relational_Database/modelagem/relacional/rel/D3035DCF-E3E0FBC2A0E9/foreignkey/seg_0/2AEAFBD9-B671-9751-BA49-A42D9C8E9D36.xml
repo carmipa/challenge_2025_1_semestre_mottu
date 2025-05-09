@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2AEAFBD9-B671-9751-BA49-A42D9C8E9D36" containerWithKeyObject="E4218F2C-FE86-9EBC-A824-B09A0CB8C893" localFKIndex="CCCA3FFC-6CFA-5CD2-79EA-CC34D2B9C581" name="TB_VR_TB_RASTREAMENTO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>34B059C0-DCC0-D8A6-0CDE-A228A9329902</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<referredTableLongName>TB_RASTREAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>796664EB-B975-89E9-3E98-81C7321C1511</referredTableID>
+<keyObject>DFAFD74C-6EEC-168D-6568-42A6F8AD9848</keyObject>
+<referredKeyID>DFAFD74C-6EEC-168D-6568-42A6F8AD9848</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_rastreamento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

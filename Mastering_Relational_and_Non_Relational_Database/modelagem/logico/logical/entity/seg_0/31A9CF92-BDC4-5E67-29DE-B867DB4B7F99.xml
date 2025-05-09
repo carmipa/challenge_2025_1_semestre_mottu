@@ -4,7 +4,7 @@
 <createdTime>2025-05-03 16:01:56 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,25 +15,13 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_zb" id="B619DDB8-1C9B-869C-56D8-F8C195DF8481">
-<createdBy>paulo</createdBy>
-<createdTime>2025-05-03 16:02:01 UTC</createdTime>
-<ownerDesignName>logico</ownerDesignName>
-<engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_zona" id="7DF8907E-AA75-85C5-B0F4-D68F72B83E49">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 16:02:52 UTC</createdTime>
 <generatorID>24DF697F-06B7-640D-BAB0-8BC8E0B086B4</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>C311D03C-7C92-9A16-12F0-86A9B449E28B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -47,7 +35,7 @@
 <generatorID>5C3E988F-552B-C2B2-FD49-07277B38343D</generatorID>
 <ownerDesignName>logico</ownerDesignName>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="true"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <referedAttribute>EEF4C859-E132-E548-9846-9436A9858E9E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -61,15 +49,13 @@
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 16:02:54 UTC</createdTime>
 <ownerDesignName>logico</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="3BB2147B-EACC-6D64-07AB-74D7C5BCF9A7" value="false"/>
+<item key="2F4DFA7D-BADC-22B3-A3E4-85BEBA9A8370" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>7DF8907E-AA75-85C5-B0F4-D68F72B83E49</attributeRef>
 <attributeRef>10989200-41E5-DE45-4FB3-970B46CDA2BB</attributeRef>
-<attributeRef>B619DDB8-1C9B-869C-56D8-F8C195DF8481</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

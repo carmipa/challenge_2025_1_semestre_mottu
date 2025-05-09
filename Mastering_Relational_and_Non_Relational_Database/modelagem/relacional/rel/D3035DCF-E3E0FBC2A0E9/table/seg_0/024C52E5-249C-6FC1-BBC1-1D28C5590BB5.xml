@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="024C52E5-249C-6FC1-BBC1-1D28C5590BB5" name="TB_CLIENTE">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>9631C141-DAAC-D11C-32A6-F084253EC76D</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cliente" id="2F2E5085-F228-75E3-7DAC-922C3D310378">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>2A2493C5-E1D4-433C-AAFE-0BA03BAB01A5</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_cadastro" id="92262BE8-BAC1-3414-7C10-F200DD83852F">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>C76C7E5C-728E-E17F-F3A5-5F8827620C26</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sexo" id="45D5CDE9-9D5C-8A61-9B85-7BC017750D71">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>E6898B2C-0F9A-084F-B53C-43294344D729</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="F82ABFC1-4E96-2288-B920-ECAB1ED442C5">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>481CC6D2-7F66-90E4-285F-EB52827E2887</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sobrenome" id="6A4A886B-F35E-020E-173D-919750115495">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>E599F009-83F6-6C0A-3F6A-4D73163D777D</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_nascimento" id="FD600922-DE5F-75D2-3656-B8ABB3B8671E">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>22CA1CF7-9B54-1546-E264-0BE849067A5B</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="066319F6-A48C-0ADB-FA74-17C00217F5DE">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>6241A23D-5073-2639-EE12-F7AB02FB8CFE</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profissao" id="28BB0D42-EA1C-47E5-F1C0-1C978C51028E">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>59A24B47-05DC-8DF3-0351-28EDF827B4EE</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_civil" id="0D10C8E7-80A9-6988-E35D-EBB232EC1A69">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>CB548903-52FE-7E1E-C90A-B92EF2DA1DA4</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_ENDERECO_id_endereco" id="CECDD98E-2215-7F41-12E5-D4897C962794">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>69D68BF2-29AD-43F9-C011-5CB80DB96EB2</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E8BFC86-AC90-8BDE-8820-D912B684080A" referredColumn="E7457B6A-EDDA-C9B2-6510-21BD8BE5F840"/>
+</associations>
+</Column>
+<Column name="TB_CONTATO_id_contato" id="63CF4416-6D2D-FD14-3865-B84422DA913C">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>8CFCBAE0-3F81-813A-8D83-C9A8C591C4F5</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="071F1976-1461-DC72-166B-46C9D5A0D16F" referredColumn="3E0B1F48-17BE-78D6-3CF0-F52895004F45"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="80F62324-1661-82DE-2C5E-59F32B33F6A1" name="TB_CLIENTE_PK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>3D6F7583-CD5C-D156-93EA-3ACF31CB465B</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F2E5085-F228-75E3-7DAC-922C3D310378"/>
+<colUsage columnID="CECDD98E-2215-7F41-12E5-D4897C962794"/>
+<colUsage columnID="63CF4416-6D2D-FD14-3865-B84422DA913C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6BBF6AAA-F217-CF6D-DFCF-DB6AA91FE46C" name="TB_CLIENTE_TB_ENDERECO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>F12188D0-B2A0-8A50-F4CF-11B4C43B92B9</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CECDD98E-2215-7F41-12E5-D4897C962794"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D94775E-6ABC-F7B3-13D9-F2B4A9500164" name="TB_CLIENTE_TB_CONTATO_FK">
+<createdBy>paulo</createdBy>
+<createdTime>2025-05-09 01:26:56 UTC</createdTime>
+<generatorID>6224A21B-0187-312E-BB82-5C0C75E596CE</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63CF4416-6D2D-FD14-3865-B84422DA913C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
