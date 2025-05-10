@@ -1,7 +1,7 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\rastreamento\RastreamentoResponseDto.java
 package br.com.fiap.mottu.dto.rastreamento;
 
 import lombok.Value;
-
 import java.io.Serializable;
 
 /**

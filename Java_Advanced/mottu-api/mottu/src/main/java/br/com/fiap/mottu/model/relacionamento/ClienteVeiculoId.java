@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\ClienteVeiculoId.java
 package br.com.fiap.mottu.model.relacionamento;
 
 import jakarta.persistence.*;
@@ -13,19 +14,17 @@ import java.io.Serializable;
 @EqualsAndHashCode // Essencial para PKs compostas
 public class ClienteVeiculoId implements Serializable {
 
-    // Componente da PK que referencia a PK simplificada de TB_CLIENTE
-    @Column(name = "tb_cliente_id_cliente", nullable = false) // Nome da coluna FK no BD
-    private Long clienteId; // Tipo do campo PK referenciado em Cliente
+    @Column(name = "TB_CLIENTE_ID_CLIENTE", nullable = false) // Nome da coluna FK no BD
+    private Long clienteId;
 
-    // Componentes da antiga PK composta de TB_CLIENTE, mantidos na PK DESSA tabela de junção
+    // Componentes da PK de ClienteVeiculo que incluem IDs de Endereco e Contato
     // Note que estes campos NÃO são @MapsId para a entidade Cliente, apenas fazem parte da PK AQUI
-    @Column(name = "tb_cliente_tb_endereco_id_endereco", nullable = false)
+    @Column(name = "TB_CLIENTE_TB_ENDERECO_ID_ENDERECO", nullable = false)
     private Long clienteEnderecoId;
 
-    @Column(name = "tb_cliente_tb_contato_id_contato", nullable = false)
+    @Column(name = "TB_CLIENTE_TB_CONTATO_ID_CONTATO", nullable = false)
     private Long clienteContatoId;
 
-    // Componente da PK que referencia a PK de TB_VEICULO
-    @Column(name = "tb_veiculo_id_veiculo", nullable = false) // Nome da coluna FK no BD
-    private Long veiculoId; // Tipo do campo PK referenciado em Veiculo
+    @Column(name = "TB_VEICULO_ID_VEICULO", nullable = false) // Nome da coluna FK no BD
+    private Long veiculoId;
 }

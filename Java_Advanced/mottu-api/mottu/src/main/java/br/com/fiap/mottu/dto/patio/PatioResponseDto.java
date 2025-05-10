@@ -1,7 +1,7 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\patio\PatioResponseDto.java
 package br.com.fiap.mottu.dto.patio;
 
 import lombok.Value;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 

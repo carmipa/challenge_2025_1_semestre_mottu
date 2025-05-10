@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\EnderecoPatioId.java
 package br.com.fiap.mottu.model.relacionamento;
 
 import jakarta.persistence.*;
@@ -13,9 +14,9 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class EnderecoPatioId implements Serializable {
 
-    @Column(name = "tb_endereco_id_endereco", nullable = false)
-    private Long enderecoId; // Tipo do campo PK referenciado em Endereco
+    @Column(name = "TB_ENDERECO_ID_ENDERECO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long enderecoId;
 
-    @Column(name = "tb_patio_id_patio", nullable = false)
-    private Long patioId; // Tipo do campo PK referenciado em TbPatio
+    @Column(name = "TB_PATIO_ID_PATIO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long patioId;
 }

@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\ContatoPatioId.java
 package br.com.fiap.mottu.model.relacionamento;
 
 import jakarta.persistence.*;
@@ -13,9 +14,9 @@ import java.io.Serializable;
 @EqualsAndHashCode // Essencial para PKs compostas
 public class ContatoPatioId implements Serializable {
 
-    @Column(name = "tb_patio_id_patio", nullable = false) // Nome da coluna FK no BD
-    private Long patioId; // Tipo do campo PK referenciado em TbPatio
+    @Column(name = "TB_PATIO_ID_PATIO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long patioId;
 
-    @Column(name = "tb_contato_id_contato", nullable = false) // Nome da coluna FK no BD
-    private Long contatoId; // Tipo do campo PK referenciado em Contato
+    @Column(name = "TB_CONTATO_ID_CONTATO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long contatoId;
 }

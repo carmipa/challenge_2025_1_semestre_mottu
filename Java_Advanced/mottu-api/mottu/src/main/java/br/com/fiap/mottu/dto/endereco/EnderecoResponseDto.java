@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\endereco\EnderecoResponseDto.java
 package br.com.fiap.mottu.dto.endereco;
 
 import lombok.Value;

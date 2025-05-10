@@ -1,13 +1,14 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\cliente\ClienteResponseDto.java
 package br.com.fiap.mottu.dto.cliente;
 
 import br.com.fiap.mottu.dto.contato.ContatoResponseDto;
 import br.com.fiap.mottu.dto.endereco.EnderecoResponseDto;
-import br.com.fiap.mottu.model.Contato;
-import br.com.fiap.mottu.model.Endereco;
 import lombok.Value;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set; // Importar Set se for incluir DTOs de veículo
+import br.com.fiap.mottu.dto.veiculo.VeiculoResponseDto; // Importar o DTO de Veículo
 
 /**
  * DTO for {@link br.com.fiap.mottu.model.Cliente}
@@ -25,4 +26,7 @@ public class ClienteResponseDto implements Serializable {
     String estadoCivil;
     EnderecoResponseDto enderecoResponseDto;
     ContatoResponseDto contatoResponseDto;
+
+    // Adicione esta linha se você quiser incluir os veículos associados no ResponseDto
+    // Set<VeiculoResponseDto> veiculos; // Necessita de mapeamento customizado no ClienteMapper
 }

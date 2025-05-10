@@ -1,45 +1,51 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Box.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
-// Importe java.util.Set se for adicionar relacionamentos inversos com VeiculoBox e ZonaBox
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "TB_BOX") // Mapeia para o nome em maiúsculas no BD
+@Table(name = "TB_BOX", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(callSuper = false) // Cuidado em entidades JPA
-public class Box { // Renomeado de TbBox para Box conforme sua convenção
+@ToString(exclude = {"veiculoBoxes", "zonaBoxes"}) // Excluir relacionamentos no toString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Box {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_box") // Nome da coluna em minúsculas no BD
+    @Column(name = "ID_BOX") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
     private Long idBox;
 
-    @Column(name = "nome", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "NOME", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String nome;
 
-    @Column(name = "status", nullable = false, length = 1) // DDL é CHAR(1)
-    private String status; // 'L' (Livre), 'O' (Ocupado), etc. Validar no Backend/Frontend/BD.
+    @Column(name = "STATUS", nullable = false, length = 1) // DDL é CHAR(1) NOT NULL
+    private String status;
 
-    @Column(name = "data_entrada", nullable = false) // DDL é DATE
-    private LocalDate dataEntrada; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_ENTRADA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataEntrada;
 
-    @Column(name = "data_saida", nullable = false) // DDL é DATE
-    private LocalDate dataSaida; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_SAIDA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataSaida;
 
-    @Column(name = "observacao", length = 100) // DDL é VARCHAR2(100). Nullable por padrão.
+    @Column(name = "OBSERVACAO", length = 100) // DDL é VARCHAR2(100). Nullable por padrão.
     private String observacao;
 
-    // Relacionamentos inversos para tabelas de junção (opcional, se precisar navegar)
-    // @OneToMany(mappedBy = "box")
-    // private Set<VeiculoBox> veiculosNoBox;
+    // Relacionamentos inversos para tabelas de junção
+    @OneToMany(mappedBy = "box", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.VeiculoBox> veiculoBoxes = new HashSet<>();
 
-    // @OneToMany(mappedBy = "box")
-    // private Set<ZonaBox> zonasDoBox; // Uma box pode estar associada a várias zonas? Conforme o modelo permite.
+    @OneToMany(mappedBy = "box", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ZonaBox> zonaBoxes = new HashSet<>();
 }

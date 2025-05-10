@@ -1,8 +1,11 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Endereco.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-// Importe java.util.Set se for adicionar relacionamentos inversos com EnderecoPatio ou Cliente
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -10,45 +13,50 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_ENDERECO") // Mapeia para o nome em maiúsculas no BD
-public class Endereco { // Nome mantido
+@Table(name = "TB_ENDERECO", schema = "CHALLENGE") // Adicionado schema
+@ToString(exclude = {"clienteEnderecos", "enderecoPatios"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_endereco") // Nome da coluna em minúsculas no BD
-    private Long idEndereco; // Renomeado para clareza
+    @Column(name = "ID_ENDERECO") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
+    private Long idEndereco;
 
-    @Column(name = "cep", nullable = false, length = 9) // DDL é CHAR(9)
-    private String cep; // CHAR(9) pode ser mapeado como String
+    @Column(name = "CEP", nullable = false, length = 9) // DDL é CHAR(9) NOT NULL
+    private String cep;
 
-    @Column(name = "numero", nullable = false, precision = 7, scale = 0) // DDL é NUMBER(7) NOT NULL
-    private Integer numero; // Use Integer para NUMBER sem casas decimais e com precisão pequena
+    @Column(name = "NUMERO", nullable = false, precision = 7, scale = 0) // DDL é NUMBER(7) NOT NULL
+    private Integer numero;
 
-    @Column(name = "logradouro", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "LOGRADOURO", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String logradouro;
 
-    @Column(name = "bairro", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "BAIRRO", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String bairro;
 
-    @Column(name = "cidade", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "CIDADE", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String cidade;
 
-    @Column(name = "estado", nullable = false, length = 2) // DDL é CHAR(2)
-    private String estado; // CHAR(2) pode ser mapeado como String
+    @Column(name = "ESTADO", nullable = false, length = 2) // DDL é CHAR(2) NOT NULL
+    private String estado;
 
-    @Column(name = "pais", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
+    @Column(name = "PAIS", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String pais;
 
-    @Column(name = "complemento", length = 60) // DDL é VARCHAR2(60). Nullable por padrão.
+    @Column(name = "COMPLEMENTO", length = 60) // DDL é VARCHAR2(60)
     private String complemento;
 
-    @Column(name = "observacao", length = 200) // DDL é VARCHAR2(200). Nullable por padrão.
+    @Column(name = "OBSERVACAO", length = 200) // DDL é VARCHAR2(200)
     private String observacao;
 
-    // Relacionamentos inversos (opcional, se precisar navegar)
-    // @OneToMany(mappedBy = "endereco")
-    // private Set<Cliente> clientes;
+    // Relacionamentos inversos
+    @OneToMany(mappedBy = "endereco", cascade = CascadeType.ALL) // Ajuste CascadeType conforme sua necessidade
+    @ToString.Exclude
+    private Set<Cliente> clienteEnderecos = new HashSet<>();
 
-    // @OneToMany(mappedBy = "endereco")
-    // private Set<EnderecoPatio> enderecosPatio;
+    @OneToMany(mappedBy = "endereco", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.EnderecoPatio> enderecoPatios = new HashSet<>();
 }

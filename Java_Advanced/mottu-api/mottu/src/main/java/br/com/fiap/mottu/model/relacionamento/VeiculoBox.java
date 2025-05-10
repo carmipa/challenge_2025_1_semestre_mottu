@@ -1,19 +1,20 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\VeiculoBox.java
 package br.com.fiap.mottu.model.relacionamento;
 
-import br.com.fiap.mottu.model.Box; // Importa a classe TbBox
-import br.com.fiap.mottu.model.Veiculo; // Importa a classe TbVeiculo
+import br.com.fiap.mottu.model.Box;
+import br.com.fiap.mottu.model.Veiculo;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_VEICULOBOX") // Mapeia para o nome renomeado e em maiúsculas no BD
+@Table(name = "TB_VEICULOBOX", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
+@ToString(exclude = {"veiculo", "box"}) // Excluir relacionamentos
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class VeiculoBox {
 
@@ -23,12 +24,14 @@ public class VeiculoBox {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("veiculoId")
-    @JoinColumn(name = "tb_veiculo_id_veiculo", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_VEICULO_ID_VEICULO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Veiculo veiculo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("boxId")
-    @JoinColumn(name = "tb_box_id_box", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_BOX_ID_BOX", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Box box;
 
     public VeiculoBox(Veiculo veiculo, Box box) {

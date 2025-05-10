@@ -1,38 +1,39 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\ContatoPatio.java
 package br.com.fiap.mottu.model.relacionamento;
 
-import br.com.fiap.mottu.model.Contato; // Importa a classe Contato
-import br.com.fiap.mottu.model.Patio; // Importa a classe TbPatio
+import br.com.fiap.mottu.model.Contato;
+import br.com.fiap.mottu.model.Patio;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_CONTATOPATIO") // Mapeia para o nome renomeado e em maiúsculas no BD
+@Table(name = "TB_CONTATOPATIO", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Use onlyExplicitlyIncluded com @EmbeddedId
+@ToString(exclude = {"patio", "contato"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class ContatoPatio {
 
-    @EmbeddedId // Usa a classe Embeddable para a PK composta
-    @EqualsAndHashCode.Include // Inclui apenas o ID no cálculo de hash/equals
+    @EmbeddedId
+    @EqualsAndHashCode.Include
     private ContatoPatioId id;
 
-    // Mapeamento dos relacionamentos Many-to-One para as entidades que compõem a PK
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("patioId") // Mapeia a parte 'patioId' do EmbeddedId
-    @JoinColumn(name = "tb_patio_id_patio", nullable = false, insertable = false, updatable = false) // Coluna real no BD, não pode ser alterada por este lado
+    @MapsId("patioId")
+    @JoinColumn(name = "TB_PATIO_ID_PATIO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Patio patio;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("contatoId") // Mapeia a parte 'contatoId' do EmbeddedId
-    @JoinColumn(name = "tb_contato_id_contato", nullable = false, insertable = false, updatable = false) // Coluna real no BD, não pode ser alterada por este lado
+    @MapsId("contatoId")
+    @JoinColumn(name = "TB_CONTATO_ID_CONTATO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Contato contato;
 
-    // Construtor útil para criar a entidade a partir das entidades relacionadas
     public ContatoPatio(Patio patio, Contato contato) {
         this.patio = patio;
         this.contato = contato;

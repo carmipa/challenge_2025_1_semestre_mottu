@@ -1,19 +1,20 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\ZonaPatio.java
 package br.com.fiap.mottu.model.relacionamento;
 
-import br.com.fiap.mottu.model.Patio; // Importa a classe TbPatio
-import br.com.fiap.mottu.model.Zona; // Importa a classe TbZona
+import br.com.fiap.mottu.model.Patio;
+import br.com.fiap.mottu.model.Zona;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_ZONAPATIO") // Mapeia para o nome renomeado e em maiúsculas no BD
+@Table(name = "TB_ZONAPATIO", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
+@ToString(exclude = {"patio", "zona"}) // Excluir relacionamentos
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class ZonaPatio {
 
@@ -23,12 +24,14 @@ public class ZonaPatio {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("patioId")
-    @JoinColumn(name = "tb_patio_id_patio", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_PATIO_ID_PATIO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Patio patio;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("zonaId")
-    @JoinColumn(name = "tb_zona_id_zona", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_ZONA_ID_ZONA", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Zona zona;
 
     public ZonaPatio(Patio patio, Zona zona) {

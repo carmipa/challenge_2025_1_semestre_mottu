@@ -1,7 +1,7 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\zona\ZonaResponseDto.java
 package br.com.fiap.mottu.dto.zona;
 
 import lombok.Value;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 

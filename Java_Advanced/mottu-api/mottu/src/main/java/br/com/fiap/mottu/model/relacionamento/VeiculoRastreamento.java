@@ -1,19 +1,20 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\VeiculoRastreamento.java
 package br.com.fiap.mottu.model.relacionamento;
 
-import br.com.fiap.mottu.model.Rastreamento; // Importa a classe TbRastreamento
-import br.com.fiap.mottu.model.Veiculo; // Importa a classe TbVeiculo
+import br.com.fiap.mottu.model.Rastreamento;
+import br.com.fiap.mottu.model.Veiculo;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_VEICULORASTREAMENTO") // Mapeia para o nome renomeado e em maiúsculas no BD
+@Table(name = "TB_VEICULORASTREAMENTO", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
+@ToString(exclude = {"veiculo", "rastreamento"}) // Excluir relacionamentos
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class VeiculoRastreamento {
 
@@ -23,12 +24,14 @@ public class VeiculoRastreamento {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("veiculoId")
-    @JoinColumn(name = "tb_veiculo_id_veiculo", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_VEICULO_ID_VEICULO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Veiculo veiculo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("rastreamentoId")
-    @JoinColumn(name = "tb_rastreamento_id_rastreamento", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "TB_RASTREAMENTO_ID_RASTREAMENTO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
+    @ToString.Exclude
     private Rastreamento rastreamento;
 
     public VeiculoRastreamento(Veiculo veiculo, Rastreamento rastreamento) {

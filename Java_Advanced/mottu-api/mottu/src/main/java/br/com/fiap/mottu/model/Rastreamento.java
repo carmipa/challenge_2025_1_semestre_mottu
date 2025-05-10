@@ -1,34 +1,40 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Rastreamento.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-// Importe java.util.Set se for adicionar relacionamentos inversos com VeiculoRastreamento
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "TB_RASTREAMENTO") // Mapeia para o nome em maiúsculas no BD
+@Table(name = "TB_RASTREAMENTO", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(callSuper = false) // Cuidado em entidades JPA
-public class Rastreamento { // Renomeado de TbRastreamento para Rastreamento
+@ToString(exclude = {"veiculoRastreamentos"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Rastreamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_rastreamento") // Nome da coluna em minúsculas no BD
+    @Column(name = "ID_RASTREAMENTO") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
     private Long idRastreamento;
 
-    @Column(name = "ips", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
+    @Column(name = "IPS", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
     private String ips; // Representação String dos dados IPS (ex: WKT). NOT NULL no BD.
 
-    @Column(name = "gprs", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
+    @Column(name = "GPRS", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
     private String gprs; // Representação String dos dados GPRS (ex: WKT). NOT NULL no BD.
 
-    // Nota: Para usar a funcionalidade espacial, considere um mapeamento avançado (custom converter).
+    // Nota: Para usar a funcionalidade espacial, considere a biblioteca `hibernate-spatial`
+    // e um UserType customizado para mapear SDO_GEOMETRY.
 
-    // Relacionamento inverso com a tabela de junção TB_VEICULORASTREAMENTO (opcional)
-    // @OneToMany(mappedBy = "rastreamento")
-    // private Set<VeiculoRastreamento> veiculosAssociados;
+    // Relacionamento inverso com a tabela de junção TB_VEICULORASTREAMENTO
+    @OneToMany(mappedBy = "rastreamento", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.VeiculoRastreamento> veiculoRastreamentos = new HashSet<>();
 }

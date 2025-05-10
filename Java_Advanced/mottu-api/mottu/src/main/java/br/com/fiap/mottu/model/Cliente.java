@@ -1,67 +1,68 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Cliente.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
-// Importe java.util.Set se for adicionar relacionamentos inversos com ClienteVeiculo
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "TB_CLIENTE" // Mapeia para o nome em maiúsculas no BD
-        // Removida anotação uniqueConstraints uq_cliente_cpf_cnpj,
-        // pois a constraint UNIQUE UK_CLIENTE_CPF foi adicionada diretamente no DDL final.
-        // Você pode adicionar uniqueConstraints aqui se quiser documentar no código ou usar geração de DDL pelo JPA.
-)
+@Table(name = "TB_CLIENTE", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(callSuper = false) // Cuidado com EqualsAndHashCode em entidades JPA
-public class Cliente { // Nome mantido
+@ToString(exclude = {"endereco", "contato", "clienteVeiculos"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente") // Nome da coluna em minúsculas no BD
-    private Long idCliente; // Mapeia para a PK simplificada no BD
+    @Column(name = "ID_CLIENTE") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
+    private Long idCliente;
 
-    @Column(name = "data_cadastro", nullable = false) // DDL é DATE com DEFAULT SYSDATE
-    // Para preencher automaticamente com a data do BD, confie no DEFAULT SYSDATE no DDL.
-    // Se usar Hibernate, @CreationTimestamp pode funcionar (depende da configuração).
-    private LocalDate dataCadastro; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_CADASTRO", nullable = false, updatable = false) // DDL é DATE com DEFAULT SYSDATE. updatable = false
+    private LocalDate dataCadastro;
 
-    @Column(name = "sexo", nullable = false, length = 2) // DDL é CHAR(2) com CHECK ('M','H')
+    @Column(name = "SEXO", nullable = false, length = 2) // DDL é CHAR(2) NOT NULL
     private String sexo;
 
-    @Column(name = "nome", nullable = false, length = 100) // DDL é VARCHAR2(100)
+    @Column(name = "NOME", nullable = false, length = 100) // DDL é VARCHAR2(100) NOT NULL
     private String nome;
 
-    @Column(name = "sobrenome", nullable = false, length = 100) // DDL é VARCHAR2(100)
+    @Column(name = "SOBRENOME", nullable = false, length = 100) // DDL é VARCHAR2(100) NOT NULL
     private String sobrenome;
 
-    @Column(name = "data_nascimento", nullable = false) // DDL é DATE com CHECK (>= 1900)
-    private LocalDate dataNascimento; // Use LocalDate. Validar range no Backend/Frontend e com CHECK/Trigger no BD.
+    @Column(name = "DATA_NASCIMENTO", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataNascimento;
 
-    @Column(name = "cpf", nullable = false, length = 11) // DDL é CHAR(11) com UNIQUE
-    private String cpf; // Validar formato e unicidade (garantida pelo UNIQUE no BD).
+    @Column(name = "CPF", nullable = false, unique = true, length = 11) // DDL é CHAR(11) NOT NULL, UNIQUE
+    private String cpf;
 
-    @Column(name = "profissao", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "PROFISSAO", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String profissao;
 
-    @Column(name = "estado_civil", nullable = false, length = 50) // DDL é VARCHAR2(50) com CHECK (lista fixa)
+    @Column(name = "ESTADO_CIVIL", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String estadoCivil;
 
     // Mapeamento da Chave Estrangeira para TB_ENDERECO
-    @ManyToOne(fetch = FetchType.LAZY) // Lazy Loading para performance
-    @JoinColumn(name = "tb_endereco_id_endereco", nullable = false) // Coluna FK real no BD
-    private Endereco endereco; // Relacionamento Many-to-One com Endereco
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "TB_ENDERECO_ID_ENDERECO", nullable = false) // Coluna FK real no BD
+    @ToString.Exclude
+    private Endereco endereco;
 
     // Mapeamento da Chave Estrangeira para TB_CONTATO
-    @ManyToOne(fetch = FetchType.LAZY) // Lazy Loading para performance
-    @JoinColumn(name = "tb_contato_id_contato", nullable = false) // Coluna FK real no BD
-    private Contato contato; // Relacionamento Many-to-One com Contato
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "TB_CONTATO_ID_CONTATO", nullable = false) // Coluna FK real no BD
+    @ToString.Exclude
+    private Contato contato;
 
-    // Relacionamento inverso com a tabela de junção TB_CLIENTEVEICULO (opcional)
-    // @OneToMany(mappedBy = "cliente")
-    // private Set<ClienteVeiculo> veiculosAssociados;
+    // Relacionamento inverso com a tabela de junção TB_CLIENTEVEICULO
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ClienteVeiculo> clienteVeiculos = new HashSet<>();
 }

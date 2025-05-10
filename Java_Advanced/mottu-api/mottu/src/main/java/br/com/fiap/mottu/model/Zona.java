@@ -1,45 +1,52 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Zona.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
-// Importe java.util.Set se for adicionar relacionamentos inversos com VeiculoZona, ZonaBox, ZonaPatio
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "TB_ZONA") // Mapeia para o nome em maiúsculas no BD
+@Table(name = "TB_ZONA", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(callSuper = false) // Cuidado em entidades JPA
-public class Zona { // Renomeado de TbZona para Zona
+@ToString(exclude = {"veiculoZonas", "zonaBoxes", "zonaPatios"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Zona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_zona") // Nome da coluna em minúsculas no BD
+    @Column(name = "ID_ZONA") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
     private Long idZona;
 
-    @Column(name = "nome", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "NOME", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String nome;
 
-    @Column(name = "data_entrada", nullable = false) // DDL é DATE
-    private LocalDate dataEntrada; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_ENTRADA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataEntrada;
 
-    @Column(name = "data_saida", nullable = false) // DDL é DATE
-    private LocalDate dataSaida; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_SAIDA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataSaida;
 
-    @Column(name = "observacao", length = 100) // DDL é VARCHAR2(100). Nullable por padrão.
+    @Column(name = "OBSERVACAO", length = 100) // DDL é VARCHAR2(100)
     private String observacao;
 
-    // Relacionamentos inversos (opcional, se precisar navegar)
-    // @OneToMany(mappedBy = "zona")
-    // private Set<VeiculoZona> veiculosNestaZona;
+    // Relacionamentos inversos
+    @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.VeiculoZona> veiculoZonas = new HashSet<>();
 
-    // @OneToMany(mappedBy = "zona")
-    // private Set<ZonaBox> boxesNestaZona; // Uma zona pode ter vários boxes
+    @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ZonaBox> zonaBoxes = new HashSet<>();
 
-    // @OneToMany(mappedBy = "zona")
-    // private Set<ZonaPatio> patiosDestaZona; // Uma zona pode estar associada a vários pátios? Conforme o modelo permite.
+    @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ZonaPatio> zonaPatios = new HashSet<>();
 }

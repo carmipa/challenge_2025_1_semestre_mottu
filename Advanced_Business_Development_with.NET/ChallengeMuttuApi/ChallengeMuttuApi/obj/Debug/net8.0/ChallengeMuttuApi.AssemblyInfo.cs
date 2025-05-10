@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChallengeMuttuApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04475ba2d3826c501ea12c452d19086dfff8d83b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0a221d60bf8359d3a2c4ebcc4d461e91a1bffcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChallengeMuttuApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChallengeMuttuApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

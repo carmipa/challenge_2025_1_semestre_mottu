@@ -1,48 +1,56 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Patio.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
-// Importe java.util.Set se for adicionar relacionamentos inversos com ContatoPatio, EnderecoPatio, VeiculoPatio, ZonaPatio
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "TB_PATIO") // Mapeia para o nome em maiúsculas no BD
+@Table(name = "TB_PATIO", schema = "CHALLENGE") // Adicionado schema
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode(callSuper = false) // Cuidado em entidades JPA
-public class Patio { // Renomeado de TbPatio para Patio
+@ToString(exclude = {"contatoPatios", "enderecoPatios", "veiculoPatios", "zonaPatios"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Patio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_patio") // Nome da coluna em minúsculas no BD
+    @Column(name = "ID_PATIO") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
     private Long idPatio;
 
-    @Column(name = "nome_patio", nullable = false, length = 50) // DDL é VARCHAR2(50)
+    @Column(name = "NOME_PATIO", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
     private String nomePatio;
 
-    @Column(name = "data_entrada", nullable = false) // DDL é DATE
-    private LocalDate dataEntrada; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_ENTRADA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataEntrada;
 
-    @Column(name = "data_saida", nullable = false) // DDL é DATE
-    private LocalDate dataSaida; // Use LocalDate para DATE sem hora
+    @Column(name = "DATA_SAIDA", nullable = false) // DDL é DATE NOT NULL
+    private LocalDate dataSaida;
 
-    @Column(name = "observacao", length = 100) // DDL é VARCHAR2(100). Nullable por padrão.
+    @Column(name = "OBSERVACAO", length = 100) // DDL é VARCHAR2(100)
     private String observacao;
 
-    // Relacionamentos inversos (opcional, se precisar navegar)
-    // @OneToMany(mappedBy = "patio")
-    // private Set<ContatoPatio> contatosDoPatio;
+    // Relacionamentos inversos
+    @OneToMany(mappedBy = "patio", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ContatoPatio> contatoPatios = new HashSet<>();
 
-    // @OneToMany(mappedBy = "patio")
-    // private Set<EnderecoPatio> enderecosDoPatio;
+    @OneToMany(mappedBy = "patio", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.EnderecoPatio> enderecoPatios = new HashSet<>();
 
-    // @OneToMany(mappedBy = "patio")
-    // private Set<VeiculoPatio> veiculosNoPatio;
+    @OneToMany(mappedBy = "patio", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.VeiculoPatio> veiculoPatios = new HashSet<>();
 
-    // @OneToMany(mappedBy = "patio")
-    // private Set<ZonaPatio> zonasDoPatio;
+    @OneToMany(mappedBy = "patio", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ZonaPatio> zonaPatios = new HashSet<>();
 }

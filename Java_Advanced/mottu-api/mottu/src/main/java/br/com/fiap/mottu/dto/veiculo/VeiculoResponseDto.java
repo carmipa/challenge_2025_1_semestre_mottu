@@ -1,7 +1,7 @@
+// Caminho do arquivo: br\com\fiap\mottu\dto\veiculo\VeiculoResponseDto.java
 package br.com.fiap.mottu.dto.veiculo;
 
 import lombok.Value;
-
 import java.io.Serializable;
 
 /**

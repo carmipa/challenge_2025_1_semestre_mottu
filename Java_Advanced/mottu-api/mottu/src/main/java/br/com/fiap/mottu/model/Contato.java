@@ -1,8 +1,11 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\Contato.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-// Importe java.util.Set se for adicionar relacionamentos inversos com ContatoPatio ou Cliente
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -10,45 +13,51 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_CONTATO") // Mapeia para o nome em maiúsculas no BD
-public class Contato { // Nome mantido
+@Table(name = "TB_CONTATO", schema = "CHALLENGE") // Adicionado schema
+@ToString(exclude = {"clienteContatos", "contatoPatios"}) // Excluir relacionamentos
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+public class Contato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_contato") // Nome da coluna em minúsculas no BD
-    private Long idContato; // Renomeado para clareza
+    @Column(name = "ID_CONTATO") // Nome da coluna em MAIÚSCULAS no BD
+    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
+    private Long idContato;
 
-    @Column(name = "email", nullable = false, length = 100) // DDL é VARCHAR2(100)
-    private String email; // UNIQUE no DDL final
+    @Column(name = "EMAIL", nullable = false, length = 100) // DDL é VARCHAR2(100) NOT NULL
+    private String email;
 
-    @Column(name = "ddd", nullable = false, precision = 4, scale = 0) // DDL é NUMBER(4) com CHECK range
-    private Integer ddd; // Integer ou Short
+    @Column(name = "DDD", nullable = false, precision = 4, scale = 0) // DDL é NUMBER(4) NOT NULL
+    private Integer ddd;
 
-    @Column(name = "ddi", nullable = false, precision = 4, scale = 0) // DDL é NUMBER(4)
-    private Integer ddi; // Integer ou Short
+    @Column(name = "DDI", nullable = false, precision = 4, scale = 0) // DDL é NUMBER(4) NOT NULL
+    private Integer ddi;
 
-    @Column(name = "telefone1", nullable = false, length = 20) // DDL é VARCHAR2(20)
+    @Column(name = "TELEFONE1", nullable = false, length = 20) // DDL é VARCHAR2(20) NOT NULL
     private String telefone1;
 
-    @Column(name = "telefone2", length = 20) // DDL é VARCHAR2(20). Nullable por padrão.
+    @Column(name = "TELEFONE2", length = 20) // DDL é VARCHAR2(20)
     private String telefone2;
 
-    @Column(name = "telefone3", length = 20) // DDL é VARCHAR2(20). Nullable por padrão.
+    @Column(name = "TELEFONE3", length = 20) // DDL é VARCHAR2(20)
     private String telefone3;
 
-    @Column(name = "celular", nullable = false, length = 20) // DDL é VARCHAR2(20)
+    @Column(name = "CELULAR", nullable = false, length = 20) // DDL é VARCHAR2(20) NOT NULL
     private String celular;
 
-    @Column(name = "outro", length = 100) // DDL é VARCHAR2(100). Nullable por padrão.
+    @Column(name = "OUTRO", length = 100) // DDL é VARCHAR2(100)
     private String outro;
 
-    @Column(name = "observacao", length = 200) // DDL é VARCHAR2(200). Nullable por padrão.
+    @Column(name = "OBSERVACAO", length = 200) // DDL é VARCHAR2(200)
     private String observacao;
 
-    // Relacionamentos inversos (opcional, se precisar navegar)
-    // @OneToMany(mappedBy = "contato")
-    // private Set<Cliente> clientes;
+    // Relacionamentos inversos
+    // Assumindo que TB_CLIENTE.TB_CONTATO_ID_CONTATO é uma FK e Contato pode ter vários Clientes
+    @OneToMany(mappedBy = "contato", cascade = CascadeType.ALL) // Ajuste CascadeType conforme sua necessidade
+    @ToString.Exclude
+    private Set<Cliente> clienteContatos = new HashSet<>();
 
-    // @OneToMany(mappedBy = "contato")
-    // private Set<ContatoPatio> patioContatos;
+    @OneToMany(mappedBy = "contato", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    private Set<br.com.fiap.mottu.model.relacionamento.ContatoPatio> contatoPatios = new HashSet<>();
 }

@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\ZonaPatioId.java
 package br.com.fiap.mottu.model.relacionamento;
 
 import jakarta.persistence.*;
@@ -13,9 +14,9 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class ZonaPatioId implements Serializable {
 
-    @Column(name = "tb_patio_id_patio", nullable = false)
-    private Long patioId; // Tipo do campo PK referenciado em TbPatio
+    @Column(name = "TB_PATIO_ID_PATIO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long patioId;
 
-    @Column(name = "tb_zona_id_zona", nullable = false)
-    private Long zonaId; // Tipo do campo PK referenciado em TbZona
+    @Column(name = "TB_ZONA_ID_ZONA", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    private Long zonaId;
 }

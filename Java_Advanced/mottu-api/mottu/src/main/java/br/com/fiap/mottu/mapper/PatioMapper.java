@@ -1,3 +1,4 @@
+// Caminho do arquivo: br\com\fiap\mottu\mapper\PatioMapper.java
 package br.com.fiap.mottu.mapper;
 
 import br.com.fiap.mottu.dto.patio.PatioRequestDto;
@@ -9,44 +10,38 @@ import org.mapstruct.ReportingPolicy;
 import org.mapstruct.MappingConstants;
 
 // Importe os mappers das entidades relacionadas se PatioRequestDto ou PatioResponseDto tiverem DTOs aninhados ou coleções de DTOs delas
-// import br.com.fiap.mottu.mapper.EnderecoMapper;
-// import br.com.fiap.mottu.mapper.ContatoMapper;
-// import br.com.fiap.mottu.mapper.ZonaMapper;
-// import br.com.fiap.mottu.mapper.VeiculoMapper;
-
+// import br.com.fiap.mottu.mapper.relacionamento.EnderecoPatioMapper;
+// import br.com.fiap.mottu.mapper.relacionamento.ContatoPatioMapper;
+// import br.com.fiap.mottu.mapper.relacionamento.ZonaPatioMapper;
+// import br.com.fiap.mottu.mapper.relacionamento.VeiculoPatioMapper;
 
 @Mapper(
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         componentModel = MappingConstants.ComponentModel.SPRING
         // Adicione aqui o 'uses' se PatioRequestDto ou PatioResponseDto incluirem DTOs aninhados ou coleções
-        // uses = { EnderecoMapper.class, ContatoMapper.class, ZonaMapper.class, VeiculoMapper.class } // Exemplo
+        // uses = { EnderecoPatioMapper.class, ContatoPatioMapper.class, ZonaPatioMapper.class, VeiculoPatioMapper.class }
 )
 public interface PatioMapper {
 
     // Método 1: Converte de Request DTO para Entidade (para CRIAR uma nova)
-    // Mapeia PatioRequestDto -> Patio
     @Mapping(target = "idPatio", ignore = true) // ID é gerado pelo BD
-    // Adicionar aqui @Mapping para campos de relacionamento (FKs) no Request DTO se houver
-    // Ex: @Mapping(target = "enderecos", source = "enderecosRequestDto") // Se PatioRequestDto tiver Set<EnderecoRequestDto> enderecosRequestDto
+    @Mapping(target = "contatoPatios", ignore = true) // Relacionamento inverso não é mapeado na criação
+    @Mapping(target = "enderecoPatios", ignore = true) // Relacionamento inverso não é mapeado na criação
+    @Mapping(target = "veiculoPatios", ignore = true) // Relacionamento inverso não é mapeado na criação
+    @Mapping(target = "zonaPatios", ignore = true) // Relacionamento inverso não é mapeado na criação
     Patio toEntity(PatioRequestDto patioRequestDto);
 
     // Método 2: Atualização de uma Entidade existente a partir de Request DTO
-    // Mapeia PatioRequestDto -> Patio (existente)
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    // @Mapping(target = "idPatio", ignore = true) // ID não é atualizado
-    // Adicionar aqui @Mapping para campos de relacionamento (FKs) no Request DTO se houver
-    // Ex: @Mapping(target = "enderecos", source = "enderecosRequestDto") // Se PatioRequestDto tiver Set<EnderecoRequestDto> enderecosRequestDto
+    @Mapping(target = "idPatio", ignore = true) // ID não é atualizado
+    @Mapping(target = "contatoPatios", ignore = true) // Relacionamento inverso não é atualizado
+    @Mapping(target = "enderecoPatios", ignore = true) // Relacionamento inverso não é atualizado
+    @Mapping(target = "veiculoPatios", ignore = true) // Relacionamento inverso não é atualizado
+    @Mapping(target = "zonaPatios", ignore = true) // Relacionamento inverso não é atualizado
     Patio partialUpdate(PatioRequestDto patioRequestDto, @MappingTarget Patio patio);
 
     // Método 3: Converte de Entidade para DTO de Resposta (ESSENCIAL para consultas)
-    // Mapeia Patio -> PatioResponseDto
-    // MapStruct mapeia campos com nomes iguais automaticamente (idPatio, nomePatio, etc.)
-    // Adicionar aqui @Mapping para campos de relacionamentos no ResponseDto
-    // Ex: @Mapping(target = "enderecos", source = "relacionamentoPatioEndereco") // Se na entidade Patio tiver um @OneToMany para a tabela de junção T_EP
-    // Ex: @Mapping(target = "contatos", source = "relacionamentoPatioContato") // Se na entidade Patio tiver um @OneToMany para a tabela de junção T_CP
-    // Ex: @Mapping(target = "zonas", source = "relacionamentoPatioZona") // Se na entidade Patio tiver um @OneToMany para a tabela de junção TB_ZP
-    // Ex: @Mapping(target = "veiculos", source = "relacionamentoPatioVeiculo") // Se na entidade Patio tiver um @OneToMany para a tabela de junção TB_VP
-    PatioResponseDto toResponseDto(Patio patio); // Renomeado de toDto1
+    PatioResponseDto toResponseDto(Patio patio);
 
     // --- Métodos para mapear coleções (opcional) ---
     // List<PatioResponseDto> toResponseDtoList(List<Patio> patios);
