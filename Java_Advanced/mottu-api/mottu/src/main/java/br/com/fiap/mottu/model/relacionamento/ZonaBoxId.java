@@ -14,9 +14,9 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class ZonaBoxId implements Serializable {
 
-    @Column(name = "TB_ZONA_ID_ZONA", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    @Column(name = "TB_ZONA_ID_ZONA", nullable = false)
     private Long zonaId;
 
-    @Column(name = "TB_BOX_ID_BOX", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    @Column(name = "TB_BOX_ID_BOX", nullable = false)
     private Long boxId;
 }

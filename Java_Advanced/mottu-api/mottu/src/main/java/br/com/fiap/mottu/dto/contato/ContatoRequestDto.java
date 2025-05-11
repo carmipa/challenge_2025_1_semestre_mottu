@@ -1,32 +1,25 @@
-// Caminho do arquivo: br\com\fiap\mottu\dto\contato\ContatoRequestDto.java
+// br/com/fiap/mottu/dto/contato/ContatoRequestDto.java
 package br.com.fiap.mottu.dto.contato;
 
 import lombok.Value;
-
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 
-/**
- * DTO for {@link br.com.fiap.mottu.model.Contato}
- */
 @Value
 public class ContatoRequestDto implements Serializable {
+    /** ID para identificar um contato existente em operações de atualização */
+    Long idContato;
+
     @NotBlank(message = "O email não pode estar em branco.")
-    @Email(message = "O email deve ser válido.")
-    @Size(max = 100, message = "O email deve ter no máximo 100 caracteres.")
+    @Email(message = "Formato de email inválido.")
     String email;
 
-    @NotNull(message = "O DDD não pode ser nulo.")
-    @Min(value = 11, message = "O DDD deve ser no mínimo 11.")
-    @Max(value = 99, message = "O DDD deve ser no máximo 99.")
+    @Min(value = 0, message = "DDD inválido.")
     Integer ddd;
 
-    @NotNull(message = "O DDI não pode ser nulo.")
-    @Min(value = 1, message = "O DDI deve ser no mínimo 1.")
-    @Max(value = 999, message = "O DDI deve ser no máximo 999.") // Assumindo DDI de 3 dígitos, ajuste se necessário
+    @Min(value = 0, message = "DDI inválido.")
     Integer ddi;
 
-    @NotBlank(message = "O telefone 1 não pode estar em branco.")
     @Size(max = 20, message = "O telefone 1 deve ter no máximo 20 caracteres.")
     String telefone1;
 

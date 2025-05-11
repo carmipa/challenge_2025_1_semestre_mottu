@@ -4,7 +4,7 @@ package br.com.fiap.mottu.dto.box;
 import lombok.Value;
 import java.io.Serializable;
 import java.time.LocalDate;
-import jakarta.validation.constraints.*; // Importar para validação
+import jakarta.validation.constraints.*;
 
 /**
  * DTO for {@link br.com.fiap.mottu.model.Box}
@@ -17,7 +17,7 @@ public class BoxRequestDto implements Serializable {
 
     @NotBlank(message = "O status não pode estar em branco.")
     @Size(max = 1, message = "O status deve ter 1 caracter.")
-    @Pattern(regexp = "[LO]", message = "O status deve ser 'L' (Livre) ou 'O' (Ocupado).") // Exemplo de validação
+    @Pattern(regexp = "[LO]", message = "O status deve ser 'L' (Livre) ou 'O' (Ocupado).")
     String status;
 
     @NotNull(message = "A data de entrada não pode ser nula.")

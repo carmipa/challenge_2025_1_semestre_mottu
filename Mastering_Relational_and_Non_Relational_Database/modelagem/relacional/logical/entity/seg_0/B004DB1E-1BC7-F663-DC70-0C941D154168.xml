@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B004DB1E-1BC7-F663-DC70-0C941D154168" name="TB_ZP">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B004DB1E-1BC7-F663-DC70-0C941D154168" name="TB_ZONAPATIO">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 15:40:51 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <generatorID>A5C54E4C-A69D-7B12-6A5B-A97CB784EF49</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>0343B087-1559-C3A9-4A42-6634C2B41D66</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -35,7 +35,7 @@
 <generatorID>9E4F9013-227B-A06D-57E1-FA1F7903E943</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>C311D03C-7C92-9A16-12F0-86A9B449E28B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -50,7 +50,7 @@
 <createdTime>2025-05-03 15:41:09 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

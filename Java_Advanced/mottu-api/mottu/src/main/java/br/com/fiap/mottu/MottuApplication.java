@@ -1,4 +1,5 @@
-package br.com.fiap.mottu;
+package br.com.fiap.mottu; // Este é o pacote correto
+
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate; // <-- Importar RestTemplate
-
+import org.springframework.web.reactive.function.client.WebClient; // <-- Adicione esta importação AQUI!
 
 
 @EnableJpaRepositories
@@ -25,4 +26,9 @@ public class MottuApplication {
 		return new RestTemplate();
 	}
 
+	// Adicionado para suportar WebClient no EnderecoService
+	@Bean // <-- Adicione este Bean AQUI!
+	public WebClient.Builder webClientBuilder() {
+		return WebClient.builder();
+	}
 }

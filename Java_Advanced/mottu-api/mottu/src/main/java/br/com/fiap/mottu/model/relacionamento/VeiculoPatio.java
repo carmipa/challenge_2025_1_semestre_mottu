@@ -1,4 +1,4 @@
-// Caminho do arquivo: br\com\fiap\mottu\model\relacionamento\VeiculoPatio.java
+// main\java\br\com\fiap\mottu\model\relacionamento\VeiculoPatio.java
 package br.com.fiap.mottu.model.relacionamento;
 
 import br.com.fiap.mottu.model.Patio;
@@ -8,30 +8,28 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_VEICULOPATIO", schema = "CHALLENGE") // Adicionado schema
+@Table(name = "TB_VEICULOPATIO", schema = "CHALLENGE")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString(exclude = {"veiculo", "patio"}) // Excluir relacionamentos
+@ToString // CORRIGIDO: Removido o parâmetro 'exclude'
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class VeiculoPatio {
 
     @EmbeddedId
     @EqualsAndHashCode.Include
     private VeiculoPatioId id;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("veiculoId")
-    @JoinColumn(name = "TB_VEICULO_ID_VEICULO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
-    @ToString.Exclude
+    @JoinColumn(name = "TB_VEICULO_ID_VEICULO", nullable = false, insertable = false, updatable = false)
+    @ToString.Exclude // MANTER esta anotação no campo
     private Veiculo veiculo;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("patioId")
-    @JoinColumn(name = "TB_PATIO_ID_PATIO", nullable = false, insertable = false, updatable = false) // Nome da coluna em MAIÚSCULAS
-    @ToString.Exclude
+    @JoinColumn(name = "TB_PATIO_ID_PATIO", nullable = false, insertable = false, updatable = false)
+    @ToString.Exclude // MANTER esta anotação no campo
     private Patio patio;
 
     public VeiculoPatio(Veiculo veiculo, Patio patio) {

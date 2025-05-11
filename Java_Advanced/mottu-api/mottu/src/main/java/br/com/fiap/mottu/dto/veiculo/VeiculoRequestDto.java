@@ -32,11 +32,11 @@ public class VeiculoRequestDto implements Serializable {
     String modelo;
 
     @Size(max = 30, message = "O motor deve ter no máximo 30 caracteres.")
-    String motor; // Não é NOT NULL no DDL
+    String motor;
 
     @NotNull(message = "O ano não pode ser nulo.")
-    @Min(value = 1900, message = "O ano deve ser a partir de 1900.") // Ajuste conforme sua regra de negócio
-    @Max(value = 2100, message = "O ano deve ser no máximo 2100.") // Ajuste conforme sua regra de negócio
+    @Min(value = 1900, message = "O ano deve ser a partir de 1900.")
+    @Max(value = 2100, message = "O ano deve ser no máximo 2100.")
     Integer ano;
 
     @NotBlank(message = "O combustível não pode estar em branco.")

@@ -5,7 +5,7 @@ import br.com.fiap.mottu.dto.contato.ContatoRequestDto;
 import br.com.fiap.mottu.dto.endereco.EnderecoRequestDto;
 import lombok.Value;
 
-import jakarta.validation.Valid; // Para validar objetos aninhados
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -47,10 +47,10 @@ public class ClienteRequestDto implements Serializable {
     String estadoCivil;
 
     @NotNull(message = "O endereço não pode ser nulo.")
-    @Valid // Valida o DTO aninhado
+    @Valid
     EnderecoRequestDto enderecoRequestDto;
 
     @NotNull(message = "O contato não pode ser nulo.")
-    @Valid // Valida o DTO aninhado
+    @Valid
     ContatoRequestDto contatoRequestDto;
 }

@@ -11,12 +11,12 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode // Essencial para PKs compostas
+@EqualsAndHashCode
 public class ContatoPatioId implements Serializable {
 
-    @Column(name = "TB_PATIO_ID_PATIO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    @Column(name = "TB_PATIO_ID_PATIO", nullable = false)
     private Long patioId;
 
-    @Column(name = "TB_CONTATO_ID_CONTATO", nullable = false) // Nome da coluna FK em MAIÚSCULAS
+    @Column(name = "TB_CONTATO_ID_CONTATO", nullable = false)
     private Long contatoId;
 }

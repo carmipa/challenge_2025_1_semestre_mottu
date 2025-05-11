@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC1E65DA-B6E0-C87F-C474-36CDD0577A45" name="TB_VB">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC1E65DA-B6E0-C87F-C474-36CDD0577A45" name="TB_VEICULOBOX">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 16:03:10 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <generatorID>79D062DA-B0FE-9127-62E0-327CA55B55E9</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>9F3ED40F-935A-8577-51AE-2EDA478341B3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -35,7 +35,7 @@
 <generatorID>77E7ED24-63BE-C73A-1C43-41A7E1EC95E4</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>EEF4C859-E132-E548-9846-9436A9858E9E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -49,9 +49,8 @@
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 16:03:31 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="false"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

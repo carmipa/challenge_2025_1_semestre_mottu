@@ -1,7 +1,6 @@
-// Caminho do arquivo: br\com\fiap\mottu\specification\RastreamentoSpecification.java
 package br.com.fiap.mottu.specification;
 
-import br.com.fiap.mottu.filter.RastreamentoFilter; // Importa do novo pacote
+import br.com.fiap.mottu.filter.RastreamentoFilter;
 import br.com.fiap.mottu.model.Rastreamento;
 import br.com.fiap.mottu.model.relacionamento.VeiculoRastreamento;
 import jakarta.persistence.criteria.Join;
@@ -10,6 +9,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.math.BigDecimal; // Importe BigDecimal!
 
 public class RastreamentoSpecification {
 
@@ -17,11 +17,26 @@ public class RastreamentoSpecification {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
-            if (filter.ips() != null && !filter.ips().isBlank()) {
-                predicates.add(cb.like(cb.lower(root.get("ips")), "%" + filter.ips().toLowerCase() + "%"));
+            // Filtros para IPS
+            if (filter.ipsX() != null) {
+                predicates.add(cb.equal(root.get("ipsX"), filter.ipsX()));
             }
-            if (filter.gprs() != null && !filter.gprs().isBlank()) {
-                predicates.add(cb.like(cb.lower(root.get("gprs")), "%" + filter.gprs().toLowerCase() + "%"));
+            if (filter.ipsY() != null) {
+                predicates.add(cb.equal(root.get("ipsY"), filter.ipsY()));
+            }
+            if (filter.ipsZ() != null) {
+                predicates.add(cb.equal(root.get("ipsZ"), filter.ipsZ()));
+            }
+
+            // Filtros para GPRS
+            if (filter.gprsLatitude() != null) {
+                predicates.add(cb.equal(root.get("gprsLatitude"), filter.gprsLatitude()));
+            }
+            if (filter.gprsLongitude() != null) {
+                predicates.add(cb.equal(root.get("gprsLongitude"), filter.gprsLongitude()));
+            }
+            if (filter.gprsAltitude() != null) {
+                predicates.add(cb.equal(root.get("gprsAltitude"), filter.gprsAltitude()));
             }
 
             // Filtro por relacionamento ManyToMany (VeiculoRastreamento)

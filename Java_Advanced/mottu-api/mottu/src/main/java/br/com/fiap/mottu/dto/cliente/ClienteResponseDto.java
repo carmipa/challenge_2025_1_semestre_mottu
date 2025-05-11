@@ -7,8 +7,8 @@ import lombok.Value;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Set; // Importar Set se for incluir DTOs de veículo
-import br.com.fiap.mottu.dto.veiculo.VeiculoResponseDto; // Importar o DTO de Veículo
+import java.util.Set;
+import br.com.fiap.mottu.dto.veiculo.VeiculoResponseDto;
 
 /**
  * DTO for {@link br.com.fiap.mottu.model.Cliente}
@@ -27,6 +27,5 @@ public class ClienteResponseDto implements Serializable {
     EnderecoResponseDto enderecoResponseDto;
     ContatoResponseDto contatoResponseDto;
 
-    // Adicione esta linha se você quiser incluir os veículos associados no ResponseDto
     // Set<VeiculoResponseDto> veiculos; // Necessita de mapeamento customizado no ClienteMapper
 }

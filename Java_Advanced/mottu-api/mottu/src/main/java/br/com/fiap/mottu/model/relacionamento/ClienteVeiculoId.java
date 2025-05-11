@@ -14,17 +14,15 @@ import java.io.Serializable;
 @EqualsAndHashCode // Essencial para PKs compostas
 public class ClienteVeiculoId implements Serializable {
 
-    @Column(name = "TB_CLIENTE_ID_CLIENTE", nullable = false) // Nome da coluna FK no BD
+    @Column(name = "TB_CLIENTE_ID_CLIENTE", nullable = false)
     private Long clienteId;
 
-    // Componentes da PK de ClienteVeiculo que incluem IDs de Endereco e Contato
-    // Note que estes campos NÃO são @MapsId para a entidade Cliente, apenas fazem parte da PK AQUI
     @Column(name = "TB_CLIENTE_TB_ENDERECO_ID_ENDERECO", nullable = false)
     private Long clienteEnderecoId;
 
     @Column(name = "TB_CLIENTE_TB_CONTATO_ID_CONTATO", nullable = false)
     private Long clienteContatoId;
 
-    @Column(name = "TB_VEICULO_ID_VEICULO", nullable = false) // Nome da coluna FK no BD
+    @Column(name = "TB_VEICULO_ID_VEICULO", nullable = false)
     private Long veiculoId;
 }

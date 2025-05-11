@@ -1,4 +1,4 @@
-// Caminho do arquivo: br\com\fiap\mottu\model\Zona.java
+// main\java\br\com\fiap\mottu\model\Zona.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
@@ -9,44 +9,40 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "TB_ZONA", schema = "CHALLENGE") // Adicionado schema
+@Table(name = "TB_ZONA", schema = "CHALLENGE")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString(exclude = {"veiculoZonas", "zonaBoxes", "zonaPatios"}) // Excluir relacionamentos
-@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+@ToString // CORRIGIDO: Removido o parâmetro 'exclude'
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Zona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_ZONA") // Nome da coluna em MAIÚSCULAS no BD
-    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
+    @Column(name = "ID_ZONA")
+    @EqualsAndHashCode.Include
     private Long idZona;
-
-    @Column(name = "NOME", nullable = false, length = 50) // DDL é VARCHAR2(50) NOT NULL
+    @Column(name = "NOME", nullable = false, length = 50)
     private String nome;
-
-    @Column(name = "DATA_ENTRADA", nullable = false) // DDL é DATE NOT NULL
+    @Column(name = "DATA_ENTRADA", nullable = false)
     private LocalDate dataEntrada;
-
-    @Column(name = "DATA_SAIDA", nullable = false) // DDL é DATE NOT NULL
+    @Column(name = "DATA_SAIDA", nullable = false)
     private LocalDate dataSaida;
-
-    @Column(name = "OBSERVACAO", length = 100) // DDL é VARCHAR2(100)
+    @Column(name = "OBSERVACAO", length = 100)
     private String observacao;
 
-    // Relacionamentos inversos
     @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
+    @ToString.Exclude // MANTER esta anotação no campo
+    @Builder.Default
     private Set<br.com.fiap.mottu.model.relacionamento.VeiculoZona> veiculoZonas = new HashSet<>();
-
     @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
+    @ToString.Exclude // MANTER esta anotação no campo
+    @Builder.Default
     private Set<br.com.fiap.mottu.model.relacionamento.ZonaBox> zonaBoxes = new HashSet<>();
-
     @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
+    @ToString.Exclude // MANTER esta anotação no campo
+    @Builder.Default
     private Set<br.com.fiap.mottu.model.relacionamento.ZonaPatio> zonaPatios = new HashSet<>();
 }

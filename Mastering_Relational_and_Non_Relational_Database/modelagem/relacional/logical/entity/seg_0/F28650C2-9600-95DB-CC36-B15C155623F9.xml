@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F28650C2-9600-95DB-CC36-B15C155623F9" name="TB_CV">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F28650C2-9600-95DB-CC36-B15C155623F9" name="TB_CLIENTEVEICULO">
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:35:01 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -21,7 +21,7 @@
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>2A2493C5-E1D4-433C-AAFE-0BA03BAB01A5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -35,7 +35,7 @@
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>69D68BF2-29AD-43F9-C011-5CB80DB96EB2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -49,7 +49,7 @@
 <generatorID>B7FDE192-4613-D999-D036-C10CC2A05D81</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>8CFCBAE0-3F81-813A-8D83-C9A8C591C4F5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -63,7 +63,7 @@
 <generatorID>22E15F5E-F42D-B0EF-2322-6AF57308F1D7</generatorID>
 <ownerDesignName>relacional</ownerDesignName>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="true"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <referedAttribute>9F3ED40F-935A-8577-51AE-2EDA478341B3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -77,9 +77,8 @@
 <createdBy>paulo</createdBy>
 <createdTime>2025-05-03 14:35:40 UTC</createdTime>
 <ownerDesignName>relacional</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7A9627D4-EF2A-664C-DA51-A4D4A329FDBD" value="false"/>
+<item key="E9281788-EBA8-E9A1-DD9E-A1E4F0D7A6B2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

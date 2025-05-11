@@ -1,40 +1,51 @@
-// Caminho do arquivo: br\com\fiap\mottu\model\Rastreamento.java
 package br.com.fiap.mottu.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal; // Importe BigDecimal!
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "TB_RASTREAMENTO", schema = "CHALLENGE") // Adicionado schema
+@Table(name = "TB_RASTREAMENTO", schema = "CHALLENGE")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString(exclude = {"veiculoRastreamentos"}) // Excluir relacionamentos
-@EqualsAndHashCode(onlyExplicitlyIncluded = true) // Usar apenas campos incluídos para equals/hashCode
+@ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Rastreamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_RASTREAMENTO") // Nome da coluna em MAIÚSCULAS no BD
-    @EqualsAndHashCode.Include // Incluir apenas o ID no cálculo de hash/equals
+    @Column(name = "ID_RASTREAMENTO")
+    @EqualsAndHashCode.Include
     private Long idRastreamento;
 
-    @Column(name = "IPS", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
-    private String ips; // Representação String dos dados IPS (ex: WKT). NOT NULL no BD.
+    // Campos para IPS com BigDecimal e precisão 7,3
+    @Column(name = "IPS_X", nullable = false, precision = 7, scale = 3)
+    private BigDecimal ipsX;
 
-    @Column(name = "GPRS", nullable = false) // DDL é mdsys.sdo_geometry. Mapeado como String por simplicidade.
-    private String gprs; // Representação String dos dados GPRS (ex: WKT). NOT NULL no BD.
+    @Column(name = "IPS_Y", nullable = false, precision = 7, scale = 3)
+    private BigDecimal ipsY;
 
-    // Nota: Para usar a funcionalidade espacial, considere a biblioteca `hibernate-spatial`
-    // e um UserType customizado para mapear SDO_GEOMETRY.
+    @Column(name = "IPS_Z", nullable = false, precision = 7, scale = 3)
+    private BigDecimal ipsZ;
 
-    // Relacionamento inverso com a tabela de junção TB_VEICULORASTREAMENTO
+    // Campos para GPRS com BigDecimal e precisão 11,6 (Latitude/Longitude) e 7,2 (Altitude)
+    @Column(name = "GPRS_LATITUDE", nullable = false, precision = 11, scale = 6)
+    private BigDecimal gprsLatitude;
+
+    @Column(name = "GPRS_LONGITUDE", nullable = false, precision = 11, scale = 6)
+    private BigDecimal gprsLongitude;
+
+    @Column(name = "GPRS_ALTITUDE", nullable = false, precision = 7, scale = 2)
+    private BigDecimal gprsAltitude;
+
     @OneToMany(mappedBy = "rastreamento", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
+    @Builder.Default
     private Set<br.com.fiap.mottu.model.relacionamento.VeiculoRastreamento> veiculoRastreamentos = new HashSet<>();
 }
