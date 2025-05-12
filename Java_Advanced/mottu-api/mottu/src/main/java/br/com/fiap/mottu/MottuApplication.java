@@ -9,11 +9,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate; // <-- Importar RestTemplate
 import org.springframework.web.reactive.function.client.WebClient; // <-- Adicione esta importação AQUI!
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 
 @EnableJpaRepositories
 @SpringBootApplication
 @EnableCaching
+@EnableJpaAuditing
 // @OpenAPIDefinition(info = @Info(title="CHALLENGE-2025-FIAP-TEMMU-METAMIND SOLUTIONS-1.0", description = "CHALLENGE FIAP 2025", version = "v1"))
 public class MottuApplication {
 

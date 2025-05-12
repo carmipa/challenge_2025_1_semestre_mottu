@@ -32,7 +32,7 @@ public interface ClienteMapper {
     // Método 1: Converte de Request DTO para Entidade (para CRIAR uma nova)
     // Mapeia ClienteRequestDto -> Cliente
     @Mapping(target = "idCliente", ignore = true) // ID é gerado pelo BD, ignore ao mapear Request para Entidade
-    @Mapping(target = "dataCadastro", ignore = true) // dataCadastro é gerada pelo BD (DEFAULT SYSDATE), ignore ao mapear Request para Entidade
+    // @Mapping(target = "dataCadastro", ignore = true) // dataCadastro é gerada pelo BD (DEFAULT SYSDATE), ignore ao mapear Request para Entidade
     @Mapping(target = "endereco", source = "enderecoRequestDto") // Mapeia o DTO de Endereco aninhado para a Entidade Endereco
     @Mapping(target = "contato", source = "contatoRequestDto") // Mapeia o DTO de Contato aninhado para a Entidade Contato
     @Mapping(target = "clienteVeiculos", ignore = true) // Relação Many-to-Many não é criada diretamente aqui
