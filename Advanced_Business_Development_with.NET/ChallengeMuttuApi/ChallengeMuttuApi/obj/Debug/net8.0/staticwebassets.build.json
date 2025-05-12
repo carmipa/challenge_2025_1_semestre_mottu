@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "b3N4SDNJKZvgKjp2DWf3mCSwmh6VZMgO+0BmFo5UfB4=",
+  "Source": "ChallengeMuttuApi",
+  "BasePath": "_content/ChallengeMuttuApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
