@@ -1,4 +1,4 @@
-﻿// Path: ChallengeMuttuApi/Controllers/BoxesController.cs
+﻿// Caminho original no seu .txt: Controllers\BoxesController.cs
 using ChallengeMuttuApi.Data;
 using ChallengeMuttuApi.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+// Se o erro CS1503 referente a MemoryExtensions.ToLowerInvariant (da sua imagem de erro) persistir,
+// verifique se você tem alguma diretiva 'using static System.MemoryExtensions;'
+// ou uma extensão personalizada que possa estar causando conflito ou sendo chamada incorretamente.
+// As chamadas .ToLower() usadas no código abaixo são padrão de string e não deveriam causar esse tipo de erro CS1503.
 
 namespace ChallengeMuttuApi.Controllers
 {
@@ -56,7 +60,7 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao buscar todos os boxes: {ex.Message}");
+                Console.WriteLine($"Erro ao buscar todos os boxes: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao buscar boxes.");
             }
         }
@@ -85,7 +89,7 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao buscar box por ID: {ex.Message}");
+                Console.WriteLine($"Erro ao buscar box por ID: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao buscar box.");
             }
         }
@@ -112,8 +116,9 @@ namespace ChallengeMuttuApi.Controllers
 
             try
             {
+                var lowerNome = nome.ToLower(); // Para evitar chamar ToLower() múltiplas vezes no loop
                 var boxes = await _context.Boxes
-                    .Where(b => b.Nome.ToLower().Contains(nome.ToLower()))
+                    .Where(b => b.Nome.ToLower().Contains(lowerNome))
                     .ToListAsync();
 
                 if (!boxes.Any())
@@ -124,7 +129,7 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao pesquisar boxes por nome: {ex.Message}");
+                Console.WriteLine($"Erro ao pesquisar boxes por nome: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao pesquisar boxes por nome.");
             }
         }
@@ -132,7 +137,7 @@ namespace ChallengeMuttuApi.Controllers
         /// <summary>
         /// Retorna boxes com base em seu status.
         /// </summary>
-        /// <param name="status">O status do box ('A' para Ativo, 'I' para Inativo, etc.).</param>
+        /// <param name="status">O status do box ('A' para Ativo, 'I' para Inativo).</param>
         /// <response code="200">Retorna a lista de boxes com o status especificado.</response>
         /// <response code="204">Nenhum box encontrado com o status especificado.</response>
         /// <response code="400">O status fornecido é inválido.</response>
@@ -144,15 +149,34 @@ namespace ChallengeMuttuApi.Controllers
         [ProducesResponseType(500)]
         public async Task<ActionResult<IEnumerable<Box>>> GetBoxesByStatus(string status)
         {
-            if (string.IsNullOrWhiteSpace(status) || status.Length != 1)
+            if (string.IsNullOrWhiteSpace(status))
             {
-                return BadRequest("Status inválido. Deve conter apenas um caractere.");
+                return BadRequest("Status inválido.");
+            }
+
+            bool statusBool;
+            string upperStatus = status.ToUpper();
+
+            if (upperStatus == "A")
+            {
+                statusBool = true;
+            }
+            else if (upperStatus == "I")
+            {
+                statusBool = false;
+            }
+            else
+            {
+                return BadRequest("Valor de status inválido. Use 'A' para Ativo ou 'I' para Inativo.");
             }
 
             try
             {
+                // A propriedade 'Status' na sua classe 'Box' é um bool ()
+                // A conversão para string 'A'/'I' acontece no AppDbContext.OnModelCreating.
+                // Portanto, a comparação aqui deve ser com o valor booleano.
                 var boxes = await _context.Boxes
-                    .Where(b => b.Status.ToLower() == status.ToLower())
+                    .Where(b => b.Status == statusBool) // Comparando com o bool
                     .ToListAsync();
 
                 if (!boxes.Any())
@@ -163,7 +187,7 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao buscar boxes por status: {ex.Message}");
+                Console.WriteLine($"Erro ao buscar boxes por status: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao buscar boxes por status.");
             }
         }
@@ -199,12 +223,12 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (DbUpdateException ex)
             {
-                Console.WriteLine($"Erro de banco de dados ao criar box: {ex.Message}");
+                Console.WriteLine($"Erro de banco de dados ao criar box: {ex.InnerException?.Message ?? ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro ao persistir o box no banco de dados.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro inesperado ao criar box: {ex.Message}");
+                Console.WriteLine($"Erro inesperado ao criar box: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao criar box.");
             }
         }
@@ -241,6 +265,7 @@ namespace ChallengeMuttuApi.Controllers
 
             try
             {
+                // AsNoTracking é útil para evitar conflitos de rastreamento se a entidade já estiver carregada.
                 var existingBox = await _context.Boxes.AsNoTracking().FirstOrDefaultAsync(b => b.IdBox == id);
                 if (existingBox == null)
                 {
@@ -258,11 +283,13 @@ namespace ChallengeMuttuApi.Controllers
                 {
                     return NotFound("Box não encontrado para atualização (possivelmente foi excluído por outro processo).");
                 }
-                throw;
+                // Idealmente, logar o erro de concorrência
+                Console.WriteLine($"Erro de concorrência ao atualizar box ID {id}.");
+                throw; // Re-lançar para que o middleware global de erros possa capturar ou para tratamento específico
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro inesperado ao atualizar box: {ex.Message}");
+                Console.WriteLine($"Erro inesperado ao atualizar box: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao atualizar box.");
             }
         }
@@ -299,7 +326,7 @@ namespace ChallengeMuttuApi.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao excluir box: {ex.Message}");
+                Console.WriteLine($"Erro ao excluir box: {ex.Message}"); // Idealmente, usar ILogger
                 return StatusCode(500, "Erro interno do servidor ao excluir box.");
             }
         }

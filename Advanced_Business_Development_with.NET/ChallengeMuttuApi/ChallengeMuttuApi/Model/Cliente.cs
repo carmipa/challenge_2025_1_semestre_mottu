@@ -1,4 +1,4 @@
-﻿// Path: ChallengeMuttuApi/Model/Cliente.cs - Este arquivo deve estar na pasta 'Model'
+﻿// Caminho original no seu .txt: Model\Cliente.cs
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,6 +25,9 @@ namespace ChallengeMuttuApi.Model
             Profissao = string.Empty;
             _sexo = string.Empty; // Inicializa o campo de apoio
             _cpf = string.Empty;   // Inicializa o campo de apoio
+            // ClienteVeiculos poderia ser inicializado aqui se não for anulável,
+            // mas como é ICollection?, está ok não inicializar ou pode-se optar por new List<ClienteVeiculo>();
+            // ClienteVeiculos = new List<ClienteVeiculo>();
         }
 
         /// <summary>
@@ -49,20 +52,21 @@ namespace ChallengeMuttuApi.Model
         /// <summary>
         /// Obtém ou define o sexo do cliente.
         /// Mapeia para a coluna "SEXO" (VARCHAR2(2 CHAR), Obrigatório).
-        /// Possui validação para aceitar apenas 'M' (Mulher) ou 'H' (Homem).
+        /// Possui validação para aceitar apenas 'M' (Masculino) ou 'F' (Feminino) - ajuste conforme sua regra de negócio.
         /// </summary>
         [Column("SEXO")]
         [Required(ErrorMessage = "O Sexo é obrigatório.")]
         [StringLength(2, ErrorMessage = "O Sexo deve ter no máximo 2 caracteres.")]
-        public string Sexo
+        public required string Sexo // 'required' garante que será fornecido ou inicializado.
         {
             get => _sexo;
             set
             {
-                if (value == "M" || value == "H") // 'M' para Masculino, 'H' para Feminino, ou similar. Verifique seu padrão real.
-                    _sexo = value;
+                // Ajuste a validação conforme sua regra. O DDL original tinha CHECK (SEXO IN ('M', 'H'))
+                if (value?.ToUpper() == "M" || value?.ToUpper() == "H" || value?.ToUpper() == "F")
+                    _sexo = value.ToUpper();
                 else
-                    throw new ArgumentException("Sexo inválido! Use 'M' para Masculino ou 'H' para Feminino.", nameof(Sexo));
+                    throw new ArgumentException("Sexo inválido! Use 'M', 'H' ou 'F' (conforme sua regra).", nameof(Sexo));
             }
         }
 
@@ -73,7 +77,7 @@ namespace ChallengeMuttuApi.Model
         [Column("NOME")]
         [Required(ErrorMessage = "O Nome é obrigatório.")]
         [StringLength(100, ErrorMessage = "O Nome deve ter no máximo 100 caracteres.")]
-        public string Nome { get; set; }
+        public required string Nome { get; set; } // 'required' garante que será fornecido ou inicializado.
 
         /// <summary>
         /// Obtém ou define o sobrenome do cliente.
@@ -87,7 +91,6 @@ namespace ChallengeMuttuApi.Model
         /// <summary>
         /// Obtém ou define a data de nascimento do cliente.
         /// Mapeia para a coluna "DATA_NASCIMENTO" (DATE, Obrigatório).
-        /// Possui validação para datas a partir de '1900-01-01' via CHECK constraint no DB.
         /// </summary>
         [Column("DATA_NASCIMENTO")]
         [Required(ErrorMessage = "A Data de Nascimento é obrigatória.")]
@@ -98,13 +101,11 @@ namespace ChallengeMuttuApi.Model
         /// <summary>
         /// Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.
         /// Mapeia para a coluna "CPF" (VARCHAR2(11 CHAR), Obrigatório, Único).
-        /// Possui validação para 11 dígitos numéricos.
         /// </summary>
         [Column("CPF")]
         [Required(ErrorMessage = "O CPF é obrigatório.")]
         [StringLength(11, MinimumLength = 11, ErrorMessage = "O CPF deve ter exatamente 11 dígitos.")]
-        // O atributo [Index] foi removido daqui e será configurado via Fluent API no DbContext.
-        public string Cpf
+        public required string Cpf // 'required' garante que será fornecido ou inicializado.
         {
             get => _cpf;
             set
@@ -130,11 +131,10 @@ namespace ChallengeMuttuApi.Model
         /// <summary>
         /// Obtém ou define o estado civil do cliente.
         /// Mapeia para a coluna "ESTADO_CIVIL" (VARCHAR2(50 BYTE), Obrigatório).
-        /// Usa o enum <see cref="EstadoCivil"/> para validação e tipagem.
         /// </summary>
         [Column("ESTADO_CIVIL")]
         [Required(ErrorMessage = "O Estado Civil é obrigatório.")]
-        [StringLength(50)] // Mapeamento para string no banco
+        [StringLength(50)]
         [EnumDataType(typeof(EstadoCivil), ErrorMessage = "Estado civil inválido!")]
         public EstadoCivil EstadoCivil
         {
@@ -146,15 +146,6 @@ namespace ChallengeMuttuApi.Model
                 _estadoCivil = value;
             }
         }
-
-        /// <summary>
-        /// Obtém ou define o status do cliente.
-        /// OBS: Esta propriedade não está presente no DDL da tabela TB_CLIENTE original.
-        /// Assumimos que é um campo de status lógico (Ativo/Inativo), onde `true` é Ativo e `false` é Inativo.
-        /// </summary>
-        [Column("STATUS")]
-        [Required(ErrorMessage = "O Status do cliente é obrigatório.")]
-        public bool Status { get; set; }
 
         /// <summary>
         /// Obtém ou define o ID da chave estrangeira para a entidade Endereco.
@@ -194,17 +185,9 @@ namespace ChallengeMuttuApi.Model
         /// <summary>
         /// Construtor parametrizado da classe Cliente.
         /// </summary>
-        /// <param name="idCliente">O identificador único do cliente.</param>
-        /// <param name="nome">O primeiro nome do cliente.</param>
-        /// <param name="sobrenome">O sobrenome do cliente.</param>
-        /// <param name="sexo">O sexo do cliente ('M' ou 'H').</param>
-        /// <param name="cpf">O CPF do cliente (11 dígitos numéricos).</param>
-        /// <param name="profissao">A profissão do cliente.</param>
-        /// <param name="estadoCivil">O estado civil do cliente, usando o enum EstadoCivil.</param>
-        /// <param name="dataNascimento">A data de nascimento do cliente.</param>
-        /// <param name="status">O status do cliente (true para Ativo, false para Inativo).</param>
         public Cliente(int idCliente, string nome, string sobrenome, string sexo, string cpf,
-                       string profissao, EstadoCivil estadoCivil, DateTime dataNascimento, bool status)
+                                string profissao, EstadoCivil estadoCivil, DateTime dataNascimento,
+                                int tbEnderecoIdEndereco, int tbContatoIdContato) // Adicionado IDs de FK
         {
             IdCliente = idCliente;
             Nome = nome;
@@ -212,12 +195,11 @@ namespace ChallengeMuttuApi.Model
             Profissao = profissao;
             EstadoCivil = estadoCivil;
             DataNascimento = dataNascimento;
-            Status = status;
-
             DataCadastro = DateTime.Now;
-
             Sexo = sexo;
             Cpf = cpf;
+            TbEnderecoIdEndereco = tbEnderecoIdEndereco; // Atribuir IDs de FK
+            TbContatoIdContato = tbContatoIdContato;     // Atribuir IDs de FK
         }
     }
 }

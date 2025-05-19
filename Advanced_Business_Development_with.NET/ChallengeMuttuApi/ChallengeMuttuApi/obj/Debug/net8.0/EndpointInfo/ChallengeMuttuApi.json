@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Challenge Muttu API",
-    "description": "\r\n            API RESTful para o Challenge Muttu - Gestão de Clientes, Veículos, Endereços, Contatos e mais.\r\n\r\n            **Endereço do Projeto GitHub:** [https://github.com/carmipa/challenge_2025_1_semestre_mottu](https://github.com/carmipa/challenge_2025_1_semestre_mottu)\r\n            \r\n            **Turma:** 2TDSPV / 2TDSPZ\r\n            \r\n            **Contatos da Equipe:**\r\n            - Arthur Bispo de Lima RM557568: [https://github.com/ArthurBispo00](https://github.com/ArthurBispo00)\r\n            - João Paulo Moreira RM557808: [https://github.com/joao1015](https://github.com/joao1015)\r\n            - Paulo André Carminati RM557881: [https://github.com/carmipa](https://github.com/carmipa)\r\n        ",
+    "description": "\r\n            API RESTful para o Challenge Muttu - Gestão de Clientes, Veículos, Endereços, Contatos e mais.\r\n            **Endereço do Projeto GitHub:** [https://github.com/carmipa/challenge_2025_1_semestre_mottu](https://github.com/carmipa/challenge_2025_1_semestre_mottu)\r\n            **Turma:** 2TDSPV / 2TDSPZ\r\n            **Contatos da Equipe:**\r\n            - Arthur Bispo de Lima RM557568: [https://github.com/ArthurBispo00](https://github.com/ArthurBispo00)\r\n            - João Paulo Moreira RM557808: [https://github.com/joao1015](https://github.com/joao1015)\r\n            - Paulo André Carminati RM557881: [https://github.com/carmipa](https://github.com/carmipa)\r\n        ",
     "contact": {
       "name": "Equipe Metamind Solution",
       "url": "https://github.com/carmipa/challenge_2025_1_semestre_mottu",
-      "email": "RM557881@fiap;RM557568@fiap.com.br;RM557808@fiap.com.br"
+      "email": "RM557881@fiap.com.br;RM557568@fiap.com.br;RM557808@fiap.com.br"
     },
     "license": {
       "name": "Licença de Exemplo",
@@ -301,7 +301,7 @@
           {
             "name": "status",
             "in": "path",
-            "description": "O status do box ('A' para Ativo, 'I' para Inativo, etc.).",
+            "description": "O status do box ('A' para Ativo, 'I' para Inativo).",
             "required": true,
             "schema": {
               "type": "string"
@@ -2786,10 +2786,8 @@
             "description": "Obtém ou define o nome do Box.\r\nMapeia para a coluna \"NOME\" (VARCHAR2(50 BYTE), Obrigatório)."
           },
           "status": {
-            "maxLength": 1,
-            "minLength": 0,
-            "type": "string",
-            "description": "Obtém ou define o status atual do Box.\r\nMapeia para a coluna \"STATUS\" (VARCHAR2(1 CHAR), Obrigatório).\r\nPode ser 'A' para Ativo, 'I' para Inativo, etc. (depende da lógica de negócio)."
+            "type": "boolean",
+            "description": "Obtém ou define o status atual do Box.\r\nMapeia para a coluna \"STATUS\" (VARCHAR2(1 CHAR), Obrigatório) no banco de dados,\r\nconvertido para bool (true para Ativo ('A'), false para Inativo ('I'))."
           },
           "dataEntrada": {
             "type": "string",
@@ -2846,7 +2844,6 @@
           "profissao",
           "sexo",
           "sobrenome",
-          "status",
           "tbContatoIdContato",
           "tbEnderecoIdEndereco"
         ],
@@ -2866,7 +2863,7 @@
             "maxLength": 2,
             "minLength": 0,
             "type": "string",
-            "description": "Obtém ou define o sexo do cliente.\r\nMapeia para a coluna \"SEXO\" (VARCHAR2(2 CHAR), Obrigatório).\r\nPossui validação para aceitar apenas 'M' (Mulher) ou 'H' (Homem)."
+            "description": "Obtém ou define o sexo do cliente.\r\nMapeia para a coluna \"SEXO\" (VARCHAR2(2 CHAR), Obrigatório).\r\nPossui validação para aceitar apenas 'M' (Masculino) ou 'F' (Feminino) - ajuste conforme sua regra de negócio."
           },
           "nome": {
             "maxLength": 100,
@@ -2882,14 +2879,14 @@
           },
           "dataNascimento": {
             "type": "string",
-            "description": "Obtém ou define a data de nascimento do cliente.\r\nMapeia para a coluna \"DATA_NASCIMENTO\" (DATE, Obrigatório).\r\nPossui validação para datas a partir de '1900-01-01' via CHECK constraint no DB.",
+            "description": "Obtém ou define a data de nascimento do cliente.\r\nMapeia para a coluna \"DATA_NASCIMENTO\" (DATE, Obrigatório).",
             "format": "date-time"
           },
           "cpf": {
             "maxLength": 11,
             "minLength": 11,
             "type": "string",
-            "description": "Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.\r\nMapeia para a coluna \"CPF\" (VARCHAR2(11 CHAR), Obrigatório, Único).\r\nPossui validação para 11 dígitos numéricos."
+            "description": "Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.\r\nMapeia para a coluna \"CPF\" (VARCHAR2(11 CHAR), Obrigatório, Único)."
           },
           "profissao": {
             "maxLength": 50,
@@ -2899,10 +2896,6 @@
           },
           "estadoCivil": {
             "$ref": "#/components/schemas/EstadoCivil"
-          },
-          "status": {
-            "type": "boolean",
-            "description": "Obtém ou define o status do cliente.\r\nOBS: Esta propriedade não está presente no DDL da tabela TB_CLIENTE original.\r\nAssumimos que é um campo de status lógico (Ativo/Inativo), onde `true` é Ativo e `false` é Inativo."
           },
           "tbEnderecoIdEndereco": {
             "type": "integer",
@@ -2969,7 +2962,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Representa a tabela de ligação \"TB_CLIENTEVEICULO\" no banco de dados.\r\nEstabelece o relacionamento muitos-para-muitos entre Cliente e Veículo.\r\nA chave primária desta tabela é composta por uma combinação de IDs de Cliente, Endereço, Contato e Veículo.\r\nOBS: O design da PK composta (CLIENTEVEICULO_PK) é incomum e pode exigir configuração explícita no DbContext."
+        "description": "Representa a tabela de ligação \"TB_CLIENTEVEICULO\" no banco de dados.\r\nEstabelece o relacionamento muitos-para-muitos entre Cliente e Veículo.\r\nA chave primária desta tabela é composta por uma combinação de IDs de Cliente, Endereço, Contato e Veículo.\r\n<remarks>\r\nOBS: O design da PK composta (CLIENTEVEICULO_PK) é incomum e pode exigir configuração explícita no DbContext.\r\nA chave primária inclui o ID do Endereço e Contato do Cliente, o que não é padrão em relacionamentos\r\nmuitos-para-muitos típicos. Considere revisar o design do banco de dados se essa granularidade não for intencional.\r\n</remarks>"
       },
       "Contato": {
         "required": [

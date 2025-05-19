@@ -19,7 +19,7 @@ namespace ChallengeMuttuApi.Model
         public Box()
         {
             Nome = string.Empty;
-            Status = string.Empty;
+            Status = false; // Valor padrão para status (Inativo)
         }
 
         /// <summary>
@@ -42,13 +42,12 @@ namespace ChallengeMuttuApi.Model
 
         /// <summary>
         /// Obtém ou define o status atual do Box.
-        /// Mapeia para a coluna "STATUS" (VARCHAR2(1 CHAR), Obrigatório).
-        /// Pode ser 'A' para Ativo, 'I' para Inativo, etc. (depende da lógica de negócio).
+        /// Mapeia para a coluna "STATUS" (VARCHAR2(1 CHAR), Obrigatório) no banco de dados,
+        /// convertido para bool (true para Ativo ('A'), false para Inativo ('I')).
         /// </summary>
         [Column("STATUS")]
         [Required(ErrorMessage = "O status do Box é obrigatório.")]
-        [StringLength(1, ErrorMessage = "O status deve ter 1 caractere.")]
-        public string Status { get; set; } // Pode ser convertido para bool no DTO/negócio se 'A'/'I' ou similar
+        public bool Status { get; set; }
 
         /// <summary>
         /// Obtém ou define a data de entrada do Box.

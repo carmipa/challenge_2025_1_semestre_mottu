@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "b3N4SDNJKZvgKjp2DWf3mCSwmh6VZMgO+0BmFo5UfB4=",
-  "Source": "ChallengeMuttuApi",
-  "BasePath": "_content/ChallengeMuttuApi",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"ENRX0a3bpTDn4r4JiQZPcF52QYfX4XjudnSqASVWx2o=","Source":"ChallengeMuttuApi","BasePath":"_content/ChallengeMuttuApi","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"ChallengeMuttuApi\\wwwroot","Source":"ChallengeMuttuApi","ContentRoot":"D:\\FIAP-2025\\1_semestre_fiap-2025\\CHALLENGE_2025_MOTTU\\challenge_2025_1_semestre_mottu\\Advanced_Business_Development_with.NET\\ChallengeMuttuApi\\ChallengeMuttuApi\\wwwroot\\","BasePath":"_content/ChallengeMuttuApi","Pattern":"**"}],"Assets":[],"Endpoints":[]}

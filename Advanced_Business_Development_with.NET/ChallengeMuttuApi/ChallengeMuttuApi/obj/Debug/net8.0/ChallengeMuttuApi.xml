@@ -46,7 +46,7 @@
             <summary>
             Retorna boxes com base em seu status.
             </summary>
-            <param name="status">O status do box ('A' para Ativo, 'I' para Inativo, etc.).</param>
+            <param name="status">O status do box ('A' para Ativo, 'I' para Inativo).</param>
             <response code="200">Retorna a lista de boxes com o status especificado.</response>
             <response code="204">Nenhum box encontrado com o status especificado.</response>
             <response code="400">O status fornecido é inválido.</response>
@@ -677,58 +677,94 @@
             <param name="options">Opções de configuração do DbContext.</param>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Boxes">
-            <summary>Representa a coleção de Boxes no banco de dados.</summary>
+            <summary>
+            Tabela dos boxex de entrada e saida dos conteiner. (Comentário baseado na sua imagem de erro)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Clientes">
-            <summary>Representa a coleção de Clientes no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Clientes no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Contatos">
-            <summary>Representa a coleção de Contatos no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Contatos no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Enderecos">
-            <summary>Representa a coleção de Endereços no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Endereços no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Patios">
-            <summary>Representa a coleção de Pátios no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Pátios no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Rastreamentos">
-            <summary>Representa a coleção de Rastreamentos no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Rastreamentos no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Veiculos">
-            <summary>Representa a coleção de Veículos no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Veículos no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.Zonas">
-            <summary>Representa a coleção de Zonas no banco de dados.</summary>
+            <summary>
+            Representa a coleção de Zonas no banco de dados. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.ClienteVeiculos">
-            <summary>Representa a coleção de ligações entre Clientes e Veículos.</summary>
+            <summary>
+            Representa a coleção de ligações entre Clientes e Veículos. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.ContatoPatios">
-            <summary>Representa a coleção de ligações entre Contatos e Pátios.</summary>
+            <summary>
+            Representa a coleção de ligações entre Contatos e Pátios. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.EnderecoPatios">
-            <summary>Representa a coleção de ligações entre Endereços e Pátios.</summary>
+            <summary>
+            Representa a coleção de ligações entre Endereços e Pátios. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.PatioBoxes">
-            <summary>Representa a coleção de ligações entre Pátios e Boxes.</summary>
+            <summary>
+            Representa a coleção de ligações entre Pátios e Boxes. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.VeiculoBoxes">
-            <summary>Representa a coleção de ligações entre Veículos e Boxes.</summary>
+            <summary>
+            Representa a coleção de ligações entre Veículos e Boxes. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.VeiculoPatios">
-            <summary>Representa a coleção de ligações entre Veículos e Pátios.</summary>
+            <summary>
+            Representa a coleção de ligações entre Veículos e Pátios. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.VeiculoRastreamentos">
-            <summary>Representa a coleção de ligações entre Veículos e Rastreamentos.</summary>
+            <summary>
+            Representa a coleção de ligações entre Veículos e Rastreamentos. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.VeiculoZonas">
-            <summary>Representa a coleção de ligações entre Veículos e Zonas.</summary>
+            <summary>
+            Representa a coleção de ligações entre Veículos e Zonas. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.ZonaBoxes">
-            <summary>Representa a coleção de ligações entre Zonas e Boxes.</summary>
+            <summary>
+            Representa a coleção de ligações entre Zonas e Boxes. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Data.AppDbContext.ZonaPatios">
-            <summary>Representa a coleção de ligações entre Zonas e Pátios.</summary>
+            <summary>
+            Representa a coleção de ligações entre Zonas e Pátios. (Substitua pelo seu comentário original se diferente)
+            </summary>
         </member>
         <member name="M:ChallengeMuttuApi.Data.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <summary>
@@ -794,8 +830,8 @@
         <member name="P:ChallengeMuttuApi.Model.Box.Status">
             <summary>
             Obtém ou define o status atual do Box.
-            Mapeia para a coluna "STATUS" (VARCHAR2(1 CHAR), Obrigatório).
-            Pode ser 'A' para Ativo, 'I' para Inativo, etc. (depende da lógica de negócio).
+            Mapeia para a coluna "STATUS" (VARCHAR2(1 CHAR), Obrigatório) no banco de dados,
+            convertido para bool (true para Ativo ('A'), false para Inativo ('I')).
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.Box.DataEntrada">
@@ -859,7 +895,7 @@
             <summary>
             Obtém ou define o sexo do cliente.
             Mapeia para a coluna "SEXO" (VARCHAR2(2 CHAR), Obrigatório).
-            Possui validação para aceitar apenas 'M' (Mulher) ou 'H' (Homem).
+            Possui validação para aceitar apenas 'M' (Masculino) ou 'F' (Feminino) - ajuste conforme sua regra de negócio.
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.Cliente.Nome">
@@ -878,14 +914,12 @@
             <summary>
             Obtém ou define a data de nascimento do cliente.
             Mapeia para a coluna "DATA_NASCIMENTO" (DATE, Obrigatório).
-            Possui validação para datas a partir de '1900-01-01' via CHECK constraint no DB.
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.Cliente.Cpf">
             <summary>
             Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.
             Mapeia para a coluna "CPF" (VARCHAR2(11 CHAR), Obrigatório, Único).
-            Possui validação para 11 dígitos numéricos.
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.Cliente.Profissao">
@@ -898,14 +932,6 @@
             <summary>
             Obtém ou define o estado civil do cliente.
             Mapeia para a coluna "ESTADO_CIVIL" (VARCHAR2(50 BYTE), Obrigatório).
-            Usa o enum <see cref="P:ChallengeMuttuApi.Model.Cliente.EstadoCivil"/> para validação e tipagem.
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Status">
-            <summary>
-            Obtém ou define o status do cliente.
-            OBS: Esta propriedade não está presente no DDL da tabela TB_CLIENTE original.
-            Assumimos que é um campo de status lógico (Ativo/Inativo), onde `true` é Ativo e `false` é Inativo.
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.Cliente.TbEnderecoIdEndereco">
@@ -935,26 +961,21 @@
             Coleção de entidades ClienteVeiculo, representando o relacionamento muitos-para-muitos com Veículos.
             </summary>
         </member>
-        <member name="M:ChallengeMuttuApi.Model.Cliente.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,ChallengeMuttuApi.Enums.EstadoCivil,System.DateTime,System.Boolean)">
+        <member name="M:ChallengeMuttuApi.Model.Cliente.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,ChallengeMuttuApi.Enums.EstadoCivil,System.DateTime,System.Int32,System.Int32)">
             <summary>
             Construtor parametrizado da classe Cliente.
             </summary>
-            <param name="idCliente">O identificador único do cliente.</param>
-            <param name="nome">O primeiro nome do cliente.</param>
-            <param name="sobrenome">O sobrenome do cliente.</param>
-            <param name="sexo">O sexo do cliente ('M' ou 'H').</param>
-            <param name="cpf">O CPF do cliente (11 dígitos numéricos).</param>
-            <param name="profissao">A profissão do cliente.</param>
-            <param name="estadoCivil">O estado civil do cliente, usando o enum EstadoCivil.</param>
-            <param name="dataNascimento">A data de nascimento do cliente.</param>
-            <param name="status">O status do cliente (true para Ativo, false para Inativo).</param>
         </member>
         <member name="T:ChallengeMuttuApi.Model.ClienteVeiculo">
             <summary>
             Representa a tabela de ligação "TB_CLIENTEVEICULO" no banco de dados.
             Estabelece o relacionamento muitos-para-muitos entre Cliente e Veículo.
             A chave primária desta tabela é composta por uma combinação de IDs de Cliente, Endereço, Contato e Veículo.
+            <remarks>
             OBS: O design da PK composta (CLIENTEVEICULO_PK) é incomum e pode exigir configuração explícita no DbContext.
+            A chave primária inclui o ID do Endereço e Contato do Cliente, o que não é padrão em relacionamentos
+            muitos-para-muitos típicos. Considere revisar o design do banco de dados se essa granularidade não for intencional.
+            </remarks>
             </summary>
         </member>
         <member name="P:ChallengeMuttuApi.Model.ClienteVeiculo.TbClienteIdCliente">
@@ -1217,6 +1238,13 @@
         <member name="P:ChallengeMuttuApi.Model.EnderecoPatio.Patio">
             <summary>
             Propriedade de navegação para a entidade Pátio associada.
+            </summary>
+        </member>
+        <member name="M:ChallengeMuttuApi.Model.Filial.#ctor">
+            <summary>
+            Construtor padrão da classe Filial.
+            Inicializa a propriedade Nome para evitar o warning/erro CS8618
+            se nullable reference types estiverem habilitados.
             </summary>
         </member>
         <member name="T:ChallengeMuttuApi.Model.Patio">

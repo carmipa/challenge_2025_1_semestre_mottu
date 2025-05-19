@@ -8,7 +8,11 @@ namespace ChallengeMuttuApi.Model
     /// Representa a tabela de ligação "TB_CLIENTEVEICULO" no banco de dados.
     /// Estabelece o relacionamento muitos-para-muitos entre Cliente e Veículo.
     /// A chave primária desta tabela é composta por uma combinação de IDs de Cliente, Endereço, Contato e Veículo.
+    /// <remarks>
     /// OBS: O design da PK composta (CLIENTEVEICULO_PK) é incomum e pode exigir configuração explícita no DbContext.
+    /// A chave primária inclui o ID do Endereço e Contato do Cliente, o que não é padrão em relacionamentos
+    /// muitos-para-muitos típicos. Considere revisar o design do banco de dados se essa granularidade não for intencional.
+    /// </remarks>
     /// </summary>
     [Table("TB_CLIENTEVEICULO")]
     public class ClienteVeiculo
