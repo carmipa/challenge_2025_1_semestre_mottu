@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_PATIOBOX", schema = "CHALLENGE")
+@Table(name = "TB_PATIOBOX")
 @Getter
 @Setter
 @NoArgsConstructor

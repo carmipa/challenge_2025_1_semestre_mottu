@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "TB_ZONABOX", schema = "CHALLENGE")
+@Table(name = "TB_ZONABOX")
 @Getter
 @Setter
 @NoArgsConstructor

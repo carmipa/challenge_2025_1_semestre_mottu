@@ -12,7 +12,7 @@ import org.springframework.data.annotation.CreatedDate; // <-- IMPORTAR AQUI
 import org.springframework.data.jpa.domain.support.AuditingEntityListener; // <-- IMPORTAR AQUI
 
 @Entity
-@Table(name = "TB_CLIENTE", schema = "CHALLENGE")
+@Table(name = "TB_CLIENTE")
 @Getter
 @Setter
 @NoArgsConstructor

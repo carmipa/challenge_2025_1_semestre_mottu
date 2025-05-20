@@ -1,7 +1,5 @@
-package br.com.fiap.mottu; // Este é o pacote correto
+package br.com.fiap.mottu;
 
-// import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-// import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
@@ -16,7 +14,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 @EnableCaching
 @EnableJpaAuditing
-// @OpenAPIDefinition(info = @Info(title="CHALLENGE-2025-FIAP-TEMMU-METAMIND SOLUTIONS-1.0", description = "CHALLENGE FIAP 2025", version = "v1"))
 public class MottuApplication {
 
 	public static void main(String[] args) {

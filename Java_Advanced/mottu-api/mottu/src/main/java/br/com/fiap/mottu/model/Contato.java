@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_CONTATO", schema = "CHALLENGE")
+@Table(name = "TB_CONTATO")
 @ToString // CORRIGIDO: Removido o parâmetro 'exclude'
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Contato {

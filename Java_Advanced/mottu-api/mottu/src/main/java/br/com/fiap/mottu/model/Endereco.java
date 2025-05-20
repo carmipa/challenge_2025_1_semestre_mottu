@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_ENDERECO", schema = "CHALLENGE")
+@Table(name = "TB_ENDERECO")
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Endereco {
