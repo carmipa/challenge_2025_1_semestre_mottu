@@ -9,51 +9,35 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.IO;
 using System.Reflection;
-using ChallengeMuttuApi.Data; // Seu namespace para AppDbContext
+using ChallengeMuttuApi.Data;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.HttpLogging; // Necessário para HttpLogging
+using Microsoft.AspNetCore.HttpLogging;
+using System.Text.Json.Serialization; // Adicionado para ReferenceHandler
 
-/// <summary>
-/// Inicializa a aplicação Web e configura os serviços.
-/// </summary>
+// Inicializa a aplicação Web e configura os serviços.
 var builder = WebApplication.CreateBuilder(args);
 
-/// <summary>
-/// Carrega a configuração do appsettings.json.
-/// </summary>
+// Carrega a configuração do appsettings.json.
 var configuration = builder.Configuration;
 
-/// <summary>
-/// Define as URLs de execução da aplicação.
-/// </summary>
+// Define as URLs de execução da aplicação.
 builder.WebHost.UseUrls("http://localhost:5181", "https://localhost:7183");
 
-/// <summary>
-/// Configura o sistema de logging da aplicação.
-/// </summary>
+// Configura o sistema de logging da aplicação.
 builder.Logging.ClearProviders();
-builder.Logging.AddConsole(); // Loga no console
+builder.Logging.AddConsole();
 builder.Logging.AddDebug();
-// builder.Logging.AddEventLog(); // Removido: Só há suporte para 'windows'
 builder.Logging.AddEventSourceLogger();
 
-// Adicionando HTTP Logging para detalhes da requisição e resposta
-// Isso pode ser bastante verboso, então use com cautela em produção.
 builder.Services.AddHttpLogging(logging =>
 {
-    logging.LoggingFields = HttpLoggingFields.All; // Loga tudo: Request, Response, Headers, Body etc.
-    // Para produção, você pode querer ser mais seletivo:
-    // logging.LoggingFields = HttpLoggingFields.RequestPropertiesAndHeaders |
-    //                         HttpLoggingFields.ResponsePropertiesAndHeaders;
-    logging.RequestBodyLogLimit = 4096; // Limite para o tamanho do corpo da requisição logado
-    logging.ResponseBodyLogLimit = 4096; // Limite para o tamanho do corpo da resposta logado
+    logging.LoggingFields = HttpLoggingFields.All;
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
 });
 
-
-/// <summary>
-/// Verifica e cria a pasta 'wwwroot' se não existir.
-/// </summary>
+// Verifica e cria a pasta 'wwwroot' se não existir.
 string wwwrootPath = Path.Combine(AppContext.BaseDirectory, "wwwroot");
 if (!Directory.Exists(wwwrootPath))
 {
@@ -67,41 +51,42 @@ else
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy => // Você pode nomear esta política, ex: "AllowSpecificOrigins"
+    options.AddDefaultPolicy(policy =>
     {
-        // Para desenvolvimento, seja mais específico ou use uma política nomeada mais aberta.
-        // A URL que o Swagger UI está usando (http://localhost:5181) deve estar aqui.
-        policy.WithOrigins("http://localhost:5181", "https://localhost:7183", "http://localhost:3000")
+        policy.WithOrigins("http://localhost:5181", "https://localhost:7183", "http://localhost:3000") // Adicionada porta 3000 para Next.js
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
 });
 
-/// <summary>
-/// Adiciona os serviços necessários ao container de injeção de dependência.
-/// </summary>
-builder.Services.AddControllers();
+// Adiciona os serviços necessários ao container de injeção de dependência.
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        // options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull; // Opcional
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 
-/// <summary>
-/// Configura o contexto do banco de dados Oracle.
-/// </summary>
+// Configura o contexto do banco de dados Oracle.
 try
 {
-    builder.Services.AddDbContext<AppDbContext>(options => // Certifique-se que AppDbContext é o nome correto
+    // CERTIFIQUE-SE QUE A STRING DE CONEXÃO "OracleDb" EM appsettings.json ESTÁ CORRETA PARA FIAP:
+    // "OracleDb": "User Id=rm557881;Password=fiap25;Data Source=oracle.fiap.com.br:1521/ORCL;"
+    builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseOracle(configuration.GetConnectionString("OracleDb"))
-               .LogTo(Console.WriteLine, LogLevel.Information) // Log de EF Core para o console
-               .EnableSensitiveDataLogging() // Apenas para desenvolvimento, mostra valores de parâmetros
+               .LogTo(Console.WriteLine, LogLevel.Information)
+               .EnableSensitiveDataLogging()
     );
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"❌ Erro ao conectar ao banco de dados Oracle: {ex.Message}");
+    Console.WriteLine($"❌ Erro CRÍTICO ao configurar o DbContext com Oracle: {ex.Message}");
+    // Em um cenário real, você pode querer logar isso de forma mais robusta e/ou impedir o startup da app.
 }
 
-/// <summary>
-/// Configura o Swagger para documentação da API.
-/// </summary>
+// Configura o Swagger para documentação da API.
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -120,7 +105,7 @@ builder.Services.AddSwaggerGen(c =>
         Contact = new OpenApiContact
         {
             Name = "Equipe Metamind Solution",
-            Email = "RM557881@fiap.com.br;RM557568@fiap.com.br;RM557808@fiap.com.br", // Separado por ;
+            Email = "RM557881@fiap.com.br;RM557568@fiap.com.br;RM557808@fiap.com.br",
             Url = new Uri("https://github.com/carmipa/challenge_2025_1_semestre_mottu")
         },
         License = new OpenApiLicense
@@ -142,47 +127,38 @@ builder.Services.AddSwaggerGen(c =>
     }
 });
 
-/// <summary>
-/// Cria a aplicação Web.
-/// </summary>
+// Cria a aplicação Web.
 var app = builder.Build();
 
-// Middleware para logar informações de CORS
+// Middleware para logar informações de CORS (ajustado para evitar warning CS8604)
 app.Use(async (context, next) =>
 {
-    var logger = context.RequestServices.GetRequiredService<ILogger<Program>>(); // Obter ILogger
-    logger.LogInformation("===================================================");
-    logger.LogInformation("CORS DEBUG: Entrando no middleware de log CORS.");
-    logger.LogInformation("CORS DEBUG: Requisição: {Method} {Path}", context.Request.Method, context.Request.Path);
-    logger.LogInformation("CORS DEBUG: Origem da Requisição: {Origin}", context.Request.Headers["Origin"]);
+    var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
+    var request = context.Request; // Armazena a requisição para usar no OnStarting
+    logger.LogInformation(1, "==================================================="); // EventId = 1 (exemplo)
+    logger.LogInformation(2, "CORS DEBUG: Entrando no middleware de log CORS.");
+    logger.LogInformation(3, "CORS DEBUG: Requisição: {Method} {Path}", request.Method, request.Path);
+    logger.LogInformation(4, "CORS DEBUG: Origem da Requisição: {Origin}", request.Headers["Origin"].ToString() ?? "(não presente)");
 
-    // Para ver os cabeçalhos da resposta CORS, precisamos adicionar um hook após o CORS middleware ter rodado.
     context.Response.OnStarting(() => {
-        logger.LogInformation("CORS DEBUG: Cabeçalhos da Resposta sendo enviados:");
+        logger.LogInformation(5, "CORS DEBUG: Cabeçalhos da Resposta sendo enviados para {Path}:", request.Path);
         foreach (var header in context.Response.Headers)
         {
-            // Log específico para cabeçalhos CORS
             if (header.Key.StartsWith("Access-Control-", StringComparison.OrdinalIgnoreCase) ||
                 header.Key.Equals("Vary", StringComparison.OrdinalIgnoreCase))
             {
-                logger.LogInformation("CORS DEBUG: Response Header: {Key}: {Value}", header.Key, header.Value);
+                logger.LogInformation(6, "CORS DEBUG: Response Header: {Key}: {Value}", header.Key, header.Value.ToString() ?? "(null ou vazio)");
             }
         }
-        logger.LogInformation("===================================================");
+        logger.LogInformation(7, "===================================================");
         return Task.CompletedTask;
     });
-
     await next.Invoke();
 });
 
-
-// Habilitar HTTP Logging (deve vir cedo no pipeline)
 app.UseHttpLogging();
 
-
-/// <summary>
-/// Configura o pipeline de requisições HTTP.
-/// </summary>
+// Configura o pipeline de requisições HTTP.
 if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Environment.IsProduction())
 {
     app.UseSwagger();
@@ -193,22 +169,15 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Enviro
     });
 }
 
-// ATENÇÃO: A ORDEM DOS MIDDLEWARES IMPORTA!
-// app.UseHttpsRedirection(); // Considere comentar para teste se o Swagger estiver em HTTP
+// app.UseHttpsRedirection(); // Mantenha comentado se o HTTPS não estiver totalmente configurado e testado
 
 app.UseStaticFiles();
-
-app.UseRouting(); // UseRouting antes de UseCors e UseAuthorization
-
-app.UseCors(); // Aplicar a política CORS
-
+app.UseRouting();
+app.UseCors();
 app.UseAuthorization();
-
 app.MapControllers();
 
-/// <summary>
-/// Middleware global para tratamento de exceções (deve ser um dos últimos).
-/// </summary>
+// Middleware global para tratamento de exceções
 app.Use(async (context, next) =>
 {
     try
@@ -218,28 +187,47 @@ app.Use(async (context, next) =>
     catch (Exception ex)
     {
         var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "❌ Erro não tratado durante a requisição: {ErrorMessage}", ex.Message);
+        logger.LogError(ex, "❌ Erro NÃO TRATADO durante a requisição para {Path}: {ErrorMessage}", context.Request.Path, ex.Message);
 
-        // Evita escrever na resposta se ela já foi iniciada (ex: por um controller)
+        var currentEx = ex.InnerException;
+        int counter = 0;
+        while (currentEx != null && counter < 5)
+        {
+            logger.LogError(currentEx, "--- Inner Exception (Nível {Counter}) --- Message: {InnerMessage}", ++counter, currentEx.Message);
+            currentEx = currentEx.InnerException;
+        }
+
         if (!context.Response.HasStarted)
         {
-            context.Response.StatusCode = 500;
-            await context.Response.WriteAsync("Ocorreu um erro interno no servidor. Verifique os logs para mais detalhes.");
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            // Evite enviar detalhes da exceção para o cliente em produção
+            var responseMessage = app.Environment.IsDevelopment()
+                ? $"Erro interno do servidor: {ex.Message} (Verifique logs do servidor para mais detalhes)."
+                : "Ocorreu um erro interno no servidor. Tente novamente mais tarde.";
+            await context.Response.WriteAsync(responseMessage);
         }
     }
 });
 
-/// <summary>
-/// Inicia a aplicação Web.
-/// </summary>
+// Inicia a aplicação Web.
 try
 {
     app.Run();
 }
 catch (Exception ex)
 {
-    // Usar o logger do builder se o app.Logger não estiver disponível
-    var logger = app.Services.GetService<ILogger<Program>>() ?? builder.Logging.Services.BuildServiceProvider().GetService<ILogger<Program>>();
-    logger?.LogError(ex, "❌ Erro crítico durante a inicialização da aplicação: {ErrorMessage}", ex.Message);
-    throw;
+    var logger = app.Services?.GetService<ILogger<Program>>();
+    if (logger != null)
+    {
+        logger.LogError(ex, "❌ Erro CRÍTICO durante a inicialização ou execução da aplicação: {ErrorMessage}", ex.Message);
+    }
+    else
+    {
+        Console.WriteLine($"ERRO CRÍTICO NA APLICAÇÃO (logger indisponível): {ex.Message}");
+        if (ex.InnerException != null) Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+    }
+    // Não relance a exceção aqui se quiser que a aplicação tente continuar ou feche graciosamente.
+    // Se relançar, a aplicação vai parar abruptamente.
+    // throw; 
+    Environment.Exit(1); // Encerra a aplicação com código de erro
 }

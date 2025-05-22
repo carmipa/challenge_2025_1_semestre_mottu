@@ -346,11 +346,9 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Retorna uma lista de todos os clientes cadastrados.",
-        "description": "Este endpoint retorna todos os clientes disponíveis no banco de dados.",
         "responses": {
           "200": {
-            "description": "Retorna a lista de clientes.",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -363,10 +361,10 @@
             }
           },
           "204": {
-            "description": "Não há clientes cadastrados."
+            "description": "No Content"
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       },
@@ -374,10 +372,7 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Cria um novo cliente.",
-        "description": "Este endpoint permite criar um novo registro de cliente no banco de dados.\r\nUm ID de cliente não deve ser fornecido no corpo da requisição, pois é gerado automaticamente.",
         "requestBody": {
-          "description": "Os dados do cliente a serem criados.",
           "content": {
             "application/json": {
               "schema": {
@@ -398,7 +393,7 @@
         },
         "responses": {
           "201": {
-            "description": "Cliente criado com sucesso.",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -408,17 +403,17 @@
             }
           },
           "400": {
-            "description": "Dados do cliente inválidos ou já existe um cliente com o mesmo CPF.",
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "$ref": "#/components/schemas/ValidationProblemDetails"
                 }
               }
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       }
@@ -428,13 +423,10 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Retorna um cliente específico pelo seu ID.",
-        "description": "Este endpoint permite buscar um cliente utilizando o seu identificador único.\r\nExemplo: GET /api/clientes/1",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "O ID do cliente a ser buscado.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -444,7 +436,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Retorna o cliente encontrado.",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -454,7 +446,7 @@
             }
           },
           "404": {
-            "description": "Cliente não encontrado.",
+            "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
@@ -464,7 +456,7 @@
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       },
@@ -472,13 +464,10 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Atualiza um cliente existente pelo ID.",
-        "description": "Este endpoint permite a atualização completa de um cliente existente.\r\nO ID na URL deve corresponder ao ID do cliente no corpo da requisição.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "O ID do cliente a ser atualizado.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -487,7 +476,6 @@
           }
         ],
         "requestBody": {
-          "description": "Os dados do cliente atualizados.",
           "content": {
             "application/json": {
               "schema": {
@@ -508,20 +496,20 @@
         },
         "responses": {
           "204": {
-            "description": "Cliente atualizado com sucesso."
+            "description": "No Content"
           },
           "400": {
-            "description": "ID na URL não corresponde ao ID do cliente no corpo da requisição, ou dados inválidos.",
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "$ref": "#/components/schemas/ValidationProblemDetails"
                 }
               }
             }
           },
           "404": {
-            "description": "Cliente não encontrado.",
+            "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
@@ -531,7 +519,7 @@
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       },
@@ -539,13 +527,10 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Exclui um cliente pelo ID.",
-        "description": "Este endpoint remove permanentemente um registro de cliente do banco de dados.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "O ID do cliente a ser excluído.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -555,10 +540,10 @@
         ],
         "responses": {
           "204": {
-            "description": "Cliente excluído com sucesso."
+            "description": "No Content"
           },
           "404": {
-            "description": "Cliente não encontrado.",
+            "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
@@ -568,7 +553,7 @@
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       }
@@ -578,13 +563,10 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Retorna um cliente específico pelo seu CPF.",
-        "description": "Este endpoint permite buscar um cliente utilizando o seu número de CPF.\r\nExemplo: GET /api/clientes/by-cpf/12345678901",
         "parameters": [
           {
             "name": "cpf",
             "in": "path",
-            "description": "O CPF do cliente a ser buscado.",
             "required": true,
             "schema": {
               "type": "string"
@@ -593,7 +575,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Retorna o cliente encontrado.",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -603,7 +585,7 @@
             }
           },
           "400": {
-            "description": "O CPF fornecido é inválido.",
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -613,7 +595,7 @@
             }
           },
           "404": {
-            "description": "Cliente com o CPF especificado não encontrado.",
+            "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
@@ -623,7 +605,7 @@
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       }
@@ -633,13 +615,10 @@
         "tags": [
           "Clientes"
         ],
-        "summary": "Pesquisa clientes por parte do nome.",
-        "description": "Este endpoint permite buscar clientes cujos nomes contenham a string fornecida.\r\nA pesquisa não diferencia maiúsculas de minúsculas.\r\nExemplo: GET /api/clientes/search-by-name?nome=maria",
         "parameters": [
           {
             "name": "nome",
             "in": "query",
-            "description": "A string a ser pesquisada no nome dos clientes.",
             "schema": {
               "type": "string"
             }
@@ -647,7 +626,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Retorna a lista de clientes que correspondem à pesquisa.",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -660,10 +639,10 @@
             }
           },
           "204": {
-            "description": "Nenhum cliente encontrado com o nome especificado."
+            "description": "No Content"
           },
           "400": {
-            "description": "O parâmetro de nome para pesquisa é obrigatório.",
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -673,7 +652,7 @@
             }
           },
           "500": {
-            "description": "Ocorreu um erro interno no servidor."
+            "description": "Server Error"
           }
         }
       }
@@ -2851,60 +2830,50 @@
         "properties": {
           "idCliente": {
             "type": "integer",
-            "description": "Obtém ou define o identificador único do Cliente.\r\nMapeia para a coluna \"ID_CLIENTE\" (Chave Primária, gerada por identidade).",
             "format": "int32"
           },
           "dataCadastro": {
             "type": "string",
-            "description": "Obtém ou define a data de cadastro do cliente.\r\nMapeia para a coluna \"DATA_CADASTRO\" (DATE, Obrigatório, com valor padrão SYSDATE).",
             "format": "date-time"
           },
           "sexo": {
             "maxLength": 2,
             "minLength": 0,
-            "type": "string",
-            "description": "Obtém ou define o sexo do cliente.\r\nMapeia para a coluna \"SEXO\" (VARCHAR2(2 CHAR), Obrigatório).\r\nPossui validação para aceitar apenas 'M' (Masculino) ou 'F' (Feminino) - ajuste conforme sua regra de negócio."
+            "type": "string"
           },
           "nome": {
             "maxLength": 100,
             "minLength": 0,
-            "type": "string",
-            "description": "Obtém ou define o primeiro nome do cliente.\r\nMapeia para a coluna \"NOME\" (VARCHAR2(100 BYTE), Obrigatório)."
+            "type": "string"
           },
           "sobrenome": {
             "maxLength": 100,
             "minLength": 0,
-            "type": "string",
-            "description": "Obtém ou define o sobrenome do cliente.\r\nMapeia para a coluna \"SOBRENOME\" (VARCHAR2(100 BYTE), Obrigatório)."
+            "type": "string"
           },
           "dataNascimento": {
             "type": "string",
-            "description": "Obtém ou define a data de nascimento do cliente.\r\nMapeia para a coluna \"DATA_NASCIMENTO\" (DATE, Obrigatório).",
             "format": "date-time"
           },
           "cpf": {
             "maxLength": 11,
             "minLength": 11,
-            "type": "string",
-            "description": "Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.\r\nMapeia para a coluna \"CPF\" (VARCHAR2(11 CHAR), Obrigatório, Único)."
+            "type": "string"
           },
           "profissao": {
             "maxLength": 50,
             "minLength": 0,
-            "type": "string",
-            "description": "Obtém ou define a profissão do cliente.\r\nMapeia para a coluna \"PROFISSAO\" (VARCHAR2(50 BYTE), Obrigatório)."
+            "type": "string"
           },
           "estadoCivil": {
             "$ref": "#/components/schemas/EstadoCivil"
           },
           "tbEnderecoIdEndereco": {
             "type": "integer",
-            "description": "Obtém ou define o ID da chave estrangeira para a entidade Endereco.\r\nMapeia para a coluna \"TB_ENDERECO_ID_ENDERECO\" (NUMBER, Obrigatório).",
             "format": "int32"
           },
           "tbContatoIdContato": {
             "type": "integer",
-            "description": "Obtém ou define o ID da chave estrangeira para a entidade Contato.\r\nMapeia para a coluna \"TB_CONTATO_ID_CONTATO\" (NUMBER, Obrigatório).",
             "format": "int32"
           },
           "endereco": {
@@ -2918,12 +2887,10 @@
             "items": {
               "$ref": "#/components/schemas/ClienteVeiculo"
             },
-            "description": "Coleção de entidades ClienteVeiculo, representando o relacionamento muitos-para-muitos com Veículos.",
             "nullable": true
           }
         },
-        "additionalProperties": false,
-        "description": "Representa a entidade Cliente no banco de dados, mapeando para a tabela \"TB_CLIENTE\".\r\nContém informações pessoais e de contato de um cliente."
+        "additionalProperties": false
       },
       "ClienteVeiculo": {
         "required": [
@@ -3212,10 +3179,11 @@
           1,
           2,
           3,
-          4
+          4,
+          5
         ],
         "type": "integer",
-        "description": "Define os estados civis possíveis para um cliente, mapeando os valores do banco de dados Oracle.",
+        "description": "Define os estados civis possíveis para um cliente, mapeando os valores do banco de dados Oracle.\r\nOs valores string devem corresponder à constraint CK_CLIENTE_ESTADO_CIVIL no DDL.",
         "format": "int32"
       },
       "Patio": {
@@ -3409,6 +3377,43 @@
         },
         "additionalProperties": false,
         "description": "Representa a entidade Rastreamento no banco de dados, mapeando para a tabela \"TB_RASTREAMENTO\".\r\nContém dados de posicionamento interno (IPS) e GPRS (Latitude, Longitude, Altitude)."
+      },
+      "ValidationProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
       },
       "Veiculo": {
         "required": [

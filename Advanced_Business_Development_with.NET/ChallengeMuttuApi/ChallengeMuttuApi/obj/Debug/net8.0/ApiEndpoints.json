@@ -312,7 +312,7 @@
         "StatusCode": 201
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
         "MediaTypes": [
           "application/json"
         ],
@@ -375,7 +375,7 @@
         "IsRequired": true
       },
       {
-        "Name": "cliente",
+        "Name": "clienteData",
         "Type": "ChallengeMuttuApi.Model.Cliente",
         "IsRequired": true
       }
@@ -387,7 +387,7 @@
         "StatusCode": 204
       },
       {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "Type": "Microsoft.AspNetCore.Mvc.ValidationProblemDetails",
         "MediaTypes": [
           "application/json"
         ],

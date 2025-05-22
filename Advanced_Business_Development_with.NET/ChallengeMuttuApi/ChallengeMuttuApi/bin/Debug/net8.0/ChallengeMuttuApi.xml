@@ -81,111 +81,6 @@
             <response code="404">Box não encontrado.</response>
             <response code="500">Ocorreu um erro interno no servidor.</response>
         </member>
-        <member name="T:ChallengeMuttuApi.Controllers.ClientesController">
-            <summary>
-            Controller responsável por gerenciar as operações CRUD para a entidade Cliente.
-            </summary>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.#ctor(ChallengeMuttuApi.Data.AppDbContext)">
-            <summary>
-            Construtor da ClientesController.
-            Injeta a instância do AppDbContext para acesso ao banco de dados.
-            </summary>
-            <param name="context">O contexto do banco de dados da aplicação.</param>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.GetAllClientes">
-            <summary>
-            Retorna uma lista de todos os clientes cadastrados.
-            </summary>
-            <remarks>
-            Este endpoint retorna todos os clientes disponíveis no banco de dados.
-            </remarks>
-            <response code="200">Retorna a lista de clientes.</response>
-            <response code="204">Não há clientes cadastrados.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.GetClienteById(System.Int32)">
-            <summary>
-            Retorna um cliente específico pelo seu ID.
-            </summary>
-            <remarks>
-            Este endpoint permite buscar um cliente utilizando o seu identificador único.
-            Exemplo: GET /api/clientes/1
-            </remarks>
-            <param name="id">O ID do cliente a ser buscado.</param>
-            <response code="200">Retorna o cliente encontrado.</response>
-            <response code="404">Cliente não encontrado.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.GetClienteByCpf(System.String)">
-            <summary>
-            Retorna um cliente específico pelo seu CPF.
-            </summary>
-            <remarks>
-            Este endpoint permite buscar um cliente utilizando o seu número de CPF.
-            Exemplo: GET /api/clientes/by-cpf/12345678901
-            </remarks>
-            <param name="cpf">O CPF do cliente a ser buscado.</param>
-            <response code="200">Retorna o cliente encontrado.</response>
-            <response code="400">O CPF fornecido é inválido.</response>
-            <response code="404">Cliente com o CPF especificado não encontrado.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.SearchClientesByName(System.String)">
-            <summary>
-            Pesquisa clientes por parte do nome.
-            </summary>
-            <remarks>
-            Este endpoint permite buscar clientes cujos nomes contenham a string fornecida.
-            A pesquisa não diferencia maiúsculas de minúsculas.
-            Exemplo: GET /api/clientes/search-by-name?nome=maria
-            </remarks>
-            <param name="nome">A string a ser pesquisada no nome dos clientes.</param>
-            <response code="200">Retorna a lista de clientes que correspondem à pesquisa.</response>
-            <response code="204">Nenhum cliente encontrado com o nome especificado.</response>
-            <response code="400">O parâmetro de nome para pesquisa é obrigatório.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.CreateCliente(ChallengeMuttuApi.Model.Cliente)">
-            <summary>
-            Cria um novo cliente.
-            </summary>
-            <remarks>
-            Este endpoint permite criar um novo registro de cliente no banco de dados.
-            Um ID de cliente não deve ser fornecido no corpo da requisição, pois é gerado automaticamente.
-            </remarks>
-            <param name="cliente">Os dados do cliente a serem criados.</param>
-            <response code="201">Cliente criado com sucesso.</response>
-            <response code="400">Dados do cliente inválidos ou já existe um cliente com o mesmo CPF.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.UpdateCliente(System.Int32,ChallengeMuttuApi.Model.Cliente)">
-            <summary>
-            Atualiza um cliente existente pelo ID.
-            </summary>
-            <remarks>
-            Este endpoint permite a atualização completa de um cliente existente.
-            O ID na URL deve corresponder ao ID do cliente no corpo da requisição.
-            </remarks>
-            <param name="id">O ID do cliente a ser atualizado.</param>
-            <param name="cliente">Os dados do cliente atualizados.</param>
-            <response code="204">Cliente atualizado com sucesso.</response>
-            <response code="400">ID na URL não corresponde ao ID do cliente no corpo da requisição, ou dados inválidos.</response>
-            <response code="404">Cliente não encontrado.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
-        <member name="M:ChallengeMuttuApi.Controllers.ClientesController.DeleteCliente(System.Int32)">
-            <summary>
-            Exclui um cliente pelo ID.
-            </summary>
-            <remarks>
-            Este endpoint remove permanentemente um registro de cliente do banco de dados.
-            </remarks>
-            <param name="id">O ID do cliente a ser excluído.</param>
-            <response code="204">Cliente excluído com sucesso.</response>
-            <response code="404">Cliente não encontrado.</response>
-            <response code="500">Ocorreu um erro interno no servidor.</response>
-        </member>
         <member name="T:ChallengeMuttuApi.Controllers.ContatosController">
             <summary>
             Controller responsável por gerenciar as operações CRUD para a entidade Contato.
@@ -776,6 +671,7 @@
         <member name="T:ChallengeMuttuApi.Enums.EstadoCivil">
             <summary>
             Define os estados civis possíveis para um cliente, mapeando os valores do banco de dados Oracle.
+            Os valores string devem corresponder à constraint CK_CLIENTE_ESTADO_CIVIL no DDL.
             </summary>
         </member>
         <member name="F:ChallengeMuttuApi.Enums.EstadoCivil.Solteiro">
@@ -788,9 +684,14 @@
             Representa o estado civil 'Casado'.
             </summary>
         </member>
-        <member name="F:ChallengeMuttuApi.Enums.EstadoCivil.Viuvo">
+        <member name="F:ChallengeMuttuApi.Enums.EstadoCivil.Divorciado">
             <summary>
             Representa o estado civil 'Divorciado'.
+            </summary>
+        </member>
+        <member name="F:ChallengeMuttuApi.Enums.EstadoCivil.Viuvo">
+            <summary>
+            Representa o estado civil 'Viúvo'.
             </summary>
         </member>
         <member name="F:ChallengeMuttuApi.Enums.EstadoCivil.Separado">
@@ -867,103 +768,11 @@
             Coleção de entidades ZonaBox, representando o relacionamento muitos-para-muitos com Zonas.
             </summary>
         </member>
-        <member name="T:ChallengeMuttuApi.Model.Cliente">
-            <summary>
-            Representa a entidade Cliente no banco de dados, mapeando para a tabela "TB_CLIENTE".
-            Contém informações pessoais e de contato de um cliente.
-            </summary>
-        </member>
         <member name="M:ChallengeMuttuApi.Model.Cliente.#ctor">
             <summary>
             Construtor padrão da classe Cliente.
-            Inicializa propriedades de string não anuláveis para evitar warnings CS8618.
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.IdCliente">
-            <summary>
-            Obtém ou define o identificador único do Cliente.
-            Mapeia para a coluna "ID_CLIENTE" (Chave Primária, gerada por identidade).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.DataCadastro">
-            <summary>
-            Obtém ou define a data de cadastro do cliente.
-            Mapeia para a coluna "DATA_CADASTRO" (DATE, Obrigatório, com valor padrão SYSDATE).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Sexo">
-            <summary>
-            Obtém ou define o sexo do cliente.
-            Mapeia para a coluna "SEXO" (VARCHAR2(2 CHAR), Obrigatório).
-            Possui validação para aceitar apenas 'M' (Masculino) ou 'F' (Feminino) - ajuste conforme sua regra de negócio.
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Nome">
-            <summary>
-            Obtém ou define o primeiro nome do cliente.
-            Mapeia para a coluna "NOME" (VARCHAR2(100 BYTE), Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Sobrenome">
-            <summary>
-            Obtém ou define o sobrenome do cliente.
-            Mapeia para a coluna "SOBRENOME" (VARCHAR2(100 BYTE), Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.DataNascimento">
-            <summary>
-            Obtém ou define a data de nascimento do cliente.
-            Mapeia para a coluna "DATA_NASCIMENTO" (DATE, Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Cpf">
-            <summary>
-            Obtém ou define o CPF (Cadastro de Pessoas Físicas) do cliente.
-            Mapeia para a coluna "CPF" (VARCHAR2(11 CHAR), Obrigatório, Único).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Profissao">
-            <summary>
-            Obtém ou define a profissão do cliente.
-            Mapeia para a coluna "PROFISSAO" (VARCHAR2(50 BYTE), Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.EstadoCivil">
-            <summary>
-            Obtém ou define o estado civil do cliente.
-            Mapeia para a coluna "ESTADO_CIVIL" (VARCHAR2(50 BYTE), Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.TbEnderecoIdEndereco">
-            <summary>
-            Obtém ou define o ID da chave estrangeira para a entidade Endereco.
-            Mapeia para a coluna "TB_ENDERECO_ID_ENDERECO" (NUMBER, Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.TbContatoIdContato">
-            <summary>
-            Obtém ou define o ID da chave estrangeira para a entidade Contato.
-            Mapeia para a coluna "TB_CONTATO_ID_CONTATO" (NUMBER, Obrigatório).
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Endereco">
-            <summary>
-            Propriedade de navegação para a entidade Endereco associada.
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.Contato">
-            <summary>
-            Propriedade de navegação para a entidade Contato associada.
-            </summary>
-        </member>
-        <member name="P:ChallengeMuttuApi.Model.Cliente.ClienteVeiculos">
-            <summary>
-            Coleção de entidades ClienteVeiculo, representando o relacionamento muitos-para-muitos com Veículos.
-            </summary>
-        </member>
-        <member name="M:ChallengeMuttuApi.Model.Cliente.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,ChallengeMuttuApi.Enums.EstadoCivil,System.DateTime,System.Int32,System.Int32)">
-            <summary>
-            Construtor parametrizado da classe Cliente.
+            Inicializa propriedades de string não anuláveis e não 'required' para evitar warnings CS8618.
+            Propriedades 'required' (Nome, Sexo, Cpf) são responsabilidade do código que instancia o objeto.
             </summary>
         </member>
         <member name="T:ChallengeMuttuApi.Model.ClienteVeiculo">

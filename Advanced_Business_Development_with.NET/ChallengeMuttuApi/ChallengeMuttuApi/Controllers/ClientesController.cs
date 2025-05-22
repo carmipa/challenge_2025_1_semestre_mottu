@@ -3,80 +3,88 @@ using ChallengeMuttuApi.Data;
 using ChallengeMuttuApi.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChallengeMuttuApi.Controllers
 {
-    /// <summary>
-    /// Controller responsável por gerenciar as operações CRUD para a entidade Cliente.
-    /// </summary>
-    [ApiController] // Indica que a classe é uma controller de API
-    [Route("api/[controller]")] // Define a rota base para a controller (ex: /api/clientes)
-    [Produces("application/json")] // Garante que a API sempre retorne JSON
+    [ApiController]
+    [Route("api/[controller]")]
+    [Produces("application/json")]
     public class ClientesController : ControllerBase
     {
         private readonly AppDbContext _context;
+        // Se você configurar ILogger via DI:
+        // private readonly ILogger<ClientesController> _logger;
 
-        /// <summary>
-        /// Construtor da ClientesController.
-        /// Injeta a instância do AppDbContext para acesso ao banco de dados.
-        /// </summary>
-        /// <param name="context">O contexto do banco de dados da aplicação.</param>
-        public ClientesController(AppDbContext context)
+        public ClientesController(AppDbContext context /*, ILogger<ClientesController> logger */)
         {
             _context = context;
+            // _logger = logger;
         }
 
-        // ---------------------------------------------------------------------
-        // Rotas GET (Recuperação de Dados)
-        // ---------------------------------------------------------------------
+        private void LogDetailedException(string contextMessage, Exception ex, int? entityId = null)
+        {
+            string logMessage = entityId.HasValue ? $"{contextMessage} (ID: {entityId.Value})" : contextMessage;
 
-        /// <summary>
-        /// Retorna uma lista de todos os clientes cadastrados.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint retorna todos os clientes disponíveis no banco de dados.
-        /// </remarks>
-        /// <response code="200">Retorna a lista de clientes.</response>
-        /// <response code="204">Não há clientes cadastrados.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
+            // Substitua Console.WriteLine por _logger.LogError se estiver usando ILogger
+            Console.WriteLine($"--- ERRO DETALHADO: {logMessage} ---");
+            Console.WriteLine($"Exceção Principal: {ex.GetType().FullName} - {ex.Message}");
+            Console.WriteLine($"StackTrace Principal:\n{ex.StackTrace}");
+
+            var currentEx = ex.InnerException;
+            int counter = 0;
+            while (currentEx != null && counter < 5) // Limita a profundidade do log
+            {
+                Console.WriteLine($"--- Inner Exception (Nível {++counter}) ---");
+                Console.WriteLine($"Tipo: {currentEx.GetType().FullName}");
+                Console.WriteLine($"Mensagem: {currentEx.Message}");
+                Console.WriteLine($"StackTrace:\n{currentEx.StackTrace}");
+                currentEx = currentEx.InnerException;
+            }
+            Console.WriteLine($"--- FIM DO LOG DE ERRO DETALHADO ({logMessage}) ---");
+        }
+
+        // GET: api/clientes
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Cliente>), 200)]
         [ProducesResponseType(204)]
         [ProducesResponseType(500)]
-        public async Task<ActionResult<IEnumerable<Cliente>>> GetAllClientes()
+        public async Task<ActionResult<IEnumerable<Cliente>>> GetAllClientes(
+            // Se você decidir implementar filtros e paginação no backend, os parâmetros viriam aqui.
+            // Ex: [FromQuery] ClienteFilterDto filters, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10
+            )
         {
             try
             {
-                var clientes = await _context.Clientes.ToListAsync();
+                var query = _context.Clientes
+                                    // .Include(c => c.Endereco) // Descomente se o frontend precisa do objeto Endereco
+                                    // .Include(c => c.Contato)  // Descomente se o frontend precisa do objeto Contato
+                                    .AsNoTracking();
+
+                // TODO: Adicionar lógica de filtro aqui se `ClienteFilterDto filters` for implementado.
+                // Ex: if (!string.IsNullOrWhiteSpace(filters.Nome)) query = query.Where(c => c.Nome.Contains(filters.Nome));
+                // Ex: if (filters.Cpf != null) query = query.Where(c => c.Cpf == filters.Cpf);
+
+                var clientes = await query.ToListAsync();
+
                 if (!clientes.Any())
                 {
-                    return NoContent(); // Retorna 204 se não houver clientes
+                    return NoContent();
                 }
-                return Ok(clientes); // Retorna 200 com a lista de clientes
+                return Ok(clientes);
             }
             catch (Exception ex)
             {
-                // Log the exception (e.g., using Serilog, NLog, or ILogger)
-                Console.WriteLine($"Erro ao buscar todos os clientes: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao buscar clientes.");
+                LogDetailedException("Erro ao buscar todos os clientes", ex);
+                return StatusCode(500, "Erro interno do servidor ao buscar clientes. Verifique os logs do servidor.");
             }
         }
 
-        /// <summary>
-        /// Retorna um cliente específico pelo seu ID.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint permite buscar um cliente utilizando o seu identificador único.
-        /// Exemplo: GET /api/clientes/1
-        /// </remarks>
-        /// <param name="id">O ID do cliente a ser buscado.</param>
-        /// <response code="200">Retorna o cliente encontrado.</response>
-        /// <response code="404">Cliente não encontrado.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
-        [HttpGet("{id:int}")] // Rota parametrizada com PathParam (id inteiro)
+        // GET: api/clientes/5
+        [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(Cliente), 200)]
         [ProducesResponseType(404)]
         [ProducesResponseType(500)]
@@ -84,40 +92,33 @@ namespace ChallengeMuttuApi.Controllers
         {
             try
             {
-                var cliente = await _context.Clientes.FindAsync(id);
+                var cliente = await _context.Clientes
+                                          // .Include(c => c.Endereco) // Descomente se necessário
+                                          // .Include(c => c.Contato)  // Descomente se necessário
+                                          .AsNoTracking()
+                                          .FirstOrDefaultAsync(c => c.IdCliente == id);
+
                 if (cliente == null)
                 {
-                    return NotFound("Cliente não encontrado."); // Retorna 404
+                    return NotFound($"Cliente com ID {id} não encontrado.");
                 }
-                return Ok(cliente); // Retorna 200 com o cliente
+                return Ok(cliente);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao buscar cliente por ID: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao buscar cliente.");
+                LogDetailedException("Erro ao buscar cliente por ID", ex, id);
+                return StatusCode(500, "Erro interno do servidor ao buscar cliente. Verifique os logs do servidor.");
             }
         }
 
-        /// <summary>
-        /// Retorna um cliente específico pelo seu CPF.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint permite buscar um cliente utilizando o seu número de CPF.
-        /// Exemplo: GET /api/clientes/by-cpf/12345678901
-        /// </remarks>
-        /// <param name="cpf">O CPF do cliente a ser buscado.</param>
-        /// <response code="200">Retorna o cliente encontrado.</response>
-        /// <response code="400">O CPF fornecido é inválido.</response>
-        /// <response code="404">Cliente com o CPF especificado não encontrado.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
-        [HttpGet("by-cpf/{cpf}")] // Rota parametrizada com PathParam (cpf string)
+        // GET: api/clientes/by-cpf/12345678901
+        [HttpGet("by-cpf/{cpf}")]
         [ProducesResponseType(typeof(Cliente), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesResponseType(500)]
         public async Task<ActionResult<Cliente>> GetClienteByCpf(string cpf)
         {
-            // Adiciona validação básica de CPF para BadRequest
             if (string.IsNullOrWhiteSpace(cpf) || cpf.Length != 11 || !cpf.All(char.IsDigit))
             {
                 return BadRequest("CPF inválido. Deve conter 11 dígitos numéricos.");
@@ -125,34 +126,26 @@ namespace ChallengeMuttuApi.Controllers
 
             try
             {
-                var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.Cpf == cpf);
+                var cliente = await _context.Clientes
+                                          // .Include(c => c.Endereco) // Descomente se necessário
+                                          // .Include(c => c.Contato)  // Descomente se necessário
+                                          .AsNoTracking()
+                                          .FirstOrDefaultAsync(c => c.Cpf == cpf);
                 if (cliente == null)
                 {
-                    return NotFound($"Cliente com CPF '{cpf}' não encontrado."); // Retorna 404
+                    return NotFound($"Cliente com CPF '{cpf}' não encontrado.");
                 }
-                return Ok(cliente); // Retorna 200 com o cliente
+                return Ok(cliente);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao buscar cliente por CPF: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao buscar cliente por CPF.");
+                LogDetailedException($"Erro ao buscar cliente por CPF ({cpf})", ex);
+                return StatusCode(500, "Erro interno do servidor ao buscar cliente por CPF. Verifique os logs do servidor.");
             }
         }
 
-        /// <summary>
-        /// Pesquisa clientes por parte do nome.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint permite buscar clientes cujos nomes contenham a string fornecida.
-        /// A pesquisa não diferencia maiúsculas de minúsculas.
-        /// Exemplo: GET /api/clientes/search-by-name?nome=maria
-        /// </remarks>
-        /// <param name="nome">A string a ser pesquisada no nome dos clientes.</param>
-        /// <response code="200">Retorna a lista de clientes que correspondem à pesquisa.</response>
-        /// <response code="204">Nenhum cliente encontrado com o nome especificado.</response>
-        /// <response code="400">O parâmetro de nome para pesquisa é obrigatório.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
-        [HttpGet("search-by-name")] // Rota parametrizada com QueryParam
+        // GET: api/clientes/search-by-name?nome=maria
+        [HttpGet("search-by-name")]
         [ProducesResponseType(typeof(IEnumerable<Cliente>), 200)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -166,119 +159,35 @@ namespace ChallengeMuttuApi.Controllers
 
             try
             {
+                var nomeLower = nome.ToLower();
                 var clientes = await _context.Clientes
-                    .Where(c => c.Nome.ToLower().Contains(nome.ToLower()))
-                    .ToListAsync();
-
+                                          // .Include(c => c.Endereco) // Descomente se necessário
+                                          // .Include(c => c.Contato)  // Descomente se necessário
+                                          .AsNoTracking()
+                                          .Where(c => c.Nome.ToLower().Contains(nomeLower) || (c.Sobrenome != null && c.Sobrenome.ToLower().Contains(nomeLower)))
+                                          .ToListAsync();
                 if (!clientes.Any())
                 {
-                    return NoContent(); // Retorna 204 se não houver resultados
+                    return NoContent();
                 }
-                return Ok(clientes); // Retorna 200 com a lista de clientes
+                return Ok(clientes);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao pesquisar clientes por nome: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao pesquisar clientes por nome.");
+                LogDetailedException($"Erro ao pesquisar clientes por nome ({nome})", ex);
+                return StatusCode(500, "Erro interno do servidor ao pesquisar clientes. Verifique os logs do servidor.");
             }
         }
 
-        // ---------------------------------------------------------------------
-        // Rotas POST (Criação de Dados)
-        // ---------------------------------------------------------------------
-
-        /// <summary>
-        /// Cria um novo cliente.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint permite criar um novo registro de cliente no banco de dados.
-        /// Um ID de cliente não deve ser fornecido no corpo da requisição, pois é gerado automaticamente.
-        /// </remarks>
-        /// <param name="cliente">Os dados do cliente a serem criados.</param>
-        /// <response code="201">Cliente criado com sucesso.</response>
-        /// <response code="400">Dados do cliente inválidos ou já existe um cliente com o mesmo CPF.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
+        // POST: api/clientes
         [HttpPost]
         [ProducesResponseType(typeof(Cliente), 201)]
-        [ProducesResponseType(400)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 400)] // Para erros de ModelState
         [ProducesResponseType(500)]
         public async Task<ActionResult<Cliente>> CreateCliente([FromBody] Cliente cliente)
         {
-            // Validação de modelo automática via [ApiController] e DataAnnotations
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState); // Retorna 400 com detalhes da validação
-            }
-
-            try
-            {
-                // A validação de CPF no setter da model já deve tratar isso,
-                // mas é bom ter uma verificação de duplicidade no DB aqui.
-                var existingCliente = await _context.Clientes.FirstOrDefaultAsync(c => c.Cpf == cliente.Cpf);
-                if (existingCliente != null)
-                {
-                    return BadRequest("Já existe um cliente cadastrado com este CPF.");
-                }
-
-                // A DataCadastro é definida no construtor padrão do model, mas se for recebida via POST,
-                // garantimos que é definida no servidor ou usada do banco.
-                if (cliente.DataCadastro == DateTime.MinValue) // Se não foi definida no cliente recebido
-                {
-                    cliente.DataCadastro = DateTime.Now;
-                }
-
-                _context.Clientes.Add(cliente);
-                await _context.SaveChangesAsync();
-
-                // Retorna 201 Created, incluindo o novo recurso e sua URI de acesso
-                return CreatedAtAction(nameof(GetClienteById), new { id = cliente.IdCliente }, cliente);
-            }
-            catch (ArgumentException ex) // Captura exceções da validação customizada no model
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (DbUpdateException ex) // Captura erros de banco de dados (ex: violação de constraint única)
-            {
-                // Pode inspecionar ex.InnerException para detalhes específicos do DB
-                Console.WriteLine($"Erro de banco de dados ao criar cliente: {ex.Message}");
-                return StatusCode(500, "Erro ao persistir o cliente no banco de dados.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro inesperado ao criar cliente: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao criar cliente.");
-            }
-        }
-
-        // ---------------------------------------------------------------------
-        // Rotas PUT (Atualização de Dados)
-        // ---------------------------------------------------------------------
-
-        /// <summary>
-        /// Atualiza um cliente existente pelo ID.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint permite a atualização completa de um cliente existente.
-        /// O ID na URL deve corresponder ao ID do cliente no corpo da requisição.
-        /// </remarks>
-        /// <param name="id">O ID do cliente a ser atualizado.</param>
-        /// <param name="cliente">Os dados do cliente atualizados.</param>
-        /// <response code="204">Cliente atualizado com sucesso.</response>
-        /// <response code="400">ID na URL não corresponde ao ID do cliente no corpo da requisição, ou dados inválidos.</response>
-        /// <response code="404">Cliente não encontrado.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
-        [HttpPut("{id:int}")]
-        [ProducesResponseType(204)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(404)]
-        [ProducesResponseType(500)]
-        public async Task<ActionResult> UpdateCliente(int id, [FromBody] Cliente cliente)
-        {
-            if (id != cliente.IdCliente)
-            {
-                return BadRequest("O ID na URL não corresponde ao ID do cliente fornecido.");
-            }
-
+            // Validação do CPF e Sexo já ocorre nos setters do modelo Cliente.cs
+            // Se ocorrer erro, uma ArgumentException será lançada e capturada abaixo.
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -286,62 +195,168 @@ namespace ChallengeMuttuApi.Controllers
 
             try
             {
-                // Verifica se o cliente existe antes de tentar atualizar
-                var existingCliente = await _context.Clientes.AsNoTracking().FirstOrDefaultAsync(c => c.IdCliente == id);
-                if (existingCliente == null)
+                // Verifica se o CPF já existe (mesmo que o modelo também possa ter um índice único)
+                var existingClienteByCpf = await _context.Clientes.AsNoTracking().FirstOrDefaultAsync(c => c.Cpf == cliente.Cpf);
+                if (existingClienteByCpf != null)
                 {
-                    return NotFound("Cliente não encontrado para atualização.");
+                    ModelState.AddModelError("Cpf", "Já existe um cliente cadastrado com este CPF.");
+                    return Conflict(new ValidationProblemDetails(ModelState) { Title = "Conflito de CPF" });
                 }
 
-                // Verifica duplicidade de CPF se ele foi alterado
-                if (existingCliente.Cpf != cliente.Cpf)
+                // Valida se os IDs de Endereço e Contato referenciam registros existentes, se forem > 0
+                if (cliente.TbEnderecoIdEndereco > 0 && !await _context.Enderecos.AnyAsync(e => e.IdEndereco == cliente.TbEnderecoIdEndereco))
                 {
-                    var clienteWithSameCpf = await _context.Clientes.AsNoTracking().FirstOrDefaultAsync(c => c.Cpf == cliente.Cpf);
-                    if (clienteWithSameCpf != null && clienteWithSameCpf.IdCliente != id)
-                    {
-                        return BadRequest("Já existe outro cliente cadastrado com este CPF.");
-                    }
+                    ModelState.AddModelError("TbEnderecoIdEndereco", $"Endereço com ID {cliente.TbEnderecoIdEndereco} não encontrado.");
+                }
+                if (cliente.TbContatoIdContato > 0 && !await _context.Contatos.AnyAsync(ct => ct.IdContato == cliente.TbContatoIdContato))
+                {
+                    ModelState.AddModelError("TbContatoIdContato", $"Contato com ID {cliente.TbContatoIdContato} não encontrado.");
+                }
+                if (!ModelState.IsValid) // Verifica novamente após validações manuais
+                {
+                    return BadRequest(new ValidationProblemDetails(ModelState) { Title = "Erro de validação de referência" });
                 }
 
-                // Anexa a entidade ao contexto no estado Modified
-                _context.Entry(cliente).State = EntityState.Modified;
+
+                if (cliente.DataCadastro == DateTime.MinValue)
+                {
+                    cliente.DataCadastro = DateTime.UtcNow;
+                }
+
+                _context.Clientes.Add(cliente);
                 await _context.SaveChangesAsync();
 
-                return NoContent(); // Retorna 204
+                // Para retornar o objeto com Endereco/Contato, seria necessário carregá-los após o SaveChangesAsync
+                // ou o GetClienteById chamado por CreatedAtAction já os traria se configurado com .Include()
+                return CreatedAtAction(nameof(GetClienteById), new { id = cliente.IdCliente }, cliente);
             }
-            catch (ArgumentException ex) // Captura exceções da validação customizada no model
+            catch (ArgumentException argEx) // Captura validações dos setters do modelo Cliente
             {
-                return BadRequest(ex.Message);
+                LogDetailedException("Erro de argumento ao criar cliente", argEx);
+                return BadRequest(new ProblemDetails { Title = "Dados inválidos fornecidos.", Detail = argEx.Message, Status = StatusCodes.Status400BadRequest });
             }
-            catch (DbUpdateConcurrencyException) // Erro de concorrência (ex: cliente excluído por outra transação)
+            catch (DbUpdateException dbEx)
             {
-                if (!await _context.Clientes.AnyAsync(e => e.IdCliente == id))
+                LogDetailedException("Erro de banco de dados ao criar cliente", dbEx);
+                var oracleEx = dbEx.InnerException as Oracle.ManagedDataAccess.Client.OracleException;
+                if (oracleEx != null)
                 {
-                    return NotFound("Cliente não encontrado para atualização (possivelmente foi excluído por outro processo).");
+                    return StatusCode(500, $"Erro de banco de dados Oracle: {oracleEx.Message} (Erro {oracleEx.Number}).");
                 }
-                throw; // Lança o erro de concorrência para ser tratado em um nível superior
+                return StatusCode(500, "Erro ao persistir o cliente no banco. Verifique se os IDs de endereço e contato são válidos.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro inesperado ao atualizar cliente: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao atualizar cliente.");
+                LogDetailedException("Erro inesperado ao criar cliente", ex);
+                return StatusCode(500, "Erro interno do servidor ao criar cliente. Verifique os logs.");
             }
         }
 
-        // ---------------------------------------------------------------------
-        // Rotas DELETE (Exclusão de Dados)
-        // ---------------------------------------------------------------------
+        // PUT: api/clientes/5
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), 400)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> UpdateCliente(int id, [FromBody] Cliente clienteData)
+        {
+            if (id != clienteData.IdCliente)
+            {
+                return BadRequest("O ID na URL não corresponde ao ID do cliente no corpo da requisição.");
+            }
 
-        /// <summary>
-        /// Exclui um cliente pelo ID.
-        /// </summary>
-        /// <remarks>
-        /// Este endpoint remove permanentemente um registro de cliente do banco de dados.
-        /// </remarks>
-        /// <param name="id">O ID do cliente a ser excluído.</param>
-        /// <response code="204">Cliente excluído com sucesso.</response>
-        /// <response code="404">Cliente não encontrado.</response>
-        /// <response code="500">Ocorreu um erro interno no servidor.</response>
+            // Validação do CPF e Sexo ocorre nos setters.
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var clienteToUpdate = await _context.Clientes.FindAsync(id);
+
+            if (clienteToUpdate == null)
+            {
+                return NotFound($"Cliente com ID {id} não encontrado para atualização.");
+            }
+
+            // Valida se os IDs de Endereço e Contato referenciam registros existentes, se forem > 0 e diferentes do atual
+            if (clienteData.TbEnderecoIdEndereco > 0 && clienteData.TbEnderecoIdEndereco != clienteToUpdate.TbEnderecoIdEndereco && !await _context.Enderecos.AnyAsync(e => e.IdEndereco == clienteData.TbEnderecoIdEndereco))
+            {
+                ModelState.AddModelError("TbEnderecoIdEndereco", $"Novo Endereço com ID {clienteData.TbEnderecoIdEndereco} não encontrado.");
+            }
+            if (clienteData.TbContatoIdContato > 0 && clienteData.TbContatoIdContato != clienteToUpdate.TbContatoIdContato && !await _context.Contatos.AnyAsync(ct => ct.IdContato == clienteData.TbContatoIdContato))
+            {
+                ModelState.AddModelError("TbContatoIdContato", $"Novo Contato com ID {clienteData.TbContatoIdContato} não encontrado.");
+            }
+            if (!ModelState.IsValid) // Verifica novamente após validações manuais
+            {
+                return BadRequest(new ValidationProblemDetails(ModelState) { Title = "Erro de validação de referência" });
+            }
+
+
+            // Atualiza as propriedades do cliente existente
+            try
+            {
+                clienteToUpdate.Nome = clienteData.Nome;
+                clienteToUpdate.Sobrenome = clienteData.Sobrenome;
+                clienteToUpdate.Sexo = clienteData.Sexo; // Setter do modelo fará a validação
+                clienteToUpdate.DataNascimento = clienteData.DataNascimento;
+                clienteToUpdate.Profissao = clienteData.Profissao;
+                clienteToUpdate.EstadoCivil = clienteData.EstadoCivil; // Setter do enum fará a validação
+                clienteToUpdate.TbEnderecoIdEndereco = clienteData.TbEnderecoIdEndereco;
+                clienteToUpdate.TbContatoIdContato = clienteData.TbContatoIdContato;
+                // DataCadastro geralmente não é alterada
+
+                // Verifica duplicidade de CPF se ele foi alterado
+                if (clienteToUpdate.Cpf != clienteData.Cpf)
+                {
+                    var clienteWithSameCpf = await _context.Clientes.AsNoTracking().FirstOrDefaultAsync(c => c.Cpf == clienteData.Cpf && c.IdCliente != id);
+                    if (clienteWithSameCpf != null)
+                    {
+                        ModelState.AddModelError("Cpf", "Já existe outro cliente cadastrado com este CPF.");
+                        return Conflict(new ValidationProblemDetails(ModelState) { Title = "Conflito de CPF" });
+                    }
+                    clienteToUpdate.Cpf = clienteData.Cpf; // Setter do modelo fará a validação
+                }
+
+                _context.Entry(clienteToUpdate).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (ArgumentException argEx) // Captura validações dos setters do modelo Cliente
+            {
+                LogDetailedException($"Erro de argumento ao atualizar cliente ID {id}", argEx);
+                return BadRequest(new ProblemDetails { Title = "Dados inválidos fornecidos.", Detail = argEx.Message, Status = StatusCodes.Status400BadRequest });
+            }
+            catch (DbUpdateConcurrencyException concEx)
+            {
+                LogDetailedException($"Erro de concorrência ao atualizar cliente ID {id}", concEx);
+                if (!await _context.Clientes.AnyAsync(e => e.IdCliente == id))
+                {
+                    return NotFound("Cliente não encontrado (concorrência).");
+                }
+                else
+                {
+                    return StatusCode(409, "Conflito de concorrência ao atualizar. Tente novamente.");
+                }
+            }
+            catch (DbUpdateException dbEx)
+            {
+                LogDetailedException($"Erro de banco de dados ao atualizar cliente ID {id}", dbEx);
+                var oracleEx = dbEx.InnerException as Oracle.ManagedDataAccess.Client.OracleException;
+                if (oracleEx != null)
+                {
+                    return StatusCode(500, $"Erro de banco de dados Oracle: {oracleEx.Message} (Erro {oracleEx.Number}).");
+                }
+                return StatusCode(500, "Erro ao atualizar o cliente no banco.");
+            }
+            catch (Exception ex)
+            {
+                LogDetailedException($"Erro inesperado ao atualizar cliente ID {id}", ex);
+                return StatusCode(500, "Erro interno do servidor ao atualizar cliente. Verifique os logs.");
+            }
+        }
+
+        // DELETE: api/clientes/5
         [HttpDelete("{id:int}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -353,18 +368,28 @@ namespace ChallengeMuttuApi.Controllers
                 var cliente = await _context.Clientes.FindAsync(id);
                 if (cliente == null)
                 {
-                    return NotFound("Cliente não encontrado para exclusão."); // Retorna 404
+                    return NotFound($"Cliente com ID {id} não encontrado para exclusão.");
                 }
 
                 _context.Clientes.Remove(cliente);
                 await _context.SaveChangesAsync();
 
-                return NoContent(); // Retorna 204
+                return NoContent();
+            }
+            catch (DbUpdateException dbEx)
+            {
+                LogDetailedException($"Erro de banco de dados ao excluir cliente ID {id}", dbEx);
+                var oracleEx = dbEx.InnerException as Oracle.ManagedDataAccess.Client.OracleException;
+                if (oracleEx != null && (oracleEx.Number == 2292))
+                { // ORA-02292: integrity constraint (SCHEMA.CONSTRAINT_NAME) violated - child record found
+                    return Conflict($"Não é possível excluir o cliente ID {id} pois ele possui registros relacionados. Detalhe: {oracleEx.Message}");
+                }
+                return StatusCode(500, "Erro ao excluir o cliente do banco de dados. Verifique dependências.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao excluir cliente: {ex.Message}");
-                return StatusCode(500, "Erro interno do servidor ao excluir cliente.");
+                LogDetailedException($"Erro ao excluir cliente ID {id}", ex);
+                return StatusCode(500, "Erro interno do servidor ao excluir cliente. Verifique os logs.");
             }
         }
     }
