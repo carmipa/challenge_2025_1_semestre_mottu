@@ -1,5 +1,7 @@
 # 🚀 API Mottu - Challenge FIAP 2025 🛵💨
 
+# repositório: https://github.com/carmipa/challenge_2025_1_semestre_mottu/tree/main/Java_Advanced
+
 
 
 **Bem-vindo à documentação oficial da API Mottu!** Este projeto foi desenvolvido pela equipe **Metamind Solutions** para o Challenge da FIAP do 1º Semestre de 2025.
@@ -35,6 +37,7 @@
 
 
 - [🚀 API Mottu - Challenge FIAP 2025 🛵💨](#-api-mottu---challenge-fiap-2025-)
+- [repositório: https://github.com/carmipa/challenge\_2025\_1\_semestre\_mottu/tree/main/Java\_Advanced](#repositório-httpsgithubcomcarmipachallenge_2025_1_semestre_mottutreemainjava_advanced)
   - [🗺️ Navegação Rápida (Índice)](#️-navegação-rápida-índice)
   - [🌟 Introdução](#-introdução)
   - [🏗️ Arquitetura do Projeto](#️-arquitetura-do-projeto)
