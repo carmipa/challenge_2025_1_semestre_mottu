@@ -39,6 +39,8 @@ O desafio consiste em desenvolver **procedimentos, funções e triggers** em **O
   - **Total geral**.  
 - Somatória feita **manualmente no corpo do procedimento** (sem ROLLUP, CUBE, GROUPING SETS).  
 
+- Saída deve seguir o formato de agrupamento, exemplo:  
+
 Agencia Conta Saldo
 
 1 1 4363.55
@@ -126,5 +128,5 @@ Total Geral 50528.39
 
 
 
-- Saída deve seguir o formato de agrupamento, exemplo:  
+
 
