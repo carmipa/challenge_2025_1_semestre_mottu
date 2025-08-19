@@ -20,9 +20,11 @@ public class SwaggerBrowserLauncher {
     @Value("${server.port:8080}")
     private String serverPort;
 
+    // Pode vir "", "/", "/minhaapp" ou "/minhaapp/"
     @Value("${server.servlet.context-path:}")
     private String contextPath;
 
+    // Deve ser um path, ex.: "/swagger-ui/index.html" ou "swagger-ui/index.html"
     @Value("${springdoc.swagger-ui.path:/swagger-ui/index.html}")
     private String swaggerUiPath;
 
@@ -36,7 +38,16 @@ public class SwaggerBrowserLauncher {
             return;
         }
 
-        String url = "http://localhost:" + serverPort + contextPath + swaggerUiPath;
+        String normalizedContext = normalizeContextPath(contextPath);   // "" ou "/algo" (sem barra no fim)
+        String normalizedSwagger = normalizeUiPath(swaggerUiPath);      // sempre "/algo/.."
+
+        // Base SEM path; resolve lida com as barras corretamente
+        URI base = URI.create("http://localhost:" + serverPort + "/");
+
+        // Junta com segurança (sem gerar //)
+        String joinedPath = (normalizedContext + normalizedSwagger).replaceAll("/{2,}", "/");
+        String url = base.resolve(joinedPath).toString();
+
         log.info("Tentando abrir o Swagger UI em: {}", url);
 
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
@@ -49,5 +60,31 @@ public class SwaggerBrowserLauncher {
         } else {
             log.warn("Abertura automática do navegador não é suportada neste ambiente. Acesse manualmente: {}", url);
         }
+    }
+
+    /** ""  -> ""
+     *  "/" -> ""
+     *  "/app/" -> "/app"
+     *  "app" -> "/app"
+     */
+    private static String normalizeContextPath(String cp) {
+        if (cp == null) return "";
+        cp = cp.trim();
+        if (cp.isEmpty() || "/".equals(cp)) return "";
+        if (!cp.startsWith("/")) cp = "/" + cp;
+        if (cp.endsWith("/")) cp = cp.substring(0, cp.length() - 1);
+        return cp;
+    }
+
+    /** null|"" -> "/swagger-ui/index.html" (default)
+     *  "swagger-ui/index.html" -> "/swagger-ui/index.html"
+     *  "/swagger-ui/index.html" -> "/swagger-ui/index.html"
+     *  Remove barras duplicadas internas.
+     */
+    private static String normalizeUiPath(String p) {
+        if (p == null || p.isBlank()) p = "/swagger-ui/index.html";
+        p = p.trim();
+        if (!p.startsWith("/")) p = "/" + p;
+        return p.replaceAll("/{2,}", "/");
     }
 }
